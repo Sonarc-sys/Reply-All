@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dfr3iv4iher32"]
+
+[ext_resource type="Script" uid="uid://bh81o2m20715l" path="res://script/issue_popup.gd" id="1_yoe8u"]
+
+[node name="IssuePopup" type="Control" unique_id=343395867]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yoe8u")
+
+[node name="Panel" type="Panel" parent="." unique_id=654638038]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 300.0
+offset_right = 800.0
+offset_bottom = 800.0
+
+[node name="Vbox" type="VBoxContainer" parent="Panel" unique_id=1556784270]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Question" type="Label" parent="Panel/Vbox" unique_id=205102993]
+layout_mode = 2
+
+[node name="Option1" type="Button" parent="Panel/Vbox" unique_id=551081903]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+
+[node name="Option2" type="Button" parent="Panel/Vbox" unique_id=590748285]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+
+[node name="Option3" type="Button" parent="Panel/Vbox" unique_id=1828114563]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+
+[connection signal="pressed" from="Panel/Vbox/Option1" to="." method="_on_option_1_pressed"]
+[connection signal="pressed" from="Panel/Vbox/Option2" to="." method="_on_option_2_pressed"]
+[connection signal="pressed" from="Panel/Vbox/Option3" to="." method="_on_option_3_pressed"]

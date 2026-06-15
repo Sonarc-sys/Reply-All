@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://hff0juo7efyi"]
+
+[ext_resource type="Resource" uid="uid://c80dnnsi24y5u" path="res://resources/Escalation Resources/AccountHijack.tres" id="1_8hw35"]
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_cjb6s"]
+
+[resource]
+script = ExtResource("1_cjb6s")
+issue_name = "Phishing Email"
+description = "You recieve an email asking you to reset your password"
+employee_message = "I got an email from my manager asking me
+to sign into a new document system.
+
+The link looks a little weird though."
+threat_level = 3
+urgency = 0.8
+escalation = ExtResource("1_8hw35")
+correct_index = 1
+answers = Array[String](["Click link", "Verify sender", "reply with password"])
+explanation = "Always check the sender domain
+and avoid entering credentials
+from email links."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

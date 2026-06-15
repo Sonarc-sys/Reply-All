@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CyberEscalation" format=3 uid="uid://c80dnnsi24y5u"]
+
+[ext_resource type="Script" uid="uid://2omncumtu2b7" path="res://resources/Escalation.gd" id="1_3ixbl"]
+
+[resource]
+script = ExtResource("1_3ixbl")
+escalation_name = "Account Hijacked"
+description = "Employee credentials were stolen."
+severity = 5
+consequence_text = "Attacker can send phishing emails from employee account"
+metadata/_custom_type_script = "uid://2omncumtu2b7"

@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://dx5j55pnkbdl7"]
+
+[ext_resource type="Script" uid="uid://b44kmjkc5rob" path="res://script/office.gd" id="1_riodj"]
+[ext_resource type="PackedScene" uid="uid://dsh758n5771af" path="res://scene/Player.tscn" id="2_nwkqs"]
+[ext_resource type="PackedScene" uid="uid://sfyiscjawqa7" path="res://scene/employee.tscn" id="2_pgah7"]
+[ext_resource type="PackedScene" uid="uid://dfr3iv4iher32" path="res://scene/IssuePopup.tscn" id="2_uvqaq"]
+[ext_resource type="Texture2D" uid="uid://bgxoq4qv3dwxs" path="res://asset/pixel background office.png" id="2_wk7dr"]
+[ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wk7dr"]
+
+[node name="Office" type="Node2D" unique_id=475616271]
+script = ExtResource("1_riodj")
+
+[node name="PixelBackgroundOffice" type="Sprite2D" parent="." unique_id=1761273186]
+position = Vector2(579.55554, 329)
+scale = Vector2(0.72444445, 0.72444445)
+texture = ExtResource("2_wk7dr")
+
+[node name="IncidentTimer" type="Timer" parent="." unique_id=181824542]
+wait_time = 8.0
+autostart = true
+
+[node name="IssuePopup" parent="." unique_id=343395867 instance=ExtResource("2_uvqaq")]
+
+[node name="Player" parent="." unique_id=1881935737 instance=ExtResource("2_nwkqs")]
+position = Vector2(-34, -281)
+
+[node name="Employees" type="Node2D" parent="." unique_id=1871804216]
+
+[node name="Employee1" parent="Employees" unique_id=1133885026 instance=ExtResource("2_pgah7")]
+position = Vector2(428, -36)
+employee_name = "Bob"
+employee_type = "Intern"
+
+[node name="Employee2" parent="Employees" unique_id=280188704 instance=ExtResource("2_pgah7")]
+position = Vector2(-361, -144)
+employee_name = "George"
+employee_type = "Manager"
+
+[node name="Employee3" parent="Employees" unique_id=2140453044 instance=ExtResource("2_pgah7")]
+position = Vector2(-390, 77)
+employee_name = "Steven"
+employee_type = "CEO"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
+script = ExtResource("5_eglr7")
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2082554985]
+offset_left = 998.0
+offset_top = 15.0
+offset_right = 1125.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Security Score: 0
+"
+
+[node name="TriagePanel" type="Panel" parent="CanvasLayer" unique_id=1382899926]
+offset_right = 176.0
+offset_bottom = 168.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wk7dr")
+
+[node name="IncidentList" type="VBoxContainer" parent="CanvasLayer/TriagePanel" unique_id=1081560639]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 63.0
+offset_bottom = 60.0
+
+[connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]

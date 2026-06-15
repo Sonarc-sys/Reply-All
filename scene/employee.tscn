@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://sfyiscjawqa7"]
+
+[ext_resource type="Script" uid="uid://ii680bg6vvaq" path="res://script/employee.gd" id="1_3ctsj"]
+[ext_resource type="Texture2D" uid="uid://c58aomvt2w40k" path="res://asset/office workers.png" id="2_8csqv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cjst8"]
+atlas = ExtResource("2_8csqv")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ctsj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cjst8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8csqv"]
+radius = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cjst8"]
+radius = 80.0
+
+[node name="Employee" type="CharacterBody2D" unique_id=1133885026 groups=["employees"]]
+script = ExtResource("1_3ctsj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1791097780]
+position = Vector2(572.00006, 448.00003)
+scale = Vector2(2.1406255, 2.1406255)
+sprite_frames = SubResource("SpriteFrames_3ctsj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1065821933]
+position = Vector2(571, 459)
+shape = SubResource("CircleShape2D_8csqv")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1043407312]
+position = Vector2(-4, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=373917816]
+position = Vector2(576, 466)
+shape = SubResource("CircleShape2D_cjst8")
+
+[node name="UI" type="Node2D" parent="." unique_id=398338841]
+position = Vector2(571, 361)
+
+[node name="NameLabel" type="Label" parent="UI" unique_id=137555678]
+offset_left = -22.0
+offset_top = -41.0
+offset_right = 18.0
+offset_bottom = -18.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+
+[node name="PatienceBar" type="ProgressBar" parent="UI" unique_id=972629461]
+custom_minimum_size = Vector2(80, 15)
+offset_left = -37.0
+offset_top = -3.0
+offset_right = 43.0
+offset_bottom = 24.0
+value = 100.0
+show_percentage = false
+
+[node name="Exclamation" type="Label" parent="UI" unique_id=278329229]
+visible = false
+offset_left = 48.0
+offset_top = -52.0
+offset_right = 92.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 72
+text = "!"

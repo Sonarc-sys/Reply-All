@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://cra66dfhl2qxn"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_7mrxq"]
+
+[resource]
+script = ExtResource("1_7mrxq")
+issue_name = "Suspicious USB"
+description = "You found a USB in the lunch room on the ground."
+employee_message = "I found a USB drive near the office entrance.
+It says \"Payroll Information\".
+
+Should I open it to see who it belongs to?"
+threat_level = 5
+urgency = 1.0
+correct_index = 2
+answers = Array[String](["Plug it in to check the files", "Give it to another employee to test", "Report it to IT/security"])
+explanation = "USB's can have autostart programs that can install malware as soon as you plug it in."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"
