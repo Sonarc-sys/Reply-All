@@ -1,49 +1,47 @@
 extends CanvasLayer
 
-var current_employee
-var correct_button = 0
-var current_issue
+@onready var score_label = $ScoreLabel
+@onready var incident_list = $TriagePanel/IncidentList
 
-func open(employee):
-	current_employee = employee
-	visible = true
-	current_issue = employee.current_issue
-	$Panel/Vbox/Question.text = current_issue.description
+# Preload your newly styled cell notification / clipboard item template
+const TRIAGE_ITEM_SCENE = preload("res://scene/TriageItem.tscn")
 
-	# Here, we will create a big list of various button paths.
-	var buttons = [$Panel/Vbox/Option1, $Panel/Vbox/Option2, $Panel/Vbox/Option3]
-	
-	#Here, we will track all available options [0, 1, 2] and randomize them.
-	var indices = [0, 1, 2]
-	indices.shuffle() 
+func _ready():
+	GameManager.score_changed.connect(update_score)
+	GameManager.incidents_changed.connect(update_triage)
 
-	#Here, we will assign the text based on random indexes.
-	for i in range(3):
-		buttons[i].text = current_issue.answer[indices[i]]
-		if indices[i] == current_issue.correct_index:
-			correct_button = i
+	update_score(GameManager.score)
+	update_triage()
 
-# Here, we will create button functions.
-func _on_option_1_pressed():
-	check_answer(0)
+func update_score(score):
+	score_label.text = "Security Score: " + str(score)
 
-func _on_option_2_pressed():
-	check_answer(1)
+func update_triage():
+	# Clean up old entries safely
+	for child in incident_list.get_children():
+		child.queue_free()
 
-func _on_option_3_pressed():
-	check_answer(2)
-	
-func check_answer(button):
-	if button == correct_button:
-		correct_answer()
-	else:
-		wrong_answer()
-		
-func correct_answer():
-	print("Correct!")
-	current_employee.solve()
-	visible = false
-
-func wrong_answer():
-	print("Wrong!\n\n" + current_issue.explanation)
-	visible = false
+	# Rebuild the queue with styled elements
+	for employee in GameManager.employees:
+		if employee.has_issue and employee.current_issue:
+			# Instantiate your custom clipboard/cellphone box layout
+			var item_instance = TRIAGE_ITEM_SCENE.instantiate()
+			incident_list.add_child(item_instance)
+			
+			# Find the label inside your template node structure to assign the text safely
+			# (Adjust the path below if your label is nested differently)
+			var item_label = item_instance.get_node("MarginContainer/Label") as Label
+			
+			if item_label:
+				item_label.text = (
+					employee.employee_name
+					+ " (" 
+					+ employee.employee_type
+					+ ")\n"
+					+ "⚠️ " + employee.current_issue.employee_message
+					+ "\n\nPatience: "
+					+ str(round(employee.patience))
+					+ "%"
+				)
+				# Give it a high-contrast text color depending on your theme style background
+				item_label.add_theme_color_override("font_color", Color.WHITE)

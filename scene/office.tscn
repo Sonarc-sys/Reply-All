@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dfr3iv4iher32" path="res://scene/IssuePopup.tscn" id="2_uvqaq"]
 [ext_resource type="Texture2D" uid="uid://bgxoq4qv3dwxs" path="res://asset/pixel background office.png" id="2_wk7dr"]
 [ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
+[ext_resource type="PackedScene" uid="uid://3f2s0rvitbvj" path="res://scene/TriageItem.tscn" id="7_iboqp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wk7dr"]
 
@@ -66,5 +67,7 @@ offset_left = 23.0
 offset_top = 20.0
 offset_right = 63.0
 offset_bottom = 60.0
+
+[node name="PanelContainer" parent="." unique_id=1129583253 instance=ExtResource("7_iboqp")]
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]

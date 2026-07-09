@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://3f2s0rvitbvj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rn8o2"]
+bg_color = Color(0.07058824, 0.07058824, 0.078431375, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[node name="TriageItem" type="PanelContainer" unique_id=1129583253]
+custom_minimum_size = Vector2(200, 80)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_rn8o2")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=709860788]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1055844515]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+autowrap_mode = 2
