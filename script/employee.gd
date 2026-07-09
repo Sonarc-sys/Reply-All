@@ -47,6 +47,10 @@ func _ready():
 
 func _process(delta):
 	if has_issue and !escalated:
+		var exclamation = $UI/Exclamation
+		if exclamation.visible:
+			var pulse = 1.0 + (sin(Time.get_ticks_msec() * 0.01) * 0.1)
+			exclamation.scale = Vector2(pulse, pulse)
 		var urgency = current_issue.urgency
 		patience -= urgency * 10 * delta
 		patience_bar.value = clamp(patience,0,100)
@@ -87,9 +91,16 @@ func create_issue(issue:CyberIssue):
 			patience = 90
 		_:
 			patience = 100
-
-	$UI/Exclamation.visible = true
+			
+	var exclamation = $UI/Exclamation
+	exclamation.visible = true
+	
+	#Here, we will create a pop animation.
+	exclamation.scale =Vector2.ZERO
+	var thetween = create_tween().set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
+	thetween.tween_property(exclamation, "scale", Vector2(1,1), 0.5)
 	GameManager.incidents_changed.emit()
+	print(employee_name, "receieved issue: ", issue.issue_name)
 
 	print(
 		employee_name,
