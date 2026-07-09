@@ -22,7 +22,7 @@ var normal_issues = []
 
 
 func _ready():
-	# Separate issues by threat
+	# Here, we will create code that will separate issues by their  threat.
 	for issue in issues:
 		if issue.threat_level >= 4:
 			high_threat_issues.append(issue)
@@ -44,7 +44,7 @@ func _process(delta):
 		
 func spawn_issue():
 	var chance = randf()
-	# 25% chance of serious incident
+	#Here, we say that there is a 25% chance of serious incident.
 	if chance < 0.25:
 		spawn_high_threat()
 	else:

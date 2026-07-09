@@ -10,18 +10,20 @@ func open(employee):
 	current_issue = employee.current_issue
 	$Panel/Vbox/Question.text = current_issue.description
 
-	var answers = current_issue.answers.duplicate()
-	var correct_answer = answers[current_issue.correct_index]
-
-	answers.shuffle()
-
-	$Panel/Vbox/Option1.text = answers[0]
-	$Panel/Vbox/Option2.text = answers[1]
-	$Panel/Vbox/Option3.text = answers[2]
+	# Here, we will again create a list of various button paths
+	var buttons = [$Panel/Vbox/Option1, $Panel/Vbox/Option2, $Panel/Vbox/Option3]
 	
-	correct_button = answers.find(correct_answer)
+	# Here, again track all available options [0, 1, 2] and randomize them
+	var indices = [0, 1, 2]
+	indices.shuffle() 
 
-#Button Functions
+	#Here, we will assign text based on the randomized indexes.
+	for i in range(3):
+		buttons[i].text = current_issue.answers[indices[i]]
+		if indices[i] == current_issue.correct_index:
+			correct_button = i
+
+# Button Functions
 func _on_option_1_pressed():
 	check_answer(0)
 
@@ -40,9 +42,8 @@ func check_answer(button):
 func correct_answer():
 	print("Correct!")
 	current_employee.solve()
-	visible=false
+	visible = false
 
 func wrong_answer():
-	print("Wrong!\n\n"
-		+ current_issue.explanation)
-	visible=false
+	print("Wrong!\n\n" + current_issue.explanation)
+	visible = false

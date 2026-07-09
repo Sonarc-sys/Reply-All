@@ -12,6 +12,9 @@ signal issue_clicked(employee)
 	"CEO"
 )
 var employee_type = "Normal"
+@export var walking_speed = 70
+var direction_ofmovement = Vector2.ZERO
+var timer_movement = 0.0
 
 var has_issue = false
 @onready var patience_bar = $UI/PatienceBar
@@ -24,9 +27,11 @@ var escalated = false
 func _ready():
 	name_label.text = employee_name
 	GameManager.register_employee(self)
-	
 
-	#Employee personalities
+
+
+
+	#Here, we will create different employee personalities.
 	match employee_type:
 		"CEO":
 			patience = 70
@@ -48,7 +53,24 @@ func _process(delta):
 		if patience <= 0:
 			escalate()
 
-
+func _physics_process(delta):
+	#Here, we will countdown on our created movement timer.
+	timer_movement -= delta
+	
+	#Here, if the timer runs out, we will pick a new direction, or stay in the same place.
+	if timer_movement <= 0:
+		if randf() < 0.60: #Here, why 0.60? Because the NPC character will have a 60% chance to walk or not.
+			var rand_angle = randf() * TAU
+			direction_ofmovement = Vector2(cos(rand_angle), sin(rand_angle))
+			timer_movement = randf_range(1.0, 3.0)
+		else: #Here, we are saying or else the NPC will have a 40% chance to stay still.
+			direction_ofmovement = Vector2.ZERO
+			timer_movement = randf_range(1.5, 4.0)
+	
+	
+	#Here, we will move the NPC safely while also at the same time, matching the physics collision engine.
+	velocity = direction_ofmovement * walking_speed
+	move_and_slide()
 
 
 func create_issue(issue:CyberIssue):
