@@ -1,73 +1,59 @@
 [gd_scene format=3 uid="uid://sfyiscjawqa7"]
 
 [ext_resource type="Script" uid="uid://ii680bg6vvaq" path="res://script/employee.gd" id="1_3ctsj"]
-[ext_resource type="Texture2D" uid="uid://c58aomvt2w40k" path="res://asset/office workers.png" id="2_8csqv"]
+[ext_resource type="Texture2D" path="res://asset/characters.png" id="2_chars"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cjst8"]
-atlas = ExtResource("2_8csqv")
-region = Rect2(0, 0, 64, 64)
+[sub_resource type="AtlasTexture" id="AT_default"]
+atlas = ExtResource("2_chars")
+region = Rect2(64, 64, 64, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_3ctsj"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cjst8")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="SpriteFrames" id="SF_default"]
+animations = [{"frames": [{"duration": 1.0, "texture": SubResource("AT_default")}], "loop": true, "name": &"default", "speed": 5.0}]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8csqv"]
-radius = 20.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_body"]
+radius = 16.0
+height = 32.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_cjst8"]
-radius = 80.0
-
-[node name="Employee" type="CharacterBody2D" unique_id=1133885026 groups=["employees"]]
+[node name="Employee" type="CharacterBody2D" groups=["employees"]]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_3ctsj")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1791097780]
-position = Vector2(572.00006, 448.00003)
-scale = Vector2(2.1406255, 2.1406255)
-sprite_frames = SubResource("SpriteFrames_3ctsj")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -20)
+scale = Vector2(1.8, 1.8)
+texture_filter = 1
+sprite_frames = SubResource("SF_default")
+animation = &"default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1065821933]
-position = Vector2(571, 459)
-shape = SubResource("CircleShape2D_8csqv")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CapsuleShape2D_body")
 
-[node name="InteractionArea" type="Area2D" parent="." unique_id=1043407312]
-position = Vector2(-4, -7)
+[node name="UI" type="Node2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=373917816]
-position = Vector2(576, 466)
-shape = SubResource("CircleShape2D_cjst8")
+[node name="NameBG" type="ColorRect" parent="UI"]
+position = Vector2(-40, -92)
+size = Vector2(80, 22)
+color = Color(0.06, 0.06, 0.10, 0.85)
 
-[node name="UI" type="Node2D" parent="." unique_id=398338841]
-position = Vector2(571, 361)
+[node name="NameLabel" type="Label" parent="UI"]
+position = Vector2(-38, -92)
+size = Vector2(76, 22)
+text = "Employee"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 
-[node name="NameLabel" type="Label" parent="UI" unique_id=137555678]
-offset_left = -22.0
-offset_top = -41.0
-offset_right = 18.0
-offset_bottom = -18.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-
-[node name="PatienceBar" type="ProgressBar" parent="UI" unique_id=972629461]
-custom_minimum_size = Vector2(80, 15)
-offset_left = -37.0
-offset_top = -3.0
-offset_right = 43.0
-offset_bottom = 24.0
+[node name="PatienceBar" type="ProgressBar" parent="UI"]
+position = Vector2(-36, -68)
+custom_minimum_size = Vector2(72, 10)
 value = 100.0
 show_percentage = false
 
-[node name="Exclamation" type="Label" parent="UI" unique_id=278329229]
+[node name="Exclamation" type="Label" parent="UI"]
 visible = false
-offset_left = 48.0
-offset_top = -52.0
-offset_right = 92.0
-offset_bottom = 47.0
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 72
+position = Vector2(-14, -130)
+theme_override_colors/font_color = Color(1.0, 0.15, 0.10, 1)
+theme_override_font_sizes/font_size = 64
 text = "!"
