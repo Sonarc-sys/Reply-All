@@ -528,13 +528,19 @@ polygon = PackedVector2Array(-583.5, -14, -583.5, 14, 583.5, 14, 583.5, -14)
 [node name="LeftBorder Wall" type="StaticBody2D" parent="Map" unique_id=1415572206]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/LeftBorder Wall" unique_id=1639255120]
-position = Vector2(846, -508)
+position = Vector2(845, -508)
 shape = SubResource("RectangleShape2D_seri3")
 
 [node name="Upper Wall" type="StaticBody2D" parent="Map" unique_id=371196974]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Upper Wall" unique_id=39761132]
 position = Vector2(-758.0625, 478.8125)
+shape = SubResource("RectangleShape2D_4spjl")
+
+[node name="RightBorder Wall2" type="StaticBody2D" parent="Map" unique_id=1114826021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/RightBorder Wall2" unique_id=1110974757]
+position = Vector2(1927, 479)
 shape = SubResource("RectangleShape2D_4spjl")
 
 [node name="PixelBackgroundOffice" type="Sprite2D" parent="." unique_id=1761273186]
