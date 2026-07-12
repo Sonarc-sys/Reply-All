@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dsh758n5771af"]
 
 [ext_resource type="Script" uid="uid://dhl0evi260gay" path="res://script/player.gd" id="1_si3wx"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://c58aomvt2w40k" path="res://asset/characters.png" id="2_player"]
+=======
+>>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_player"]
-atlas = ExtResource("2_player")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_player"]
@@ -22,6 +24,7 @@ animations = [{
 radius = 16.0
 height = 32.0
 
+<<<<<<< Updated upstream
 [node name="Player" type="CharacterBody2D" unique_id=1676413528]
 collision_mask = 0
 script = ExtResource("1_si3wx")
@@ -34,4 +37,18 @@ sprite_frames = SubResource("SpriteFrames_player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1430369263]
 position = Vector2(226, 209)
+=======
+[node name="Player" type="CharacterBody2D" unique_id=350423311]
+collision_mask = 0
+script = ExtResource("1_si3wx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1632732264]
+texture_filter = 1
+position = Vector2(0, -20)
+scale = Vector2(1.8, 1.8)
+sprite_frames = SubResource("SpriteFrames_player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1967443251]
+position = Vector2(0, -8)
+>>>>>>> Stashed changes
 shape = SubResource("CapsuleShape2D_body")

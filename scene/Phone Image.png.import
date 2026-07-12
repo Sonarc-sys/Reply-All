@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream
-uid="uid://c58aomvt2w40k"
-=======
-uid="uid://elk878iv7f1a"
->>>>>>> Stashed changes
-path="res://.godot/imported/characters.png-829eeb4241820a41e2d9ba66aefd212c.ctex"
+uid="uid://ckpdbe7yb5osx"
+path="res://.godot/imported/Phone Image.png-622367b6f99cdfc0257ff4e79b6ad21e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/characters.png"
-dest_files=["res://.godot/imported/characters.png-829eeb4241820a41e2d9ba66aefd212c.ctex"]
+source_file="res://scene/Phone Image.png"
+dest_files=["res://.godot/imported/Phone Image.png-622367b6f99cdfc0257ff4e79b6ad21e.ctex"]
 
 [params]
 
