@@ -3,19 +3,52 @@
 [ext_resource type="Script" uid="uid://ii680bg6vvaq" path="res://script/employee.gd" id="1_3ctsj"]
 [ext_resource type="Texture2D" uid="uid://c58aomvt2w40k" path="res://asset/characters.png" id="2_chars"]
 
-[sub_resource type="AtlasTexture" id="AT_default"]
+[sub_resource type="AtlasTexture" id="AT_idle"]
 atlas = ExtResource("2_chars")
-region = Rect2(64, 64, 64, 64)
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AT_w0"]
+atlas = ExtResource("2_chars")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AT_w1"]
+atlas = ExtResource("2_chars")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AT_w2"]
+atlas = ExtResource("2_chars")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AT_w3"]
+atlas = ExtResource("2_chars")
+region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SF_default"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AT_default")
+"texture": SubResource("AT_idle")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_w3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_body"]
@@ -66,6 +99,7 @@ value = 100.0
 show_percentage = false
 
 [node name="Exclamation" type="Label" parent="UI" unique_id=577583120]
+visible = false
 offset_left = 548.0
 offset_top = 94.0
 offset_right = 566.0
