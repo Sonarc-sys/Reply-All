@@ -7,6 +7,35 @@
 [ext_resource type="Texture2D" uid="uid://bgxoq4qv3dwxs" path="res://asset/pixel background office.png" id="2_wk7dr"]
 [ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
 [ext_resource type="PackedScene" uid="uid://3f2s0rvitbvj" path="res://scene/TriageItem.tscn" id="7_iboqp"]
+[ext_resource type="Texture2D" uid="uid://dpr4s3akpdp20" path="res://asset/Map/Map__0003_Background.png" id="8_seri3"]
+[ext_resource type="Texture2D" uid="uid://cnifnd38kwlgo" path="res://asset/Map/Map__0001s_0001_Secretary-Desk-upper.png" id="9_4spjl"]
+[ext_resource type="Texture2D" uid="uid://csrx0uc1etpyy" path="res://asset/Map/Map__0001s_0002_Secretary-Desk.png" id="10_m1geu"]
+[ext_resource type="Texture2D" uid="uid://q13brcpn0p3p" path="res://asset/Map/Map__0001s_0000_Cubicle-Divider.png" id="11_vfpnv"]
+[ext_resource type="Texture2D" uid="uid://bgilc6pftwef8" path="res://asset/Map/Map__0004s_0006_Vending-Machines-and-others.png" id="12_qv62g"]
+[ext_resource type="Texture2D" uid="uid://bnshgatmcjpdb" path="res://asset/Map/Map__0004s_0005_2-Couches-and-Plant.png" id="13_1dort"]
+[ext_resource type="Texture2D" uid="uid://b1neu8pt6nv52" path="res://asset/Map/Map__0004s_0000_Left-Breakroom-Divider.png" id="14_6q284"]
+[ext_resource type="Texture2D" uid="uid://bh1enqjnsjwgt" path="res://asset/Map/Map__0004s_0001_Right-Breakroom-Divider.png" id="15_pr4d6"]
+[ext_resource type="Texture2D" uid="uid://bks8w4lg6shao" path="res://asset/Map/Map__0004s_0003_Break-Room-Table.png" id="16_yoaiw"]
+[ext_resource type="Texture2D" uid="uid://cgrfk6lr887bm" path="res://asset/Map/Map__0004s_0002_Left-Chair.png" id="17_w4psh"]
+[ext_resource type="Texture2D" uid="uid://c42yxflts7ukx" path="res://asset/Map/Map__0004s_0004_Right-Chair-.png" id="18_33w1t"]
+[ext_resource type="Texture2D" uid="uid://cq3cxalmaeywq" path="res://asset/Map/Map__0001_Cubicle-Cluster.png" id="19_68t56"]
+[ext_resource type="Texture2D" uid="uid://qhsu34gfqchk" path="res://asset/Map/Map__0000_CEO-Cubicle.png" id="20_ydi3i"]
+[ext_resource type="Texture2D" uid="uid://dlkgnddltmikb" path="res://asset/Map/Map__0003s_0005_Boardroom-Wall.png" id="21_7qnlp"]
+[ext_resource type="Texture2D" uid="uid://ds4mknkhmbuwq" path="res://asset/Map/Map__0003s_0001_Printer-Table.png" id="22_gah80"]
+[ext_resource type="Texture2D" uid="uid://byoyir6pdomkq" path="res://asset/Map/Map__0003s_0000_Coffee-Table-and-Tree.png" id="23_rl73t"]
+[ext_resource type="Texture2D" uid="uid://d2ybg5vg4cslc" path="res://asset/Map/Map__0003s_0003_Board-Table.png" id="24_mk753"]
+[ext_resource type="Texture2D" uid="uid://dnvct62q76gic" path="res://asset/Map/Map__0003s_0004_boardroom-Serveroom-Divider.png" id="25_6odtb"]
+[ext_resource type="Texture2D" uid="uid://cdill43u5pjvo" path="res://asset/Map/Map__0000s_0000_Right-Vertical-Wall.png" id="26_qbscn"]
+[ext_resource type="Texture2D" uid="uid://df1hnewy7g5q3" path="res://asset/Map/Map__0002s_0008_Server-Room-Inner-Wall.png" id="27_7h6bd"]
+[ext_resource type="Texture2D" uid="uid://buux446s244n5" path="res://asset/Map/Map__0002s_0001_Upper-IT-Desk.png" id="28_46qiu"]
+[ext_resource type="Texture2D" uid="uid://d33mbn6tidcwn" path="res://asset/Map/Map__0002s_0000_Lower-IT-Desk.png" id="29_viurs"]
+[ext_resource type="Texture2D" uid="uid://ti3tdlmpwx6y" path="res://asset/Map/Map__0002s_0003_Left-Table.png" id="30_ifrvc"]
+[ext_resource type="Texture2D" uid="uid://c55t2i1tvtfe" path="res://asset/Map/Map__0002s_0007_Inner-Server-Room-walls.png" id="31_na3bg"]
+[ext_resource type="Texture2D" uid="uid://d303y4wb588m8" path="res://asset/Map/Map__0002s_0006_Server-Row-3.png" id="32_kdaek"]
+[ext_resource type="Texture2D" uid="uid://bederkkat5h2l" path="res://asset/Map/Map__0000s_0001_Hallway-Upper-Wall.png" id="33_rqnvb"]
+[ext_resource type="Texture2D" uid="uid://dr286k4oyxb6p" path="res://asset/Map/Map__0000s_0002_Lower-Hallway-Wall.png" id="34_snxsr"]
+[ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
+[ext_resource type="Texture2D" uid="uid://cvxgmso0xv7p6" path="res://asset/Map/Map__0002_Bottom-Wall.png" id="36_8ep84"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wk7dr"]
 
@@ -14,6 +43,7 @@
 script = ExtResource("1_riodj")
 
 [node name="PixelBackgroundOffice" type="Sprite2D" parent="." unique_id=1761273186]
+visible = false
 position = Vector2(579.55554, 329)
 scale = Vector2(0.72444445, 0.72444445)
 texture = ExtResource("2_wk7dr")
@@ -69,5 +99,185 @@ offset_right = 63.0
 offset_bottom = 60.0
 
 [node name="PanelContainer" parent="." unique_id=1129583253 instance=ExtResource("7_iboqp")]
+
+[node name="Map" type="Node2D" parent="." unique_id=390555796]
+
+[node name="Background" type="Sprite2D" parent="Map" unique_id=171329901]
+position = Vector2(584, 478)
+texture = ExtResource("8_seri3")
+
+[node name="Entry Hallway" type="Node2D" parent="Map" unique_id=1202782627]
+
+[node name="Secratary Cubicle 1" type="Sprite2D" parent="Map/Entry Hallway" unique_id=1197564615]
+position = Vector2(146, 279)
+texture = ExtResource("9_4spjl")
+
+[node name="Secretary Cubicle 2" type="Sprite2D" parent="Map/Entry Hallway" unique_id=865723841]
+position = Vector2(146, 378)
+texture = ExtResource("10_m1geu")
+
+[node name="Door Hallway Wall" type="Sprite2D" parent="Map/Entry Hallway" unique_id=764977170]
+position = Vector2(76, 169)
+texture = ExtResource("11_vfpnv")
+
+[node name="BreakRoom" type="Node2D" parent="Map" unique_id=326120212]
+
+[node name="Vending Machines" type="Sprite2D" parent="Map/BreakRoom" unique_id=1642107967]
+position = Vector2(405, 136)
+texture = ExtResource("12_qv62g")
+
+[node name="Couches and Tree" type="Sprite2D" parent="Map/BreakRoom" unique_id=759338298]
+position = Vector2(168, 151)
+texture = ExtResource("13_1dort")
+
+[node name="Left Breakroom Wall" type="Sprite2D" parent="Map/BreakRoom" unique_id=641996506]
+position = Vector2(286, 271)
+texture = ExtResource("14_6q284")
+
+[node name="Right Breakroom Wall" type="Sprite2D" parent="Map/BreakRoom" unique_id=345805796]
+position = Vector2(577, 272)
+texture = ExtResource("15_pr4d6")
+
+[node name="Break Room table1" type="Sprite2D" parent="Map/BreakRoom" unique_id=2095024716]
+position = Vector2(341, 356)
+texture = ExtResource("16_yoaiw")
+
+[node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table1" unique_id=126750148]
+position = Vector2(-38, -10)
+texture = ExtResource("17_w4psh")
+
+[node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table1" unique_id=1500618434]
+position = Vector2(40, -8)
+texture = ExtResource("18_33w1t")
+
+[node name="Break Room table2" type="Sprite2D" parent="Map/BreakRoom" unique_id=126687484]
+position = Vector2(521, 360)
+texture = ExtResource("16_yoaiw")
+
+[node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table2" unique_id=1330712450]
+position = Vector2(39, -8)
+texture = ExtResource("18_33w1t")
+
+[node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table2" unique_id=1940055530]
+position = Vector2(-39, -10)
+texture = ExtResource("17_w4psh")
+
+[node name="Break Room table3" type="Sprite2D" parent="Map/BreakRoom" unique_id=1704802675]
+position = Vector2(515, 268)
+texture = ExtResource("16_yoaiw")
+
+[node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table3" unique_id=507763856]
+position = Vector2(-42, -10)
+texture = ExtResource("17_w4psh")
+
+[node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table3" unique_id=62733729]
+position = Vector2(45, -8)
+texture = ExtResource("18_33w1t")
+
+[node name="Break Room table4" type="Sprite2D" parent="Map/BreakRoom" unique_id=421566745]
+position = Vector2(345, 261)
+texture = ExtResource("16_yoaiw")
+
+[node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table4" unique_id=379455694]
+position = Vector2(-41, -9)
+texture = ExtResource("17_w4psh")
+
+[node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table4" unique_id=1549759515]
+position = Vector2(42, -8)
+texture = ExtResource("18_33w1t")
+
+[node name="Main Office Area" type="Node2D" parent="Map" unique_id=1502121410]
+
+[node name="Cubicle Cluster" type="Sprite2D" parent="Map/Main Office Area" unique_id=1572912720]
+position = Vector2(704, 213)
+texture = ExtResource("19_68t56")
+
+[node name="CEO Cubicle" type="Sprite2D" parent="Map/Main Office Area" unique_id=953562690]
+position = Vector2(1019.75, 238)
+scale = Vector2(1.0261322, 1)
+texture = ExtResource("20_ydi3i")
+
+[node name="BoardRoom" type="Node2D" parent="Map" unique_id=1384085087]
+
+[node name="Board Room Wall" type="Sprite2D" parent="Map/BoardRoom" unique_id=1204340529]
+position = Vector2(254, 514)
+texture = ExtResource("21_7qnlp")
+
+[node name="Printer Table" type="Sprite2D" parent="Map/BoardRoom" unique_id=1866172121]
+position = Vector2(252, 530)
+texture = ExtResource("22_gah80")
+
+[node name="Coffee Table and Tree" type="Sprite2D" parent="Map/BoardRoom" unique_id=40478336]
+position = Vector2(61, 531)
+texture = ExtResource("23_rl73t")
+
+[node name="Board Table" type="Sprite2D" parent="Map/BoardRoom" unique_id=1930431643]
+position = Vector2(378, 691)
+texture = ExtResource("24_mk753")
+
+[node name="Boardroom Wall Divider" type="Sprite2D" parent="Map/BoardRoom" unique_id=1583052567]
+position = Vector2(507, 725)
+texture = ExtResource("25_6odtb")
+
+[node name="ServerRoom" type="Node2D" parent="Map" unique_id=1754038388]
+
+[node name="Right Server Room Wall" type="Sprite2D" parent="Map/ServerRoom" unique_id=522682029]
+position = Vector2(944, 612.75)
+scale = Vector2(1, 1.4693655)
+texture = ExtResource("26_qbscn")
+
+[node name="Server Room Wall" type="Sprite2D" parent="Map/ServerRoom" unique_id=63600278]
+position = Vector2(726, 512)
+texture = ExtResource("27_7h6bd")
+
+[node name="Upper IT Desk" type="Sprite2D" parent="Map/ServerRoom" unique_id=1012919009]
+position = Vector2(609, 557)
+texture = ExtResource("28_46qiu")
+
+[node name="Lower IT Desk" type="Sprite2D" parent="Map/ServerRoom" unique_id=1323191039]
+position = Vector2(608, 656)
+texture = ExtResource("29_viurs")
+
+[node name="Left Printer Table" type="Sprite2D" parent="Map/ServerRoom" unique_id=1649153878]
+position = Vector2(767, 531)
+texture = ExtResource("30_ifrvc")
+
+[node name="Right Printer Table" type="Sprite2D" parent="Map/ServerRoom" unique_id=590254158]
+position = Vector2(859, 533)
+texture = ExtResource("30_ifrvc")
+
+[node name="Inner Server Wall" type="Sprite2D" parent="Map/ServerRoom" unique_id=637124715]
+position = Vector2(822, 788)
+texture = ExtResource("31_na3bg")
+
+[node name="Bottom Server Row" type="Sprite2D" parent="Map/ServerRoom" unique_id=1143656579]
+position = Vector2(825, 920)
+texture = ExtResource("32_kdaek")
+
+[node name="Middle Server Row" type="Sprite2D" parent="Map/ServerRoom" unique_id=111389666]
+position = Vector2(825, 820)
+texture = ExtResource("32_kdaek")
+
+[node name="Top Server Row" type="Sprite2D" parent="Map/ServerRoom" unique_id=428482325]
+position = Vector2(825, 724)
+texture = ExtResource("32_kdaek")
+
+[node name="Main Hallway" type="Node2D" parent="Map" unique_id=396824245]
+
+[node name="Upper Hallway Wall" type="Sprite2D" parent="Map/Main Hallway" unique_id=2005199803]
+position = Vector2(507, 427)
+texture = ExtResource("33_rqnvb")
+
+[node name="Lower hallway wall" type="Sprite2D" parent="Map/Main Hallway" unique_id=247284495]
+position = Vector2(474, 495)
+texture = ExtResource("34_snxsr")
+
+[node name="Black Bar" type="Sprite2D" parent="Map" unique_id=1200372671]
+position = Vector2(1057, 631)
+texture = ExtResource("35_y3oto")
+
+[node name="Bottom Wall" type="Sprite2D" parent="Map" unique_id=894646853]
+position = Vector2(583, 941)
+texture = ExtResource("36_8ep84")
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]
