@@ -1,28 +1,36 @@
 [gd_scene format=3 uid="uid://3f2s0rvitbvj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rn8o2"]
-bg_color = Color(0.07058824, 0.07058824, 0.078431375, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 10
+[ext_resource type="Texture2D" uid="uid://ckpdbe7yb5osx" path="res://scene/Phone Image.png" id="1_6maa2"]
 
-[node name="TriageItem" type="PanelContainer" unique_id=1129583253]
+[sub_resource type="LabelSettings" id="LabelSettings_rn8o2"]
+
+[node name="TriageItem" type="PanelContainer" unique_id=276811036]
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1822899265]
 custom_minimum_size = Vector2(200, 80)
-offset_right = 40.0
-offset_bottom = 40.0
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_rn8o2")
-
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=709860788]
 layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+texture = ExtResource("1_6maa2")
 
-[node name="Label" type="Label" parent="MarginContainer" unique_id=1055844515]
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect" unique_id=1454202246]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect/MarginContainer" unique_id=790296174]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-autowrap_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NinePatchRect/MarginContainer/ScrollContainer" unique_id=663377380]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1681211640]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_rn8o2")
+autowrap_mode = 1

@@ -3,26 +3,52 @@
 [ext_resource type="Script" uid="uid://dhl0evi260gay" path="res://script/player.gd" id="1_si3wx"]
 [ext_resource type="Texture2D" uid="uid://c58aomvt2w40k" path="res://asset/characters.png" id="2_player"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_player"]
+[sub_resource type="AtlasTexture" id="AT_idle"]
 atlas = ExtResource("2_player")
 region = Rect2(0, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AT_w0"]
+atlas = ExtResource("2_player")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AT_w1"]
+atlas = ExtResource("2_player")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AT_w2"]
+atlas = ExtResource("2_player")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AT_w3"]
+atlas = ExtResource("2_player")
+region = Rect2(192, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_player"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_player")
-}],
+"frames": [{"duration": 1.0, "texture": SubResource("AT_idle")}],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
+}, {
+"frames": [
+{"duration": 1.0, "texture": SubResource("AT_w0")},
+{"duration": 1.0, "texture": SubResource("AT_w1")},
+{"duration": 1.0, "texture": SubResource("AT_w2")},
+{"duration": 1.0, "texture": SubResource("AT_w3")}
+],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
 size = Vector2(37, 13)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
+radius = 100.0
+
 [node name="Player" type="CharacterBody2D" unique_id=1676413528]
-collision_mask = 0
+collision_mask = 1
 script = ExtResource("1_si3wx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=35757525]
@@ -30,6 +56,7 @@ texture_filter = 1
 position = Vector2(229, 191)
 scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_player")
+animation = &"default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1430369263]
 y_sort_enabled = true
@@ -42,3 +69,14 @@ limit_top = 0
 limit_right = 1167
 limit_bottom = 952
 position_smoothing_enabled = true
+
+[node name="InteractionArea" type="Area2D" parent="."]
+position = Vector2(227.5, 230.5)
+collision_layer = 0
+collision_mask = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_interact")
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
