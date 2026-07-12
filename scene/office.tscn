@@ -42,64 +42,6 @@
 [node name="Office" type="Node2D" unique_id=475616271]
 script = ExtResource("1_riodj")
 
-[node name="PixelBackgroundOffice" type="Sprite2D" parent="." unique_id=1761273186]
-visible = false
-position = Vector2(579.55554, 329)
-scale = Vector2(0.72444445, 0.72444445)
-texture = ExtResource("2_wk7dr")
-
-[node name="IncidentTimer" type="Timer" parent="." unique_id=181824542]
-wait_time = 8.0
-autostart = true
-
-[node name="IssuePopup" parent="." unique_id=343395867 instance=ExtResource("2_uvqaq")]
-
-[node name="Player" parent="." unique_id=1881935737 instance=ExtResource("2_nwkqs")]
-position = Vector2(-34, -281)
-
-[node name="Employees" type="Node2D" parent="." unique_id=1871804216]
-
-[node name="Employee1" parent="Employees" unique_id=1133885026 instance=ExtResource("2_pgah7")]
-position = Vector2(428, -36)
-employee_name = "Bob"
-employee_type = "Intern"
-
-[node name="Employee2" parent="Employees" unique_id=280188704 instance=ExtResource("2_pgah7")]
-position = Vector2(-361, -144)
-employee_name = "George"
-employee_type = "Manager"
-
-[node name="Employee3" parent="Employees" unique_id=2140453044 instance=ExtResource("2_pgah7")]
-position = Vector2(-390, 77)
-employee_name = "Steven"
-employee_type = "CEO"
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
-script = ExtResource("5_eglr7")
-
-[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2082554985]
-offset_left = 998.0
-offset_top = 15.0
-offset_right = 1125.0
-offset_bottom = 64.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Security Score: 0
-"
-
-[node name="TriagePanel" type="Panel" parent="CanvasLayer" unique_id=1382899926]
-offset_right = 176.0
-offset_bottom = 168.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wk7dr")
-
-[node name="IncidentList" type="VBoxContainer" parent="CanvasLayer/TriagePanel" unique_id=1081560639]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 20.0
-offset_right = 63.0
-offset_bottom = 60.0
-
-[node name="PanelContainer" parent="." unique_id=1129583253 instance=ExtResource("7_iboqp")]
-
 [node name="Map" type="Node2D" parent="." unique_id=390555796]
 
 [node name="Background" type="Sprite2D" parent="Map" unique_id=171329901]
@@ -112,13 +54,23 @@ texture = ExtResource("8_seri3")
 position = Vector2(146, 279)
 texture = ExtResource("9_4spjl")
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Entry Hallway/Secratary Cubicle 1" unique_id=865822376]
+y_sort_enabled = true
+polygon = PackedVector2Array(-74, 42, -35, 42, -35, 11, -20, 11, -20, 12.200001, -31.3, 14, -34, 14, -29, 27, -11, 27, -9, 7, -3, 7, 1, -7, 63.199997, -7, 65.2, 11, 74, 11, 74, -42, -74, -42)
+
 [node name="Secretary Cubicle 2" type="Sprite2D" parent="Map/Entry Hallway" unique_id=865723841]
 position = Vector2(146, 378)
 texture = ExtResource("10_m1geu")
 
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Entry Hallway/Secretary Cubicle 2" unique_id=559127966]
+polygon = PackedVector2Array(-74, -64.5, -74, 64.5, 74, 64.5, 74, -9.599998, 65.899994, -7.5, 63, -7.5, 63, 28.5, -35, 28.5, -35, -10.5, -20, -10.5, -34, -8.200001, -34, 7, -29, 7, -26, 7, -22, 8, -19, 8, -15, 8, -10, 9, -11, -14, -4, -15, -3, -23, 1, -29.5, 74, -29.5, 74, -64.5)
+
 [node name="Door Hallway Wall" type="Sprite2D" parent="Map/Entry Hallway" unique_id=764977170]
 position = Vector2(76, 169)
 texture = ExtResource("11_vfpnv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Entry Hallway/Door Hallway Wall" unique_id=2000202727]
+polygon = PackedVector2Array(-3.5, -69.5, -3.5, 69.5, 3.5, 69.5, 3.5, -69.5)
 
 [node name="BreakRoom" type="Node2D" parent="Map" unique_id=326120212]
 
@@ -133,6 +85,12 @@ texture = ExtResource("13_1dort")
 [node name="Left Breakroom Wall" type="Sprite2D" parent="Map/BreakRoom" unique_id=641996506]
 position = Vector2(286, 271)
 texture = ExtResource("14_6q284")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/BreakRoom/Left Breakroom Wall" unique_id=1873228733]
+polygon = PackedVector2Array(3.5, 170, 3.5, -75, -3.5, -75, -3.5, 170)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/BreakRoom/Left Breakroom Wall" unique_id=2094929600]
+polygon = PackedVector2Array(-3.5, -170, -3.5, -99, 3.5, -99, 3.5, -170)
 
 [node name="Right Breakroom Wall" type="Sprite2D" parent="Map/BreakRoom" unique_id=345805796]
 position = Vector2(577, 272)
@@ -311,5 +269,64 @@ texture = ExtResource("35_y3oto")
 [node name="Bottom Wall" type="Sprite2D" parent="Map" unique_id=894646853]
 position = Vector2(583, 941)
 texture = ExtResource("36_8ep84")
+
+[node name="PixelBackgroundOffice" type="Sprite2D" parent="." unique_id=1761273186]
+visible = false
+position = Vector2(579.55554, 329)
+scale = Vector2(0.72444445, 0.72444445)
+texture = ExtResource("2_wk7dr")
+
+[node name="IncidentTimer" type="Timer" parent="." unique_id=181824542]
+wait_time = 8.0
+autostart = true
+
+[node name="IssuePopup" parent="." unique_id=343395867 instance=ExtResource("2_uvqaq")]
+
+[node name="Player" parent="." unique_id=1881935737 instance=ExtResource("2_nwkqs")]
+position = Vector2(33, 183)
+collision_mask = 1
+
+[node name="Employees" type="Node2D" parent="." unique_id=1871804216]
+
+[node name="Employee1" parent="Employees" unique_id=1133885026 instance=ExtResource("2_pgah7")]
+position = Vector2(425, 227)
+employee_name = "Bob"
+employee_type = "Intern"
+
+[node name="Employee2" parent="Employees" unique_id=280188704 instance=ExtResource("2_pgah7")]
+position = Vector2(847, 395)
+employee_name = "George"
+employee_type = "Manager"
+
+[node name="Employee3" parent="Employees" unique_id=2140453044 instance=ExtResource("2_pgah7")]
+position = Vector2(171, 650)
+employee_name = "Steven"
+employee_type = "CEO"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
+script = ExtResource("5_eglr7")
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2082554985]
+offset_left = 998.0
+offset_top = 15.0
+offset_right = 1125.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Security Score: 0
+"
+
+[node name="TriagePanel" type="Panel" parent="CanvasLayer" unique_id=1382899926]
+offset_right = 176.0
+offset_bottom = 168.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wk7dr")
+
+[node name="IncidentList" type="VBoxContainer" parent="CanvasLayer/TriagePanel" unique_id=1081560639]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 20.0
+offset_right = 63.0
+offset_bottom = 60.0
+
+[node name="PanelContainer" parent="." unique_id=1129583253 instance=ExtResource("7_iboqp")]
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]

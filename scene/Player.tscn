@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dsh758n5771af"]
 
 [ext_resource type="Script" uid="uid://dhl0evi260gay" path="res://script/player.gd" id="1_si3wx"]
-[ext_resource type="Texture2D" path="res://asset/characters.png" id="2_player"]
+[ext_resource type="Texture2D" uid="uid://c58aomvt2w40k" path="res://asset/characters.png" id="2_player"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_player"]
 atlas = ExtResource("2_player")
@@ -9,8 +9,11 @@ region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_player"]
 animations = [{
-"frames": [{"duration": 1.0, "texture": SubResource("AtlasTexture_player")}],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_player")
+}],
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }]
@@ -19,18 +22,16 @@ animations = [{
 radius = 16.0
 height = 32.0
 
-[node name="Player" type="CharacterBody2D"]
-collision_layer = 1
+[node name="Player" type="CharacterBody2D" unique_id=1676413528]
 collision_mask = 0
 script = ExtResource("1_si3wx")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -20)
-scale = Vector2(1.8, 1.8)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=35757525]
 texture_filter = 1
+position = Vector2(229, 191)
+scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_player")
-animation = &"default"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1430369263]
+position = Vector2(226, 209)
 shape = SubResource("CapsuleShape2D_body")
