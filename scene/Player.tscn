@@ -20,9 +20,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_body"]
-radius = 16.0
-height = 32.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
+size = Vector2(37, 13)
 
 <<<<<<< Updated upstream
 [node name="Player" type="CharacterBody2D" unique_id=1676413528]
@@ -36,6 +35,7 @@ scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_player")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1430369263]
+<<<<<<< HEAD
 position = Vector2(226, 209)
 =======
 [node name="Player" type="CharacterBody2D" unique_id=350423311]
@@ -52,3 +52,15 @@ sprite_frames = SubResource("SpriteFrames_player")
 position = Vector2(0, -8)
 >>>>>>> Stashed changes
 shape = SubResource("CapsuleShape2D_body")
+=======
+y_sort_enabled = true
+position = Vector2(227.5, 230.5)
+shape = SubResource("RectangleShape2D_seri3")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=530706158]
+limit_left = 0
+limit_top = 0
+limit_right = 1167
+limit_bottom = 952
+position_smoothing_enabled = true
+>>>>>>> 7abf401bdc8b3d4c73169506da46c3bfaf7934e6
