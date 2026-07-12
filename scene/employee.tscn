@@ -51,9 +51,8 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_body"]
-radius = 16.0
-height = 32.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
+size = Vector2(38, 32)
 
 [node name="Employee" type="CharacterBody2D" unique_id=1292802840 groups=["employees"]]
 collision_layer = 2
@@ -67,8 +66,8 @@ scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SF_default")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=360066229]
-position = Vector2(492, 213)
-shape = SubResource("CapsuleShape2D_body")
+position = Vector2(492, 232)
+shape = SubResource("RectangleShape2D_seri3")
 
 [node name="UI" type="Node2D" parent="." unique_id=2121231054]
 
