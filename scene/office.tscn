@@ -215,6 +215,38 @@ texture = ExtResource("23_rl73t")
 position = Vector2(378, 691)
 texture = ExtResource("24_mk753")
 
+[node name="Right Chair" type="Sprite2D" parent="Map/BoardRoom/Board Table" unique_id=883025772]
+position = Vector2(60, -89)
+texture = ExtResource("18_33w1t")
+
+[node name="Right Chair2" type="Sprite2D" parent="Map/BoardRoom/Board Table" unique_id=1222361140]
+position = Vector2(59, -40)
+texture = ExtResource("18_33w1t")
+
+[node name="Right Chair3" type="Sprite2D" parent="Map/BoardRoom/Board Table" unique_id=258389018]
+position = Vector2(58, 11)
+texture = ExtResource("18_33w1t")
+
+[node name="Right Chair4" type="Sprite2D" parent="Map/BoardRoom/Board Table" unique_id=99621426]
+position = Vector2(60, 66)
+texture = ExtResource("18_33w1t")
+
+[node name="Left Chair" type="Sprite2D" parent="Map/BoardRoom/Board Table" unique_id=1698512394]
+position = Vector2(-57, -95)
+texture = ExtResource("17_w4psh")
+
+[node name="Left Chair2" type="Sprite2D" parent="Map/BoardRoom/Board Table" unique_id=306223684]
+position = Vector2(-59, -49)
+texture = ExtResource("17_w4psh")
+
+[node name="Left Chair3" type="Sprite2D" parent="Map/BoardRoom/Board Table" unique_id=1013939361]
+position = Vector2(-60, 67)
+texture = ExtResource("17_w4psh")
+
+[node name="Left Chair4" type="Sprite2D" parent="Map/BoardRoom/Board Table" unique_id=858693686]
+position = Vector2(-57, 7)
+texture = ExtResource("17_w4psh")
+
 [node name="Boardroom Wall Divider" type="Sprite2D" parent="Map/BoardRoom" unique_id=1583052567]
 position = Vector2(507, 725)
 texture = ExtResource("25_6odtb")
