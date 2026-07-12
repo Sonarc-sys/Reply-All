@@ -73,7 +73,7 @@ func _physics_process(delta):
 	
 	
 	#Here, we will move the NPC safely while also at the same time, matching the physics collision engine.
-	velocity = direction_ofmovement * walking_speed
+	velocity = direction_ofmovement * (walking_speed if walking_speed != null else 70)
 	move_and_slide()
 
 
@@ -110,7 +110,32 @@ func create_issue(issue:CyberIssue):
 
 func interact():
 	if has_issue:
-		issue_clicked.emit(self)
+		issue_clicked.emit(self) # Sends the signal" ---")
+	
+	# 1. Check if the employee even has an issue
+	if not has_issue:
+		print("DEBUG: Employee has no issue.")
+		return
+		
+	print("DEBUG: Employee has an issue! Searching for popup...")
+	
+	# 2. Search for the popup (The path must be exact)
+	# If this returns null, the name "IssuePopup" in your scene tree is wrong
+	var popup = get_tree().current_scene.find_child("IssuePopup", true, false)
+	
+	if popup:
+		print("DEBUG: Found IssuePopup node!")
+		
+		# 3. Try to call the function. 
+		# CAUTION: Is the function inside IssuePopup.gd actually called 'show_issue'?
+		# Check that file! If it's called 'open' or 'display', change it below.
+		if popup.has_method("show_issue"):
+			popup.show_issue(current_issue)
+			print("DEBUG: show_issue() was called!")
+		else:
+			print("CRITICAL ERROR: IssuePopup node exists, but it has no function named 'show_issue'.")
+	else:
+		print("CRITICAL ERROR: Could not find a node named 'IssuePopup' in the scene tree!")
 
 func solve():
 	var solved_issue = current_issue
