@@ -1,12 +1,14 @@
 extends CanvasLayer
 
-@onready var score_label = $ScoreLabel
-@onready var incident_list = $TriagePanel/IncidentList
-
-# Preload your newly styled cell notification / clipboard item template
 const TRIAGE_ITEM_SCENE = preload("res://scene/TriageItem.tscn")
 
+var score_label
+var incident_list
+
 func _ready():
+	score_label   = get_node("ScoreLabel")
+	incident_list = get_node("TriagePanel/IncidentList")
+
 	GameManager.score_changed.connect(update_score)
 	GameManager.incidents_changed.connect(update_triage)
 
@@ -14,28 +16,29 @@ func _ready():
 	update_triage()
 
 func update_score(score):
-	score_label.text = "Security Score: " + str(score)
+	if score_label:
+		score_label.text = "Security Score: " + str(score)
 
 func update_triage():
-	# Clean up old entries safely
+	if incident_list == null:
+		print("update_triage: incident_list node not found! Check your path.")
+		return
+
 	for child in incident_list.get_children():
 		child.queue_free()
 
-	# Rebuild the queue with styled elements
 	for employee in GameManager.employees:
+		if not is_instance_valid(employee):
+			continue
 		if employee.has_issue and employee.current_issue:
-			# Instantiate your custom clipboard/cellphone box layout
 			var item_instance = TRIAGE_ITEM_SCENE.instantiate()
 			incident_list.add_child(item_instance)
-			
-			# Find the label inside your template node structure to assign the text safely
-			# (Adjust the path below if your label is nested differently)
-			var item_label = item_instance.get_node("MarginContainer/Label") as Label
-			
+
+			var item_label = item_instance.find_child("Label", true, false) as Label
 			if item_label:
 				item_label.text = (
 					employee.employee_name
-					+ " (" 
+					+ " ("
 					+ employee.employee_type
 					+ ")\n"
 					+ "⚠️ " + employee.current_issue.employee_message
@@ -43,5 +46,4 @@ func update_triage():
 					+ str(round(employee.patience))
 					+ "%"
 				)
-				# Give it a high-contrast text color depending on your theme style background
 				item_label.add_theme_color_override("font_color", Color.WHITE)
