@@ -37,6 +37,14 @@
 [ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
 [ext_resource type="Texture2D" uid="uid://cvxgmso0xv7p6" path="res://asset/Map/Map__0002_Bottom-Wall.png" id="36_8ep84"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjf4h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5270r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nn7b"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
 size = Vector2(1687.5, 1318.5)
 
@@ -138,6 +146,11 @@ texture = ExtResource("17_w4psh")
 position = Vector2(40, -8)
 texture = ExtResource("18_33w1t")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table1" unique_id=1095865043]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table1/StaticBody2D" unique_id=1244532736]
+shape = SubResource("RectangleShape2D_ijygm")
+
 [node name="Break Room table2" type="Sprite2D" parent="Map/BreakRoom" unique_id=126687484]
 position = Vector2(521, 360)
 texture = ExtResource("16_yoaiw")
@@ -149,6 +162,11 @@ texture = ExtResource("18_33w1t")
 [node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table2" unique_id=1940055530]
 position = Vector2(-39, -10)
 texture = ExtResource("17_w4psh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table2" unique_id=698287206]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table2/StaticBody2D" unique_id=1325957725]
+shape = SubResource("RectangleShape2D_hjf4h")
 
 [node name="Break Room table3" type="Sprite2D" parent="Map/BreakRoom" unique_id=1704802675]
 position = Vector2(515, 268)
@@ -162,6 +180,11 @@ texture = ExtResource("17_w4psh")
 position = Vector2(45, -8)
 texture = ExtResource("18_33w1t")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table3" unique_id=825472602]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table3/StaticBody2D" unique_id=613478131]
+shape = SubResource("RectangleShape2D_5270r")
+
 [node name="Break Room table4" type="Sprite2D" parent="Map/BreakRoom" unique_id=421566745]
 position = Vector2(345, 261)
 texture = ExtResource("16_yoaiw")
@@ -173,6 +196,11 @@ texture = ExtResource("17_w4psh")
 [node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table4" unique_id=1549759515]
 position = Vector2(42, -8)
 texture = ExtResource("18_33w1t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table4" unique_id=1902609803]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table4/StaticBody2D" unique_id=169436272]
+shape = SubResource("RectangleShape2D_8nn7b")
 
 [node name="Main Office Area" type="Node2D" parent="Map" unique_id=1502121410]
 
