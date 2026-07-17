@@ -37,6 +37,14 @@
 [ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
 [ext_resource type="Texture2D" uid="uid://cvxgmso0xv7p6" path="res://asset/Map/Map__0002_Bottom-Wall.png" id="36_8ep84"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjf4h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5270r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nn7b"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
 size = Vector2(1687.5, 1318.5)
 
@@ -138,6 +146,11 @@ texture = ExtResource("17_w4psh")
 position = Vector2(40, -8)
 texture = ExtResource("18_33w1t")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table1" unique_id=1095865043]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table1/StaticBody2D" unique_id=1244532736]
+shape = SubResource("RectangleShape2D_ijygm")
+
 [node name="Break Room table2" type="Sprite2D" parent="Map/BreakRoom" unique_id=126687484]
 position = Vector2(521, 360)
 texture = ExtResource("16_yoaiw")
@@ -149,6 +162,11 @@ texture = ExtResource("18_33w1t")
 [node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table2" unique_id=1940055530]
 position = Vector2(-39, -10)
 texture = ExtResource("17_w4psh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table2" unique_id=698287206]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table2/StaticBody2D" unique_id=1325957725]
+shape = SubResource("RectangleShape2D_hjf4h")
 
 [node name="Break Room table3" type="Sprite2D" parent="Map/BreakRoom" unique_id=1704802675]
 position = Vector2(515, 268)
@@ -162,6 +180,11 @@ texture = ExtResource("17_w4psh")
 position = Vector2(45, -8)
 texture = ExtResource("18_33w1t")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table3" unique_id=825472602]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table3/StaticBody2D" unique_id=613478131]
+shape = SubResource("RectangleShape2D_5270r")
+
 [node name="Break Room table4" type="Sprite2D" parent="Map/BreakRoom" unique_id=421566745]
 position = Vector2(345, 261)
 texture = ExtResource("16_yoaiw")
@@ -173,6 +196,11 @@ texture = ExtResource("17_w4psh")
 [node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table4" unique_id=1549759515]
 position = Vector2(42, -8)
 texture = ExtResource("18_33w1t")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table4" unique_id=1902609803]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table4/StaticBody2D" unique_id=169436272]
+shape = SubResource("RectangleShape2D_8nn7b")
 
 [node name="Main Office Area" type="Node2D" parent="Map" unique_id=1502121410]
 
@@ -528,13 +556,19 @@ polygon = PackedVector2Array(-583.5, -14, -583.5, 14, 583.5, 14, 583.5, -14)
 [node name="LeftBorder Wall" type="StaticBody2D" parent="Map" unique_id=1415572206]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/LeftBorder Wall" unique_id=1639255120]
-position = Vector2(846, -508)
+position = Vector2(845, -508)
 shape = SubResource("RectangleShape2D_seri3")
 
 [node name="Upper Wall" type="StaticBody2D" parent="Map" unique_id=371196974]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Upper Wall" unique_id=39761132]
 position = Vector2(-758.0625, 478.8125)
+shape = SubResource("RectangleShape2D_4spjl")
+
+[node name="RightBorder Wall2" type="StaticBody2D" parent="Map" unique_id=1114826021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/RightBorder Wall2" unique_id=1110974757]
+position = Vector2(1927, 479)
 shape = SubResource("RectangleShape2D_4spjl")
 
 [node name="PixelBackgroundOffice" type="Sprite2D" parent="." unique_id=1761273186]
@@ -546,8 +580,6 @@ texture = ExtResource("2_wk7dr")
 [node name="IncidentTimer" type="Timer" parent="." unique_id=181824542]
 wait_time = 8.0
 autostart = true
-
-[node name="IssuePopup" parent="." unique_id=343395867 instance=ExtResource("2_uvqaq")]
 
 [node name="Player" parent="." unique_id=1881935737 instance=ExtResource("2_nwkqs")]
 position = Vector2(-99, 56)
@@ -580,8 +612,74 @@ collision_mask = 1
 employee_name = "Steven"
 employee_type = "CEO"
 
+
+[node name="Employee4" parent="Employees" unique_id=1133885030 instance=ExtResource("2_pgah7")]
+position = Vector2(200, 450)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Alex"
+employee_type = "IT"
+
+[node name="Employee5" parent="Employees" unique_id=1133885031 instance=ExtResource("2_pgah7")]
+position = Vector2(-200, 300)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Marcus"
+employee_type = "IT2"
+
+[node name="Employee6" parent="Employees" unique_id=1133885032 instance=ExtResource("2_pgah7")]
+position = Vector2(450, 350)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Jake"
+employee_type = "Intern"
+
+[node name="Employee7" parent="Employees" unique_id=1133885033 instance=ExtResource("2_pgah7")]
+position = Vector2(-350, 150)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Mia"
+employee_type = "Intern2"
+
+[node name="Employee8" parent="Employees" unique_id=1133885034 instance=ExtResource("2_pgah7")]
+position = Vector2(300, 200)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Sandra"
+employee_type = "Receptionist"
+
+[node name="Employee9" parent="Employees" unique_id=1133885035 instance=ExtResource("2_pgah7")]
+position = Vector2(-150, 550)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Lisa"
+employee_type = "Receptionist2"
+
+[node name="Employee10" parent="Employees" unique_id=1133885036 instance=ExtResource("2_pgah7")]
+position = Vector2(100, 600)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Priya"
+employee_type = "Normal3"
+
+[node name="Employee11" parent="Employees" unique_id=1133885037 instance=ExtResource("2_pgah7")]
+position = Vector2(-300, 650)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "James"
+employee_type = "Normal4"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
-script = ExtResource("5_eglr7")
+
+[node name="IssuePopup" parent="CanvasLayer" unique_id=343395867 instance=ExtResource("2_uvqaq")]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2082554985]
 offset_left = 998.0
