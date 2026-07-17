@@ -1,25 +1,29 @@
-[gd_scene format=3 uid="uid://mainmenu001"]
+[gd_scene format=3 uid="uid://4bydu0ff1l4n"]
 
-[ext_resource type="Script" path="res://script/MainMenu.gd" id="1_mm"]
-[ext_resource type="Texture2D" path="res://asset/menu_bg.png" id="2_bg"]
+[ext_resource type="Script" uid="uid://dwc88dnls8gcr" path="res://script/MainMenu.gd" id="1_mm"]
+[ext_resource type="Texture2D" uid="uid://cpp2jv3qv7l6u" path="res://asset/menu_bg.png" id="2_bg"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=379239056]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_mm")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=795147593]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_bg")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TitleLabel" type="Label" parent="."]
+[node name="TitleLabel" type="Label" parent="." unique_id=1335991189]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -30,16 +34,18 @@ offset_left = -400.0
 offset_top = -280.0
 offset_right = 400.0
 offset_bottom = -180.0
-text = "REPLY ALL"
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 72
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.922, 0.745, 0.137, 1)
-theme_override_colors/font_shadow_color = Color(0.08, 0.031, 0.0, 1)
+theme_override_colors/font_shadow_color = Color(0.08, 0.031, 0, 1)
 theme_override_constants/shadow_offset_x = 4
 theme_override_constants/shadow_offset_y = 4
 theme_override_constants/shadow_outline_size = 6
+theme_override_font_sizes/font_size = 72
+text = "REPLY ALL"
+horizontal_alignment = 1
 
-[node name="SubtitleLabel" type="Label" parent="."]
+[node name="SubtitleLabel" type="Label" parent="." unique_id=203421925]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -50,34 +56,35 @@ offset_left = -300.0
 offset_top = -190.0
 offset_right = 300.0
 offset_bottom = -148.0
-text = "IT Incident Response"
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 26
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.784, 0.647, 0.275, 1)
-theme_override_colors/font_shadow_color = Color(0.08, 0.031, 0.0, 1)
+theme_override_colors/font_shadow_color = Color(0.08, 0.031, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 3
+theme_override_font_sizes/font_size = 26
+text = "IT Incident Response"
+horizontal_alignment = 1
 
-[node name="PlayButton" type="Button" parent="."]
+[node name="PlayButton" type="Button" parent="." unique_id=2058789237]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -30.0
-offset_right = 150.0
-offset_bottom = 28.0
+offset_left = -148.0
+offset_top = -9.0
+offset_right = 152.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.941, 0.784, 0.149, 1)
+theme_override_font_sizes/font_size = 24
 text = "PLAY"
-theme_override_font_sizes/font_size = 24
-theme_override_colors/font_color = Color(0.941, 0.784, 0.149, 1)
-theme_override_colors/font_shadow_color = Color(0.118, 0.055, 0.0, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 3
 
-[node name="ExitButton" type="Button" parent="."]
+[node name="ExitButton" type="Button" parent="." unique_id=1903099503]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -85,15 +92,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = 48.0
+offset_top = 61.0
 offset_right = 150.0
-offset_bottom = 106.0
-text = "EXIT"
-theme_override_font_sizes/font_size = 24
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0.941, 0.784, 0.149, 1)
-theme_override_colors/font_shadow_color = Color(0.118, 0.055, 0.0, 1)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 24
+text = "EXIT"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_pressed"]
