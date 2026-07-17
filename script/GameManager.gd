@@ -108,4 +108,4 @@ func end_day():
 		"Final score: ",
 		score
 	)
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://scene/GameOver.tscn")

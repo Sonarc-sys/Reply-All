@@ -15,5 +15,5 @@ func _on_incident_timer_timeout():
 
 func show_issue(employee):
 	current_employee = employee
-	$IssuePopup.open(employee)
+	$CanvasLayer/IssuePopup.open(employee)
 	print("Opening popup")
