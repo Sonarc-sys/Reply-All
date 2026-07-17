@@ -581,8 +581,6 @@ texture = ExtResource("2_wk7dr")
 wait_time = 8.0
 autostart = true
 
-[node name="IssuePopup" parent="." unique_id=343395867 instance=ExtResource("2_uvqaq")]
-
 [node name="Player" parent="." unique_id=1881935737 instance=ExtResource("2_nwkqs")]
 position = Vector2(-99, 56)
 scale = Vector2(0.61124456, 0.61124456)
@@ -614,8 +612,74 @@ collision_mask = 1
 employee_name = "Steven"
 employee_type = "CEO"
 
+
+[node name="Employee4" parent="Employees" unique_id=1133885030 instance=ExtResource("2_pgah7")]
+position = Vector2(200, 450)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Alex"
+employee_type = "IT"
+
+[node name="Employee5" parent="Employees" unique_id=1133885031 instance=ExtResource("2_pgah7")]
+position = Vector2(-200, 300)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Marcus"
+employee_type = "IT2"
+
+[node name="Employee6" parent="Employees" unique_id=1133885032 instance=ExtResource("2_pgah7")]
+position = Vector2(450, 350)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Jake"
+employee_type = "Intern"
+
+[node name="Employee7" parent="Employees" unique_id=1133885033 instance=ExtResource("2_pgah7")]
+position = Vector2(-350, 150)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Mia"
+employee_type = "Intern2"
+
+[node name="Employee8" parent="Employees" unique_id=1133885034 instance=ExtResource("2_pgah7")]
+position = Vector2(300, 200)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Sandra"
+employee_type = "Receptionist"
+
+[node name="Employee9" parent="Employees" unique_id=1133885035 instance=ExtResource("2_pgah7")]
+position = Vector2(-150, 550)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Lisa"
+employee_type = "Receptionist2"
+
+[node name="Employee10" parent="Employees" unique_id=1133885036 instance=ExtResource("2_pgah7")]
+position = Vector2(100, 600)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Priya"
+employee_type = "Normal3"
+
+[node name="Employee11" parent="Employees" unique_id=1133885037 instance=ExtResource("2_pgah7")]
+position = Vector2(-300, 650)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "James"
+employee_type = "Normal4"
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
-script = ExtResource("5_eglr7")
+
+[node name="IssuePopup" parent="CanvasLayer" unique_id=343395867 instance=ExtResource("2_uvqaq")]
 
 [node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2082554985]
 offset_left = 998.0
