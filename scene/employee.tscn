@@ -63,6 +63,7 @@ script = ExtResource("1_3ctsj")
 texture_filter = 1
 position = Vector2(490, 201)
 scale = Vector2(1.8, 1.8)
+offset = Vector2(0, -7)
 sprite_frames = SubResource("SF_default")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=360066229]
