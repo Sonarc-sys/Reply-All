@@ -40,3 +40,12 @@ func wrong_answer():
 	explanation_label.text = "Wrong! " + current_issue.explanation
 	explanation_label.visible = true
 	print("Wrong!")
+
+func _on_option_1_pressed():
+	check_answer(0)
+
+func _on_option_2_pressed():
+	check_answer(1)
+
+func _on_option_3_pressed():
+	check_answer(2)

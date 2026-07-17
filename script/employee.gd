@@ -25,10 +25,21 @@ var escalated = false
 # Sprite sheet layout: player=x0, Normal=x256, Intern=x512, Manager=x768, CEO=x1024
 # Each character has 4 walk frames at base_x+0, +64, +128, +192
 const SPRITE_BASE_X = {
-	"Normal":  256,
-	"Intern":  512,
-	"Manager": 768,
-	"CEO":     1024,
+	# Exact type strings used in office.tscn
+	"Player":       0,
+	"IT":           256,
+	"IT2":          512,
+	"Intern":       768,
+	"Intern2":      1024,
+	"CEO":          1280,
+	"Receptionist": 1536,
+	"Receptionist2":1792,
+	"Normal":       2048,
+	"Normal2":      2304,
+	"Normal3":      2560,
+	"Normal4":      2816,
+	# Legacy fallbacks for existing scene employees
+	"Manager":      1280,  # CEO slot
 }
 
 func _ready():
@@ -67,7 +78,7 @@ func _build_sprite_frames():
 
 	frames.add_animation("walk")
 	frames.set_animation_loop("walk", true)
-	frames.set_animation_speed("walk", 8.0)
+	frames.set_animation_speed("walk", 10.0)
 	for f in range(4):
 		var at = AtlasTexture.new()
 		at.atlas = tex
