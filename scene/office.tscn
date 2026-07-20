@@ -691,10 +691,10 @@ text = "Security Score: 0
 "
 
 [node name="Phone" type="TextureRect" parent="CanvasLayer" unique_id=1934767713]
-offset_left = -41.0
-offset_top = -7.0
-offset_right = 192.0
-offset_bottom = 286.25864
+offset_left = 892.0
+offset_top = 302.60345
+offset_right = 1194.0
+offset_bottom = 682.7069
 texture = ExtResource("35_q2p2h")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Phone" unique_id=495335545]
@@ -702,14 +702,14 @@ layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.071
 anchor_bottom = -0.071
-offset_left = 61.0
-offset_top = 54.821365
-offset_right = 180.0
-offset_bottom = 253.82137
+offset_left = 78.0
+offset_top = 69.91646
+offset_right = 235.0
+offset_bottom = 324.38388
 horizontal_scroll_mode = 0
 
 [node name="NotificationList" type="VBoxContainer" parent="CanvasLayer/Phone/ScrollContainer" unique_id=1932424071]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 1
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]

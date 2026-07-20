@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://hbxqqtpxoeb8" path="res://script/notification_item.gd" id="1_b7bfx"]
 
 [node name="NotificationItem" type="PanelContainer" unique_id=140080238]
-custom_minimum_size = Vector2(120, 20)
+custom_minimum_size = Vector2(157, 20)
 script = ExtResource("1_b7bfx")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2022888275]
