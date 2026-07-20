@@ -9,7 +9,7 @@ var score_label: Label
 var active_notifications: Dictionary = {}
 
 func _ready() -> void:
-	print("[OfficeUI] Ready script initialized!")
+	
 	score_label = get_node_or_null("ScoreLabel")
 
 	# Connect signals
@@ -25,15 +25,12 @@ func update_score(score: int) -> void:
 		score_label.text = "Security Score: " + str(score)
 
 func update_triage() -> void:
-	print("[OfficeUI] update_triage() fired!")
 	
 	for employee in GameManager.employees:
-		print("  -> Checking ", employee.employee_name, " | Has Issue: ", employee.has_issue)
 		
 		# Spawning new notifications
 		if employee.has_issue and employee.current_issue != null:
 			if !active_notifications.has(employee):
-				print("  -> Spawning phone notification for ", employee.employee_name)
 				var item = notification_scene.instantiate()
 				notification_list.add_child(item)
 				item.setup(employee)
