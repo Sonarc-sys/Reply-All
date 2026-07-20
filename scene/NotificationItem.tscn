@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dp0yescl3dyou"]
+
+[ext_resource type="Script" uid="uid://hbxqqtpxoeb8" path="res://script/notification_item.gd" id="1_b7bfx"]
+
+[node name="NotificationItem" type="PanelContainer" unique_id=140080238]
+custom_minimum_size = Vector2(120, 20)
+script = ExtResource("1_b7bfx")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2022888275]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1286978183]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1505574667]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1600840315]
+layout_mode = 2
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2056446084]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1926891970]
+clip_children = 1
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/PanelContainer" unique_id=1207910314]
+layout_mode = 2
+
+[node name="DescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/Control" unique_id=1558082471]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 23.0
