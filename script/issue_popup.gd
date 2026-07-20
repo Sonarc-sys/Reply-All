@@ -36,10 +36,9 @@ func correct_answer():
 	visible = false
 
 func wrong_answer():
-
-	explanation_label.text = "Wrong! " + current_issue.explanation
-	explanation_label.visible = true
-	print("Wrong!")
+	current_employee.escalate()
+	
+	visible = false
 
 func _on_option_1_pressed():
 	check_answer(0)

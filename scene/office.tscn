@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://sfyiscjawqa7" path="res://scene/employee.tscn" id="2_pgah7"]
 [ext_resource type="PackedScene" uid="uid://dfr3iv4iher32" path="res://scene/IssuePopup.tscn" id="2_uvqaq"]
 [ext_resource type="Texture2D" uid="uid://bgxoq4qv3dwxs" path="res://asset/pixel background office.png" id="2_wk7dr"]
-[ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
+[ext_resource type="PackedScene" uid="uid://3f2s0rvitbvj" path="res://scene/TriageItem.tscn" id="7_iboqp"]
 [ext_resource type="Texture2D" uid="uid://dpr4s3akpdp20" path="res://asset/Map/Map__0003_Background.png" id="8_seri3"]
 [ext_resource type="Texture2D" uid="uid://cnifnd38kwlgo" path="res://asset/Map/Map__0001s_0001_Secretary-Desk-upper.png" id="9_4spjl"]
 [ext_resource type="Texture2D" uid="uid://csrx0uc1etpyy" path="res://asset/Map/Map__0001s_0002_Secretary-Desk.png" id="10_m1geu"]
