@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://c55t2i1tvtfe" path="res://asset/Map/Map__0002s_0007_Inner-Server-Room-walls.png" id="31_na3bg"]
 [ext_resource type="Texture2D" uid="uid://bederkkat5h2l" path="res://asset/Map/Map__0000s_0001_Hallway-Upper-Wall.png" id="33_rqnvb"]
 [ext_resource type="Texture2D" uid="uid://dr286k4oyxb6p" path="res://asset/Map/Map__0000s_0002_Lower-Hallway-Wall.png" id="34_snxsr"]
+[ext_resource type="Texture2D" uid="uid://b0pdktxh5l6gp" path="res://asset/phone pixel.png" id="35_q2p2h"]
 [ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
 [ext_resource type="Texture2D" uid="uid://cvxgmso0xv7p6" path="res://asset/Map/Map__0002_Bottom-Wall.png" id="36_8ep84"]
 
@@ -49,8 +50,6 @@ size = Vector2(1687.5, 1318.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4spjl"]
 size = Vector2(1518.125, 956.375)
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wk7dr"]
 
 [node name="Office" type="Node2D" unique_id=475616271]
 script = ExtResource("1_riodj")
@@ -676,6 +675,7 @@ employee_name = "James"
 employee_type = "Normal4"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
+script = ExtResource("5_eglr7")
 
 [node name="IssuePopup" parent="CanvasLayer" unique_id=343395867 instance=ExtResource("2_uvqaq")]
 grow_horizontal = 2
@@ -690,23 +690,26 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Security Score: 0
 "
 
-[node name="TriagePanel" type="Panel" parent="CanvasLayer" unique_id=1382899926]
-offset_left = 1.0
-offset_top = 4.0
-offset_right = 177.0
-offset_bottom = 172.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wk7dr")
+[node name="Phone" type="TextureRect" parent="CanvasLayer" unique_id=1934767713]
+offset_left = -41.0
+offset_top = -7.0
+offset_right = 192.0
+offset_bottom = 286.25864
+texture = ExtResource("35_q2p2h")
 
-[node name="IncidentList" type="VBoxContainer" parent="CanvasLayer/TriagePanel" unique_id=1081560639]
-layout_mode = 0
-offset_left = 23.0
-offset_top = 20.0
-offset_right = 63.0
-offset_bottom = 60.0
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Phone" unique_id=495335545]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.071
+anchor_bottom = -0.071
+offset_left = 61.0
+offset_top = 54.821365
+offset_right = 180.0
+offset_bottom = 253.82137
+horizontal_scroll_mode = 0
 
-[node name="PanelContainer" parent="." unique_id=1129583253 instance=ExtResource("7_iboqp")]
-offset_top = 1.0
-offset_right = 200.0
-offset_bottom = 83.0
+[node name="NotificationList" type="VBoxContainer" parent="CanvasLayer/Phone/ScrollContainer" unique_id=1932424071]
+layout_mode = 2
+theme_override_constants/separation = 0
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]
