@@ -1,15 +1,34 @@
+
 extends Control
 
-@onready var job_list: ItemList = $SplitView/JobList
-@onready var details_label: Label = $DetailsPanel/Label
-@onready var explanation_label: Label = $DetailsPanel/ExplanationLabel
-@onready var back_button: Button = $BackButton
+# Removed strict typing (e.g., ": Label", "as Label") to prevent Godot from nullifying RichTextLabels
+var job_list
+var details_label
+var explanation_label
+var back_button
 
 var failed_jobs: Array = []
 
 func _ready() -> void:
+	# find_child automatically searches the entire scene tree regardless of hierarchy
+	job_list = find_child("JobList", true, false)
+	back_button = find_child("BackButton", true, false)
+	
+	# Target the labels specifically inside DetailsPanel
+	var details_panel = find_child("DetailsPanel", true, false)
+	if details_panel:
+		details_label = details_panel.find_child("Label", true, false)
+		explanation_label = details_panel.find_child("ExplanationLabel", true, false)
+	
+	# Fallbacks just in case the labels aren't inside DetailsPanel
+	if not explanation_label:
+		explanation_label = find_child("ExplanationLabel", true, false)
+	if not details_label:
+		details_label = find_child("Label", true, false)
+
+	# Final safety check
 	if not job_list or not details_label or not explanation_label or not back_button:
-		printerr("Scoreboard Error: Missing node -> JobList: ", job_list, " | Details: ", details_label, " | Exp: ", explanation_label, " | Back: ", back_button)
+		printerr("Scoreboard Error: Missing nodes! JobList: ", job_list, " | Details: ", details_label, " | Exp: ", explanation_label, " | Back: ", back_button)
 		return
 
 	job_list.item_selected.connect(_on_job_selected)
