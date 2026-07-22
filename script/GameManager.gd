@@ -10,6 +10,9 @@ var incidents_handled = 0
 var incidents_failed = 0
 
 var employees = []
+var unsucessful_job_hist: Array = []
+
+
 
 var issues = [
 	preload("res://resources/Issue Resources/PhishingEmail.tres"),
@@ -93,6 +96,7 @@ func add_score(amount):
 	score += amount
 	score_changed.emit(score)
 	
+	
 func end_day():
 	day_over = true
 	print("SHIFT COMPLETE")
@@ -109,3 +113,11 @@ func end_day():
 		score
 	)
 	get_tree().change_scene_to_file("res://scene/GameOver.tscn")
+	
+func write_failure(issue: CyberIssue):
+	unsucessful_job_hist.append({
+		"issue_name": issue.issue_name,
+		"description": issue.description,
+		"right_answer": issue.answers[issue.correct_index],
+		"explanation": issue.explanation
+	})

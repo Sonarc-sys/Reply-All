@@ -48,3 +48,12 @@ func _on_option_2_pressed():
 
 func _on_option_3_pressed():
 	check_answer(2)
+
+func incorrect_answer():
+	#Here, we will log the answer for the game over so that it will appear on the reflection report:
+	GameManager.record_incorrect(current_issue)
+	#Here, we will remove some points(score)  using the issue's specific score var.
+	var thepenalty = current_issue.score_value * current_issue.threat_level
+	GameManager.modify_score(-thepenalty)
+	current_employee.escalate()
+	visible = false

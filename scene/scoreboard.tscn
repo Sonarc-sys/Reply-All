@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://gij0wp4sa71w"]
+
+[ext_resource type="Script" uid="uid://c6juuuctlbf2a" path="res://scene/scoreboard.gd" id="1_sts5m"]
+
+[node name="Scoreboard" type="Control" unique_id=941527220]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_sts5m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=46730888]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.11372549, 0.14117648, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="MainLayout" type="VBoxContainer" parent="ColorRect" unique_id=1553527180]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1112.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/MainLayout" unique_id=980294378]
+layout_mode = 2
+text = "REFLECTION REPORT AND SCOREBOARD
+"
+
+[node name="SplitView" type="HBoxContainer" parent="ColorRect/MainLayout" unique_id=349389453]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="JobList" type="ItemList" parent="ColorRect/MainLayout/SplitView" unique_id=1703332928]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DetailsPanel" type="VBoxContainer" parent="ColorRect/MainLayout/SplitView" unique_id=1716612343]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ColorRect/MainLayout/SplitView/DetailsPanel" unique_id=1365679166]
+layout_mode = 2
+text = "ANSWERLABEL
+"
+
+[node name="ExplanationLabel" type="RichTextLabel" parent="ColorRect/MainLayout/SplitView/DetailsPanel" unique_id=23685627]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="ColorRect/MainLayout" unique_id=756975357]
+layout_mode = 2
+text = "BACK TO GAME OVER.
+"
