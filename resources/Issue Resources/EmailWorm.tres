@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://c35pqpvfa5e8l"]
+
+[ext_resource type="Resource" uid="uid://du7u00xe0sc0k" path="res://resources/Escalation Resources/Escalation_WormBreakout.tres" id="1_mwxv4"]
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_rxhjm"]
+
+[resource]
+script = ExtResource("1_rxhjm")
+issue_name = "The Reply-All Storm"
+description = "An employee clicked on a link accidentally that then hijacked their email client to email a malicious link to all of the company's employees using the company's directory."
+employee_message = "Hey, so I clicked on the link for a free gift card, and now my Outlook is sending thousands of emails to all of the company's contacts all on it's own."
+threat_level = 5
+urgency = 0.9
+escalation = ExtResource("1_mwxv4")
+score = 450
+answers = Array[String](["Issue Password Reset Ticket", "Send them Home", "Destroy Computer"])
+explanation = "A self-propagating email worm will paralyze the mail server, and then at the same time compromise anyone else who will click on it.
+
+"
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

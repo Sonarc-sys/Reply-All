@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://dx2wpybd2fi6t"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_olob1"]
+
+[resource]
+script = ExtResource("1_olob1")
+issue_name = "Slow Workstation"
+description = "There is Unusually high CPU usage and fan noise on a standard office PC."
+employee_message = "My computer is sounding like a jet engine and my Excel is constantly freezing. I haven't even opened that many tabs."
+threat_level = 2
+urgency = 0.4
+answers = Array[String](["Issue Password Reset Ticket", "Send them Home", "Destroy Computer"])
+explanation = "High resource consumption without cause often indicates a hidden cryptominer running in the background."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

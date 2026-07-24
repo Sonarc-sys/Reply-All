@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://lacqr1thydab"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_cem50"]
+
+[resource]
+script = ExtResource("1_cem50")
+issue_name = "Unauthorized Software"
+description = "An employee downloaded a free, but an unvetted PDF convertor tool from the web."
+employee_message = "The company software is way too slow, so I just downoaded a free tool that I found online to help convert these documents! It works really good."
+threat_level = 3
+urgency = 0.4
+score = 150
+answers = Array[String](["Issue Password Reset Ticket", "Send them Home", "Destroy Computer"])
+explanation = "Unapproved software will bypass security protocols and can introduce malware or exfiltrating company data."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

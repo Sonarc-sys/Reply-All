@@ -22,6 +22,9 @@ var current_issue:CyberIssue
 
 var escalated = false
 
+var in_qte: bool = false
+@onready var warning_icon: Sprite2D = $WarningIcon
+
 # Sprite sheet layout: player=x0, Normal=x256, Intern=x512, Manager=x768, CEO=x1024
 # Each character has 4 walk frames at base_x+0, +64, +128, +192
 const SPRITE_BASE_X = {
@@ -103,6 +106,14 @@ func _process(delta):
 			escalate()
 
 func _physics_process(delta):
+	# FREEZE THE EMPLOYEE DURING A QTE
+	if in_qte:
+		velocity = Vector2.ZERO
+		var sprite = $AnimatedSprite2D
+		if sprite.animation != "default":
+			sprite.play("default")
+		return 
+
 	timer_movement -= delta
 
 	if timer_movement <= 0:
@@ -189,3 +200,29 @@ func escalate():
 	$UI/PatienceBar.value = patience
 	$UI/Exclamation.visible = false
 	GameManager.incidents_changed.emit()
+
+func enable_qte_state(qte_type: int) -> void:
+	in_qte = true
+	direction_ofmovement = Vector2.ZERO # Stop their current walk path
+	
+	if warning_icon:
+		warning_icon.show()
+		
+		match qte_type:
+			1: warning_icon.modulate = Color.RED      
+			2: warning_icon.modulate = Color.YELLOW     
+			3: warning_icon.modulate = Color.ORANGE   
+
+func disable_qte_state() -> void:
+	in_qte = false
+	if warning_icon:
+		warning_icon.hide()
+
+func receive_interaction() -> void:
+	if in_qte:
+		in_qte = false
+		if warning_icon:
+			warning_icon.hide()
+		var manager = get_tree().get_first_node_in_group("qte_manager")
+		if manager:
+			manager.register_employee_saved()

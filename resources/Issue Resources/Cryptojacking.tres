@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://s01gghhrol4i"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_qu055"]
+
+[resource]
+script = ExtResource("1_qu055")
+issue_name = "Expose Password"
+description = "An employee wrote their system password on a sticky note attached to their monitor."
+employee_message = "I have to change my password each 30 days, there's no way I can memorize all of these passwords."
+urgency = 0.2
+score = 50
+answers = Array[String](["Issue Password Reset Ticket", "Send them Home", "Destroy Computer"])
+explanation = "Physical security is as important as digital security. Passwords must never be written down and left in plain sight."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

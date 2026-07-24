@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="CyberEscalation" format=3 uid="uid://du7u00xe0sc0k"]
+
+[ext_resource type="Script" uid="uid://2omncumtu2b7" path="res://resources/Escalation.gd" id="1_tu7ox"]
+
+[resource]
+script = ExtResource("1_tu7ox")
+metadata/_custom_type_script = "uid://2omncumtu2b7"
