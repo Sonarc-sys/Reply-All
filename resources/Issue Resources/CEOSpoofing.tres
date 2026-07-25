@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://dk7cdc28kk3nr"]
 
+[ext_resource type="Resource" uid="uid://d3u443eq3a37j" path="res://resources/Escalation Resources/Escalation_CEOSpoof.tres" id="1_03rbd"]
 [ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_vxpga"]
 
 [resource]
@@ -9,6 +10,7 @@ description = "The finance team has received an \"urgent\" email from the CEO, t
 employee_message = "Hey all, the CEO just emailed me directly asking to buy $5000 in Apple gift cards for a client emergency. I'm processing it now!"
 threat_level = 5
 urgency = 0.9
+escalation = ExtResource("1_03rbd")
 score = 500
 answers = Array[String](["Issue Password Reset Ticket", "Send them Home", "Destroy Computer"])
 explanation = "Social engineering attacks will bypass standard authorization channels can result in large, unrecoverable financial loss.

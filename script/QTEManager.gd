@@ -18,7 +18,7 @@ func qte_trigger(escalation_path: String) -> void:
 		qte_start(QTEType.RANSOMWARE, 12.0)
 	elif "Escalation_WormBreakout" in escalation_path:
 		qte_start(QTEType.EMAIL_WORMS, 10.0)
-	elif "CEOFinancialFraud" in escalation_path:
+	elif "Escalation_CEOSpoof" in escalation_path:
 		qte_start(QTEType.CEO_SPOOF, 15.0)
 	else:
 		return
