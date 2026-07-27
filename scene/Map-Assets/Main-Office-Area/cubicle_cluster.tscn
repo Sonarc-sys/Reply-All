@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c1wedo578v35u"]
+
+[ext_resource type="Texture2D" uid="uid://cq3cxalmaeywq" path="res://asset/Map/Map__0001_Cubicle-Cluster.png" id="1_xf3sg"]
+
+[node name="Cubicle Cluster" type="StaticBody2D" unique_id=990662673]
+
+[node name="Cubicle Cluster" type="Sprite2D" parent="." unique_id=593504720]
+position = Vector2(704, 213)
+texture = ExtResource("1_xf3sg")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=772203239]
+position = Vector2(704, 213)
+polygon = PackedVector2Array(-74, -92.5, -74, -65, -38, -65, -38, -43, -74, -43, -74, -15, -39, -15, -39, 9, -74, 9, -74, 37, -38, 37, -38, 60, -74, 60, -74, 92.5, 74, 92.5, 74, 60, 32, 59, 32, 38, 74, 38, 74, 9, 33, 9, 33, -16, 74, -16, 74, -43, 32, -43, 32, -63, 74, -63, 74, -92.5)

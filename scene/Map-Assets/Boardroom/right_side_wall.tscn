@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://drot523u1kg4t"]
+
+[ext_resource type="Texture2D" uid="uid://dnvct62q76gic" path="res://asset/Map/Map__0003s_0004_boardroom-Serveroom-Divider.png" id="1_qrmyi"]
+
+[node name="Right Side Wall" type="StaticBody2D" unique_id=1457444003]
+z_index = 5
+
+[node name="Boardroom Wall Divider" type="Sprite2D" parent="." unique_id=748258799]
+position = Vector2(507, 725)
+texture = ExtResource("1_qrmyi")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1920975422]
+position = Vector2(507, 725)
+polygon = PackedVector2Array(-3.5, -210, -3.5, 230.5, 3.5, 230.5, 3.5, -210)

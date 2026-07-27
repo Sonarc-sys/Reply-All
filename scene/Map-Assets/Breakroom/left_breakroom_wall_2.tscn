@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://mbhxdklix6co"]
+
+[ext_resource type="Texture2D" uid="uid://b1neu8pt6nv52" path="res://asset/Map/Map__0004s_0000_Left-Breakroom-Divider.png" id="1_rc7du"]
+
+[node name="Left Breakroom Wall2" type="StaticBody2D" unique_id=1041769389]
+
+[node name="Left Breakroom Wall" type="Sprite2D" parent="." unique_id=1094041452]
+position = Vector2(286, 271)
+texture = ExtResource("1_rc7du")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1458613182]
+position = Vector2(286, 271)
+polygon = PackedVector2Array(-3.5, -170, -3.5, -99, 3.5, -99, 3.5, -170)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1307740504]
+position = Vector2(286, 271)
+polygon = PackedVector2Array(3.5, 170, 3.5, -75, -3.5, -75, -3.5, 170)

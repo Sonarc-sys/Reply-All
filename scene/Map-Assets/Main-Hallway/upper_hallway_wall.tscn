@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://87x0mdyq3hnm"]
+
+[ext_resource type="Texture2D" uid="uid://bederkkat5h2l" path="res://asset/Map/Map__0000s_0001_Hallway-Upper-Wall.png" id="1_3546h"]
+
+[node name="Upper Hallway Wall" type="StaticBody2D" unique_id=1560255017]
+y_sort_enabled = true
+
+[node name="Upper Hallway Wall" type="Sprite2D" parent="." unique_id=1182098693]
+position = Vector2(0, -11)
+texture = ExtResource("1_3546h")
+offset = Vector2(0, -5)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=60564215]
+position = Vector2(-0.3999939, -16)
+polygon = PackedVector2Array(-292.5, 16, -288.6, 16, -288.6, 1.3999996, -292.5, 1.3999996)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1672759338]
+position = Vector2(-0.3999939, -16)
+polygon = PackedVector2Array(-94.600006, 1.3999996, -224.6, 1.3999996, -224.6, 16, -94.600006, 16)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="." unique_id=1406960127]
+position = Vector2(-0.3999939, -16)
+polygon = PackedVector2Array(292.5, 1.3999996, -41.600006, 1.3999996, -41.600006, 16, 292.5, 16)

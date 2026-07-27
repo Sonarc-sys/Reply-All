@@ -25,42 +25,51 @@ region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_player"]
 animations = [{
-"frames": [{"duration": 1.0, "texture": SubResource("AT_idle")}],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_idle")
+}],
 "loop": 1,
 "name": &"default",
 "speed": 1.0
 }, {
-"frames": [
-{"duration": 1.0, "texture": SubResource("AT_w0")},
-{"duration": 1.0, "texture": SubResource("AT_w1")},
-{"duration": 1.0, "texture": SubResource("AT_w2")},
-{"duration": 1.0, "texture": SubResource("AT_w3")}
-],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AT_w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_w1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AT_w3")
+}],
 "loop": 1,
 "name": &"walk",
 "speed": 8.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
-size = Vector2(37, 13)
+size = Vector2(37, 28.25)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
 radius = 100.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1676413528]
-collision_mask = 1
+y_sort_enabled = true
 script = ExtResource("1_si3wx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=35757525]
 texture_filter = 1
-position = Vector2(229, 191)
 scale = Vector2(1.8, 1.8)
 sprite_frames = SubResource("SpriteFrames_player")
-animation = &"default"
+offset = Vector2(0, -32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1430369263]
 y_sort_enabled = true
-position = Vector2(227.5, 230.5)
+position = Vector2(0, -14.875)
 shape = SubResource("RectangleShape2D_seri3")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=530706158]
@@ -70,12 +79,12 @@ limit_right = 1167
 limit_bottom = 952
 position_smoothing_enabled = true
 
-[node name="InteractionArea" type="Area2D" parent="."]
-position = Vector2(227.5, 230.5)
+[node name="InteractionArea" type="Area2D" parent="." unique_id=267811972]
+position = Vector2(228, 231)
 collision_layer = 0
-collision_mask = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1368849613]
+position = Vector2(-228, -286)
 shape = SubResource("CircleShape2D_interact")
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]

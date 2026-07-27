@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://r6qopkoi47pc"]
+
+[ext_resource type="Texture2D" uid="uid://cdill43u5pjvo" path="res://asset/Map/Map__0000s_0000_Right-Vertical-Wall.png" id="1_sbsey"]
+
+[node name="Right Wall" type="StaticBody2D" unique_id=1103901928]
+
+[node name="Right Server Room Wall" type="Sprite2D" parent="." unique_id=480368016]
+position = Vector2(944, 612.75)
+scale = Vector2(1, 1.4693655)
+texture = ExtResource("1_sbsey")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=385229193]
+position = Vector2(944, 612.75)
+scale = Vector2(1, 1.4693655)
+polygon = PackedVector2Array(-3.5, -203.31906, -3.5, 228.5, 3.5, 228.5, 3.5, -203.31906)

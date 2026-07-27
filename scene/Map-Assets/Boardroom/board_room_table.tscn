@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c2af72505t0yv"]
+
+[ext_resource type="Texture2D" uid="uid://d2ybg5vg4cslc" path="res://asset/Map/Map__0003s_0003_Board-Table.png" id="1_f2u74"]
+
+[node name="Board Room Table" type="StaticBody2D" unique_id=1090588129]
+y_sort_enabled = true
+
+[node name="Board Table" type="Sprite2D" parent="." unique_id=1744967632]
+position = Vector2(4, 89)
+texture = ExtResource("1_f2u74")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1507796386]
+position = Vector2(3, 82)
+polygon = PackedVector2Array(-38.5, 108, -24.5, 108, -24.5, 107, 22.5, 107, 22.5, 108, 38.5, 108, 38.5, -84, -38.5, -85)

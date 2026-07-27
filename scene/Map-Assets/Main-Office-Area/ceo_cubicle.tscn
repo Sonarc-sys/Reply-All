@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dq34x2vo8o35w"]
+
+[ext_resource type="Texture2D" uid="uid://qhsu34gfqchk" path="res://asset/Map/Map__0000_CEO-Cubicle.png" id="1_8cw38"]
+
+[node name="CEO Cubicle" type="StaticBody2D" unique_id=1880990275]
+y_sort_enabled = true
+
+[node name="CEO Cubicle" type="Sprite2D" parent="." unique_id=941528267]
+position = Vector2(-4, 30)
+scale = Vector2(1.0261322, 1)
+texture = ExtResource("1_8cw38")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1882748671]
+position = Vector2(-3, 33)
+scale = Vector2(1.0261322, 1)
+polygon = PackedVector2Array(-19.490665, -40, -73.09, -41, -78.937195, -41, -81.5, 34.5, -143.5, 34.5, -143.5, 69.5, 143.5, 69.5, 143.5, 34.5, -35.5, 34.5, -35.5, -24.5, -19.300003, -24.5, -17.5, -12.200001, -17.5, -9.5, 31.300003, -9.5, 33.300003, -24.5, 38.699997, -24.5, 40.699997, -7.5, 63.300003, -7.5, 66.5, -10.700001, 66.5, -25.099998, 70.8, -26.5, 73.600006, -26.5, 71.14093, -41, 66.268265, -41)

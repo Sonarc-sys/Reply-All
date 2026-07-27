@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://2rmni31cmksd"]
+
+[ext_resource type="Texture2D" uid="uid://buux446s244n5" path="res://asset/Map/Map__0002s_0001_Upper-IT-Desk.png" id="1_nq2du"]
+
+[node name="Upper IT Desk" type="StaticBody2D" unique_id=1989647576]
+y_sort_enabled = true
+
+[node name="Upper IT Desk" type="Sprite2D" parent="." unique_id=807131059]
+position = Vector2(8, -42)
+texture = ExtResource("1_nq2du")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=885634275]
+position = Vector2(8, -42)
+polygon = PackedVector2Array(36, -50, 28, -50, 28, -45, 17, -42, -35, -42, -35, -14, 0, -14, 1, 33, -36, 32, -35.5, 64.5, 35.4, 64.5, 35.5, 62.699997)

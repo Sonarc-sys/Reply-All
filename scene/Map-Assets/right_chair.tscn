@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://mw8dcjuiwt7"]
+
+[ext_resource type="Texture2D" uid="uid://c42yxflts7ukx" path="res://asset/Map/Map__0004s_0004_Right-Chair-.png" id="1_j2v8a"]
+
+[node name="Right Chair" type="StaticBody2D" unique_id=1906262150]
+y_sort_enabled = true
+
+[node name="Right Chair" type="Sprite2D" parent="." unique_id=865956015]
+position = Vector2(0, -12)
+texture = ExtResource("1_j2v8a")
+offset = Vector2(0, -8)
+
+[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="." unique_id=276486216]
+position = Vector2(0, -21)
+polygon = PackedVector2Array(10, -19, 8, 7, 5, 7, -10, 7, -10.5, 20.5, 10.5, 20.5)

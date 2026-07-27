@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://yxdnkkabkhfr"]
+
+[ext_resource type="Texture2D" uid="uid://dlkgnddltmikb" path="res://asset/Map/Map__0003s_0005_Boardroom-Wall.png" id="1_foyif"]
+
+[node name="Upper wall" type="StaticBody2D" unique_id=533576473]
+y_sort_enabled = true
+
+[node name="Board Room Wall" type="Sprite2D" parent="." unique_id=1353197186]
+position = Vector2(86, 1)
+texture = ExtResource("1_foyif")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1263010570]
+position = Vector2(86, 4)
+polygon = PackedVector2Array(-254, 15, -122, 15, -122, -4, -254, -4)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=994619489]
+position = Vector2(90, 1)
+polygon = PackedVector2Array(250, -1, -53, -1, -52, 18, 250, 18)

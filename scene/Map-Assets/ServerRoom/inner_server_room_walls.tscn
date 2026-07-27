@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bfbl04nl55cig"]
+
+[ext_resource type="Texture2D" uid="uid://c55t2i1tvtfe" path="res://asset/Map/Map__0002s_0007_Inner-Server-Room-walls.png" id="1_ppxp4"]
+
+[node name="Inner Server Room Walls" type="StaticBody2D" unique_id=883658233]
+
+[node name="Inner Server Wall" type="Sprite2D" parent="." unique_id=1778229530]
+position = Vector2(822, 788)
+texture = ExtResource("1_ppxp4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1982547682]
+position = Vector2(822, 788)
+polygon = PackedVector2Array(-121, 140.5, -110, 140.5, -110, -129.7, -78.9, -131.5, -76, -131.5, -76, -140.5, -121, -140.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=181703028]
+position = Vector2(822, 788)
+polygon = PackedVector2Array(121, -140.5, -35, -140.5, -35, -131.5, -34, -131.5, -34, -130.5, -33, -130.5, -33, -129.5, 121, -129.5)
