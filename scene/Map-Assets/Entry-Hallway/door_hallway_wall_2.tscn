@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://r4873igoon8j"]
+
+[ext_resource type="Texture2D" uid="uid://q13brcpn0p3p" path="res://asset/Map/Map__0001s_0000_Cubicle-Divider.png" id="1_4j4ly"]
+
+[node name="Door Hallway Wall2" type="StaticBody2D" unique_id=1706407914]
+
+[node name="Door Hallway Wall" type="Sprite2D" parent="." unique_id=331453115]
+position = Vector2(76, 169)
+texture = ExtResource("1_4j4ly")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1050536637]
+position = Vector2(76, 169)
+polygon = PackedVector2Array(-3.5, -69.5, -3.5, 69.5, 3.5, 69.5, 3.5, -69.5)

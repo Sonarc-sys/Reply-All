@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://3o8mcx0ga6ij"]
+
+[ext_resource type="Texture2D" uid="uid://d33mbn6tidcwn" path="res://asset/Map/Map__0002s_0000_Lower-IT-Desk.png" id="1_57gic"]
+
+[node name="Lower IT Desk" type="StaticBody2D" unique_id=1604667695]
+y_sort_enabled = true
+
+[node name="Lower IT Desk" type="Sprite2D" parent="." unique_id=1158013035]
+position = Vector2(-1, -64)
+texture = ExtResource("1_57gic")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1782212868]
+position = Vector2(-2, -64)
+polygon = PackedVector2Array(35.5, -64.5, 24.5, -64.5, 24.5, -56.3, 23.3, -57.5, 14.700001, -57.5, 11.5, -54.3, 11.5, -49.5, -34.6, -47.5, -35.5, -47.5, -35.5, -12.400002, -32.5, -11.200001, -7.700001, -10.5, -3.5, -10.5, -3.5, 28.5, -35.5, 28.5, -35.5, 51, 33, 52)

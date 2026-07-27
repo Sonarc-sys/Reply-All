@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bgmifdnu7evrr"]
+
+[ext_resource type="Texture2D" uid="uid://cgrfk6lr887bm" path="res://asset/Map/Map__0004s_0002_Left-Chair.png" id="1_536j5"]
+
+[node name="Left Chair" type="StaticBody2D" unique_id=1435613411]
+y_sort_enabled = true
+
+[node name="Left Chair" type="Sprite2D" parent="." unique_id=522749959]
+position = Vector2(1, -12)
+texture = ExtResource("1_536j5")
+offset = Vector2(0, -8)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="." unique_id=1014600307]
+position = Vector2(1, -20)
+polygon = PackedVector2Array(10, 20.5, 10, 5, -5, 5, -7, 5, -10, -20.5, -10, 20.5)

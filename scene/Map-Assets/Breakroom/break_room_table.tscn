@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://brursbb3017mh"]
+
+[ext_resource type="Texture2D" uid="uid://bks8w4lg6shao" path="res://asset/Map/Map__0004s_0003_Break-Room-Table.png" id="1_aftvp"]
+
+[node name="Break Room table" type="StaticBody2D" unique_id=1312199014]
+y_sort_enabled = true
+
+[node name="Break Room table" type="Sprite2D" parent="." unique_id=342966676]
+texture = ExtResource("1_aftvp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=862262891]
+y_sort_enabled = true
+position = Vector2(1, 7)
+polygon = PackedVector2Array(-25, -9, -25, 9, 23, 9, 23, -9)

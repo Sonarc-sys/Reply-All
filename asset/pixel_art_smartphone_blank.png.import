@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0pdktxh5l6gp"
-path="res://.godot/imported/phone pixel.png-f6af05c2c81f0da7b3fe16587b296849.ctex"
+uid="uid://dgoyski6kmxha"
+path="res://.godot/imported/pixel_art_smartphone_blank.png-786b177d139acf065da19a1deac1c568.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/phone pixel.png"
-dest_files=["res://.godot/imported/phone pixel.png-f6af05c2c81f0da7b3fe16587b296849.ctex"]
+source_file="res://asset/pixel_art_smartphone_blank.png"
+dest_files=["res://.godot/imported/pixel_art_smartphone_blank.png-786b177d139acf065da19a1deac1c568.ctex"]
 
 [params]
 

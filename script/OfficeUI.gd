@@ -5,6 +5,8 @@ extends CanvasLayer
 var score_label: Label
 @onready var notification_list: VBoxContainer = $Phone/ScrollContainer/NotificationList
 
+@onready var toast_banner: PanelContainer = $ToastBanner
+
 # Keep track of active notifications tied to employees
 var active_notifications: Dictionary = {}
 
@@ -28,13 +30,20 @@ func update_triage() -> void:
 	
 	for employee in GameManager.employees:
 		
-		# Spawning new notifications
+		# Spawning new Phone notifications
 		if employee.has_issue and employee.current_issue != null:
 			if !active_notifications.has(employee):
 				var item = notification_scene.instantiate()
 				notification_list.add_child(item)
 				item.setup(employee)
 				active_notifications[employee] = item
+		#Spawn toaster notification
+				if toast_banner and toast_banner.has_method("show_toast"):
+					toast_banner.show_toast(
+					employee.employee_name, 
+					employee.current_issue.employee_message
+					)
+				
 
 	# Removing notifications for fixed/failed issues
 	var employees_to_remove = []

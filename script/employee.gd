@@ -51,13 +51,13 @@ func _ready():
 
 	match employee_type:
 		"CEO":
-			patience = 70
+			patience = 40
 		"Intern":
-			patience = 120
+			patience = 60
 		"Manager":
-			patience = 90
+			patience = 50
 		_:
-			patience = 100
+			patience = 65
 
 	_build_sprite_frames()
 
@@ -101,7 +101,7 @@ func _process(delta):
 			exclamation.scale = Vector2(pulse, pulse)
 		var urgency = current_issue.urgency
 		patience -= urgency * 10 * delta
-		patience_bar.value = clamp(patience,0,100)
+		patience_bar.value = clamp(patience,0,60)
 		if patience <= 0:
 			escalate()
 
@@ -147,13 +147,13 @@ func create_issue(issue:CyberIssue):
 	current_issue = issue
 	match employee_type:
 		"CEO":
-			patience = 70
+			patience = 40
 		"Intern":
-			patience = 120
+			patience = 60
 		"Manager":
-			patience = 90
+			patience = 50
 		_:
-			patience = 100
+			patience = 65
 
 	var exclamation = $UI/Exclamation
 	exclamation.visible = true

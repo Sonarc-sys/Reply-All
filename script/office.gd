@@ -5,7 +5,7 @@ var current_employee = null
 
 
 func _ready():
-	for employee in $Employees.get_children():
+	for employee in $Map/Employees.get_children():
 		GameManager.register_employee(employee)
 		if !employee.issue_clicked.is_connected(show_issue):
 			employee.issue_clicked.connect(show_issue)
