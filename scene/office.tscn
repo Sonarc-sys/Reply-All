@@ -5,46 +5,38 @@
 [ext_resource type="PackedScene" uid="uid://sfyiscjawqa7" path="res://scene/employee.tscn" id="2_pgah7"]
 [ext_resource type="PackedScene" uid="uid://dfr3iv4iher32" path="res://scene/IssuePopup.tscn" id="2_uvqaq"]
 [ext_resource type="Texture2D" uid="uid://bgxoq4qv3dwxs" path="res://asset/pixel background office.png" id="2_wk7dr"]
+[ext_resource type="PackedScene" uid="uid://bgldeqc1xwyaj" path="res://scene/ToastBanner.tscn" id="5_4spjl"]
 [ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
+[ext_resource type="Texture2D" uid="uid://dgoyski6kmxha" path="res://asset/pixel_art_smartphone_blank.png" id="6_m1geu"]
+[ext_resource type="PackedScene" uid="uid://dcywsqq8hc6g3" path="res://scene/Map-Assets/Entry-Hallway/secretary_cubicle_1.tscn" id="7_seri3"]
+[ext_resource type="PackedScene" uid="uid://ch8jfytgdwl4y" path="res://scene/Map-Assets/Entry-Hallway/secretary_cubicle_2.tscn" id="8_4spjl"]
 [ext_resource type="Texture2D" uid="uid://dpr4s3akpdp20" path="res://asset/Map/Map__0003_Background.png" id="8_seri3"]
-[ext_resource type="Texture2D" uid="uid://cnifnd38kwlgo" path="res://asset/Map/Map__0001s_0001_Secretary-Desk-upper.png" id="9_4spjl"]
-[ext_resource type="Texture2D" uid="uid://csrx0uc1etpyy" path="res://asset/Map/Map__0001s_0002_Secretary-Desk.png" id="10_m1geu"]
-[ext_resource type="Texture2D" uid="uid://q13brcpn0p3p" path="res://asset/Map/Map__0001s_0000_Cubicle-Divider.png" id="11_vfpnv"]
+[ext_resource type="PackedScene" uid="uid://r4873igoon8j" path="res://scene/Map-Assets/Entry-Hallway/door_hallway_wall_2.tscn" id="9_m1geu"]
 [ext_resource type="Texture2D" uid="uid://bgilc6pftwef8" path="res://asset/Map/Map__0004s_0006_Vending-Machines-and-others.png" id="12_qv62g"]
+[ext_resource type="PackedScene" uid="uid://mbhxdklix6co" path="res://scene/Map-Assets/Breakroom/left_breakroom_wall_2.tscn" id="12_vfpnv"]
 [ext_resource type="Texture2D" uid="uid://bnshgatmcjpdb" path="res://asset/Map/Map__0004s_0005_2-Couches-and-Plant.png" id="13_1dort"]
-[ext_resource type="Texture2D" uid="uid://b1neu8pt6nv52" path="res://asset/Map/Map__0004s_0000_Left-Breakroom-Divider.png" id="14_6q284"]
-[ext_resource type="Texture2D" uid="uid://bh1enqjnsjwgt" path="res://asset/Map/Map__0004s_0001_Right-Breakroom-Divider.png" id="15_pr4d6"]
-[ext_resource type="Texture2D" uid="uid://bks8w4lg6shao" path="res://asset/Map/Map__0004s_0003_Break-Room-Table.png" id="16_yoaiw"]
-[ext_resource type="Texture2D" uid="uid://cgrfk6lr887bm" path="res://asset/Map/Map__0004s_0002_Left-Chair.png" id="17_w4psh"]
-[ext_resource type="Texture2D" uid="uid://c42yxflts7ukx" path="res://asset/Map/Map__0004s_0004_Right-Chair-.png" id="18_33w1t"]
-[ext_resource type="Texture2D" uid="uid://cq3cxalmaeywq" path="res://asset/Map/Map__0001_Cubicle-Cluster.png" id="19_68t56"]
-[ext_resource type="Texture2D" uid="uid://qhsu34gfqchk" path="res://asset/Map/Map__0000_CEO-Cubicle.png" id="20_ydi3i"]
-[ext_resource type="Texture2D" uid="uid://dlkgnddltmikb" path="res://asset/Map/Map__0003s_0005_Boardroom-Wall.png" id="21_7qnlp"]
+[ext_resource type="PackedScene" uid="uid://bveqttk7web3h" path="res://scene/Map-Assets/Breakroom/right_breakroom_wall_2.tscn" id="13_qv62g"]
+[ext_resource type="PackedScene" uid="uid://brursbb3017mh" path="res://scene/Map-Assets/Breakroom/break_room_table.tscn" id="14_1dort"]
+[ext_resource type="PackedScene" uid="uid://c1wedo578v35u" path="res://scene/Map-Assets/Main-Office-Area/cubicle_cluster.tscn" id="15_6q284"]
+[ext_resource type="PackedScene" uid="uid://dq34x2vo8o35w" path="res://scene/Map-Assets/Main-Office-Area/ceo_cubicle.tscn" id="16_pr4d6"]
+[ext_resource type="PackedScene" uid="uid://yxdnkkabkhfr" path="res://scene/Map-Assets/Boardroom/upper_wall.tscn" id="17_yoaiw"]
+[ext_resource type="PackedScene" uid="uid://drot523u1kg4t" path="res://scene/Map-Assets/Boardroom/right_side_wall.tscn" id="20_w4psh"]
+[ext_resource type="PackedScene" uid="uid://c2af72505t0yv" path="res://scene/Map-Assets/Boardroom/board_room_table.tscn" id="21_33w1t"]
+[ext_resource type="PackedScene" uid="uid://mw8dcjuiwt7" path="res://scene/Map-Assets/right_chair.tscn" id="22_68t56"]
 [ext_resource type="Texture2D" uid="uid://ds4mknkhmbuwq" path="res://asset/Map/Map__0003s_0001_Printer-Table.png" id="22_gah80"]
 [ext_resource type="Texture2D" uid="uid://byoyir6pdomkq" path="res://asset/Map/Map__0003s_0000_Coffee-Table-and-Tree.png" id="23_rl73t"]
-[ext_resource type="Texture2D" uid="uid://d2ybg5vg4cslc" path="res://asset/Map/Map__0003s_0003_Board-Table.png" id="24_mk753"]
-[ext_resource type="Texture2D" uid="uid://dnvct62q76gic" path="res://asset/Map/Map__0003s_0004_boardroom-Serveroom-Divider.png" id="25_6odtb"]
-[ext_resource type="Texture2D" uid="uid://cdill43u5pjvo" path="res://asset/Map/Map__0000s_0000_Right-Vertical-Wall.png" id="26_qbscn"]
-[ext_resource type="Texture2D" uid="uid://47pn8omlimnu" path="res://asset/Map/server.png" id="26_seri3"]
-[ext_resource type="Texture2D" uid="uid://df1hnewy7g5q3" path="res://asset/Map/Map__0002s_0008_Server-Room-Inner-Wall.png" id="27_7h6bd"]
-[ext_resource type="Texture2D" uid="uid://buux446s244n5" path="res://asset/Map/Map__0002s_0001_Upper-IT-Desk.png" id="28_46qiu"]
-[ext_resource type="Texture2D" uid="uid://d33mbn6tidcwn" path="res://asset/Map/Map__0002s_0000_Lower-IT-Desk.png" id="29_viurs"]
+[ext_resource type="PackedScene" uid="uid://bgmifdnu7evrr" path="res://scene/Map-Assets/left_chair.tscn" id="23_ydi3i"]
+[ext_resource type="PackedScene" uid="uid://r6qopkoi47pc" path="res://scene/Map-Assets/ServerRoom/right_wall.tscn" id="24_7qnlp"]
+[ext_resource type="PackedScene" uid="uid://dqj41cl3f0sml" path="res://scene/Map-Assets/ServerRoom/upper_wall.tscn" id="25_gah80"]
+[ext_resource type="PackedScene" uid="uid://2rmni31cmksd" path="res://scene/Map-Assets/ServerRoom/upper_it_desk.tscn" id="26_rl73t"]
+[ext_resource type="PackedScene" uid="uid://3o8mcx0ga6ij" path="res://scene/Map-Assets/ServerRoom/lower_it_desk.tscn" id="27_mk753"]
+[ext_resource type="PackedScene" uid="uid://bfbl04nl55cig" path="res://scene/Map-Assets/ServerRoom/inner_server_room_walls.tscn" id="29_6odtb"]
 [ext_resource type="Texture2D" uid="uid://ti3tdlmpwx6y" path="res://asset/Map/Map__0002s_0003_Left-Table.png" id="30_ifrvc"]
-[ext_resource type="Texture2D" uid="uid://c55t2i1tvtfe" path="res://asset/Map/Map__0002s_0007_Inner-Server-Room-walls.png" id="31_na3bg"]
-[ext_resource type="Texture2D" uid="uid://bederkkat5h2l" path="res://asset/Map/Map__0000s_0001_Hallway-Upper-Wall.png" id="33_rqnvb"]
-[ext_resource type="Texture2D" uid="uid://dr286k4oyxb6p" path="res://asset/Map/Map__0000s_0002_Lower-Hallway-Wall.png" id="34_snxsr"]
-[ext_resource type="Texture2D" uid="uid://b0pdktxh5l6gp" path="res://asset/phone pixel.png" id="35_q2p2h"]
+[ext_resource type="PackedScene" uid="uid://0uwnffk4aiy2" path="res://scene/Map-Assets/ServerRoom/server.tscn" id="30_qbscn"]
+[ext_resource type="PackedScene" uid="uid://87x0mdyq3hnm" path="res://scene/Map-Assets/Main-Hallway/upper_hallway_wall.tscn" id="31_7h6bd"]
+[ext_resource type="PackedScene" uid="uid://dxxbh0pkbjgi4" path="res://scene/Map-Assets/Main-Hallway/lower_hallway_wall.tscn" id="32_46qiu"]
+[ext_resource type="PackedScene" uid="uid://oe1veavo5w57" path="res://scene/Map-Assets/bottom_wall.tscn" id="34_viurs"]
 [ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
-[ext_resource type="Texture2D" uid="uid://cvxgmso0xv7p6" path="res://asset/Map/Map__0002_Bottom-Wall.png" id="36_8ep84"]
-[ext_resource type="PackedScene" path="res://scene/LockdownEvent.tscn" id="lockdown_ext"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijygm"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjf4h"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5270r"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nn7b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
 size = Vector2(1687.5, 1318.5)
@@ -55,47 +47,163 @@ size = Vector2(1518.125, 956.375)
 [node name="Office" type="Node2D" unique_id=475616271]
 script = ExtResource("1_riodj")
 
-[node name="Map" type="Node2D" parent="." unique_id=390555796]
-
-[node name="Background" type="Sprite2D" parent="Map" unique_id=171329901]
+[node name="Background" type="Sprite2D" parent="." unique_id=171329901]
 position = Vector2(584, 478)
 texture = ExtResource("8_seri3")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
+script = ExtResource("5_eglr7")
+
+[node name="IssuePopup" parent="CanvasLayer" unique_id=343395867 instance=ExtResource("2_uvqaq")]
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2082554985]
+offset_left = 998.0
+offset_top = 15.0
+offset_right = 1125.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Security Score: 0
+"
+
+[node name="ToastBanner" parent="CanvasLayer" unique_id=1473712903 instance=ExtResource("5_4spjl")]
+
+[node name="Phone" type="TextureRect" parent="CanvasLayer" unique_id=577603701]
+offset_left = 809.0
+offset_top = 292.0
+offset_right = 1282.0
+offset_bottom = 658.0
+texture = ExtResource("6_m1geu")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Phone" unique_id=495335545]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.071
+anchor_bottom = -0.071
+offset_left = 149.0
+offset_top = 66.986
+offset_right = 325.0
+offset_bottom = 365.986
+horizontal_scroll_mode = 0
+
+[node name="NotificationList" type="VBoxContainer" parent="CanvasLayer/Phone/ScrollContainer" unique_id=1932424071]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Map" type="Node2D" parent="." unique_id=390555796]
+y_sort_enabled = true
+
+[node name="Employees" type="Node2D" parent="Map" unique_id=1871804216]
+y_sort_enabled = true
+position = Vector2(5, 24)
+
+[node name="Employee1" parent="Map/Employees" unique_id=1133885026 instance=ExtResource("2_pgah7")]
+position = Vector2(340, 652)
+scale = Vector2(0.639369, 0.639369)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Bob"
+employee_type = "Intern"
+
+[node name="Employee2" parent="Map/Employees" unique_id=280188704 instance=ExtResource("2_pgah7")]
+position = Vector2(198, 704)
+scale = Vector2(0.6130586, 0.6130586)
+collision_layer = 1
+collision_mask = 1
+employee_name = "George"
+employee_type = "Manager"
+
+[node name="Employee3" parent="Map/Employees" unique_id=2140453044 instance=ExtResource("2_pgah7")]
+position = Vector2(247, 293)
+scale = Vector2(0.6141567, 0.6141567)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Steven"
+employee_type = "CEO"
+
+[node name="Employee4" parent="Map/Employees" unique_id=1133885030 instance=ExtResource("2_pgah7")]
+position = Vector2(530, 193.00003)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Alex"
+employee_type = "IT"
+
+[node name="Employee5" parent="Map/Employees" unique_id=1133885031 instance=ExtResource("2_pgah7")]
+position = Vector2(1121.9999, 239.00002)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Marcus"
+employee_type = "IT2"
+
+[node name="Employee6" parent="Map/Employees" unique_id=1133885032 instance=ExtResource("2_pgah7")]
+position = Vector2(432.00003, 314.00003)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Jake"
+employee_type = "Intern"
+
+[node name="Employee7" parent="Map/Employees" unique_id=1133885033 instance=ExtResource("2_pgah7")]
+position = Vector2(31.999939, 364)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Mia"
+employee_type = "Intern2"
+
+[node name="Employee8" parent="Map/Employees" unique_id=1133885034 instance=ExtResource("2_pgah7")]
+position = Vector2(828.99994, 244.00002)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Sandra"
+employee_type = "Receptionist"
+
+[node name="Employee9" parent="Map/Employees" unique_id=1133885035 instance=ExtResource("2_pgah7")]
+position = Vector2(773.99994, 781)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Lisa"
+employee_type = "Receptionist2"
+
+[node name="Employee10" parent="Map/Employees" unique_id=1133885036 instance=ExtResource("2_pgah7")]
+position = Vector2(88.00001, 690)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "Priya"
+employee_type = "Normal3"
+
+[node name="Employee11" parent="Map/Employees" unique_id=1133885037 instance=ExtResource("2_pgah7")]
+position = Vector2(638.99994, 821.00006)
+scale = Vector2(0.614, 0.614)
+collision_layer = 1
+collision_mask = 1
+employee_name = "James"
+employee_type = "Normal4"
+
+[node name="Player" parent="Map" unique_id=1881935737 instance=ExtResource("2_nwkqs")]
+position = Vector2(43, 162)
+scale = Vector2(0.61124456, 0.61124456)
+
 [node name="Entry Hallway" type="Node2D" parent="Map" unique_id=1202782627]
-
-[node name="Secretary Cubicle 1" type="StaticBody2D" parent="Map/Entry Hallway" unique_id=1176133719]
-
-[node name="Secratary Cubicle 1" type="Sprite2D" parent="Map/Entry Hallway/Secretary Cubicle 1" unique_id=1197564615]
-position = Vector2(146, 279)
-texture = ExtResource("9_4spjl")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Entry Hallway/Secretary Cubicle 1" unique_id=865822376]
 y_sort_enabled = true
-position = Vector2(146, 279)
-polygon = PackedVector2Array(-74, 42, -35, 42, -35, 11, -20, 11, -20, 12.200001, -31.3, 14, -34, 14, -29, 27, -11, 27, -9, 7, -3, 7, 1, -7, 63.199997, -7, 65.2, 11, 74, 11, 74, -42, -74, -42)
 
-[node name="Secretary Cubicle 2" type="StaticBody2D" parent="Map/Entry Hallway" unique_id=589688700]
+[node name="Secretary Cubicle 1" parent="Map/Entry Hallway" unique_id=1443239124 instance=ExtResource("7_seri3")]
+position = Vector2(144, 264)
 
-[node name="Secretary Cubicle 2" type="Sprite2D" parent="Map/Entry Hallway/Secretary Cubicle 2" unique_id=865723841]
-position = Vector2(146, 378)
-texture = ExtResource("10_m1geu")
+[node name="Secretary Cubicle 2" parent="Map/Entry Hallway" unique_id=863925489 instance=ExtResource("8_4spjl")]
+position = Vector2(146, 343)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Entry Hallway/Secretary Cubicle 2" unique_id=559127966]
-y_sort_enabled = true
-position = Vector2(146, 378)
-polygon = PackedVector2Array(-74, -64.5, -74, 64.5, 74, 64.5, 74, -9.599998, 65.899994, -7.5, 63, -7.5, 63, 28.5, -35, 28.5, -35, -10.5, -20, -10.5, -34, -8.200001, -34, 7, -29, 7, -26, 7, -22, 8, -19, 8, -15, 8, -10, 9, -11, -14, -4, -15, -3, -23, 1, -29.5, 74, -29.5, 74, -64.5)
-
-[node name="Door Hallway Wall2" type="StaticBody2D" parent="Map/Entry Hallway" unique_id=1477795616]
-
-[node name="Door Hallway Wall" type="Sprite2D" parent="Map/Entry Hallway/Door Hallway Wall2" unique_id=764977170]
-position = Vector2(76, 169)
-texture = ExtResource("11_vfpnv")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Entry Hallway/Door Hallway Wall2" unique_id=2000202727]
-position = Vector2(76, 169)
-polygon = PackedVector2Array(-3.5, -69.5, -3.5, 69.5, 3.5, 69.5, 3.5, -69.5)
+[node name="Door Hallway Wall2" parent="Map/Entry Hallway" unique_id=1706407914 instance=ExtResource("9_m1geu")]
 
 [node name="BreakRoom" type="Node2D" parent="Map" unique_id=326120212]
+y_sort_enabled = true
 
 [node name="Vending Machines" type="Sprite2D" parent="Map/BreakRoom" unique_id=1642107967]
 position = Vector2(405, 136)
@@ -105,286 +213,67 @@ texture = ExtResource("12_qv62g")
 position = Vector2(168, 151)
 texture = ExtResource("13_1dort")
 
-[node name="Left Breakroom Wall2" type="StaticBody2D" parent="Map/BreakRoom" unique_id=1969078817]
+[node name="Left Breakroom Wall2" parent="Map/BreakRoom" unique_id=1041769389 instance=ExtResource("12_vfpnv")]
 
-[node name="Left Breakroom Wall" type="Sprite2D" parent="Map/BreakRoom/Left Breakroom Wall2" unique_id=641996506]
-position = Vector2(286, 271)
-texture = ExtResource("14_6q284")
+[node name="Right Breakroom Wall2" parent="Map/BreakRoom" unique_id=291478902 instance=ExtResource("13_qv62g")]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/BreakRoom/Left Breakroom Wall2" unique_id=2094929600]
-position = Vector2(286, 271)
-polygon = PackedVector2Array(-3.5, -170, -3.5, -99, 3.5, -99, 3.5, -170)
+[node name="Break Room table" parent="Map/BreakRoom" unique_id=1312199014 instance=ExtResource("14_1dort")]
+position = Vector2(348, 341)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/BreakRoom/Left Breakroom Wall2" unique_id=1873228733]
-position = Vector2(286, 271)
-polygon = PackedVector2Array(3.5, 170, 3.5, -75, -3.5, -75, -3.5, 170)
+[node name="Break Room table2" parent="Map/BreakRoom" unique_id=2128287278 instance=ExtResource("14_1dort")]
+position = Vector2(348, 257)
 
-[node name="Right Breakroom Wall2" type="StaticBody2D" parent="Map/BreakRoom" unique_id=2009829756]
+[node name="Break Room table3" parent="Map/BreakRoom" unique_id=1323058050 instance=ExtResource("14_1dort")]
+position = Vector2(497, 255)
 
-[node name="Right Breakroom Wall" type="Sprite2D" parent="Map/BreakRoom/Right Breakroom Wall2" unique_id=345805796]
-position = Vector2(577, 272)
-texture = ExtResource("15_pr4d6")
+[node name="Break Room table4" parent="Map/BreakRoom" unique_id=1904787096 instance=ExtResource("14_1dort")]
+position = Vector2(497, 342)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/BreakRoom/Right Breakroom Wall2" unique_id=746876617]
-position = Vector2(577, 272)
-polygon = PackedVector2Array(-3.5, -170, -3.5, -98, 3.5, -98, 3.5, -170)
+[node name="Right Chair" parent="Map/BreakRoom" unique_id=1906262150 instance=ExtResource("22_68t56")]
+position = Vector2(392, 271)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/BreakRoom/Right Breakroom Wall2" unique_id=665963028]
-position = Vector2(577, 272)
-polygon = PackedVector2Array(3.5, 170, 3.5, -73, -3.5, -73, -3.5, 170)
+[node name="Left Chair" parent="Map/BreakRoom" unique_id=1435613411 instance=ExtResource("23_ydi3i")]
+position = Vector2(306, 271)
 
-[node name="Break Room table1" type="Sprite2D" parent="Map/BreakRoom" unique_id=2095024716]
-position = Vector2(341, 356)
-texture = ExtResource("16_yoaiw")
+[node name="Right Chair2" parent="Map/BreakRoom" unique_id=667096667 instance=ExtResource("22_68t56")]
+position = Vector2(542, 271)
 
-[node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table1" unique_id=126750148]
-position = Vector2(-38, -10)
-texture = ExtResource("17_w4psh")
+[node name="Left Chair2" parent="Map/BreakRoom" unique_id=1817680156 instance=ExtResource("23_ydi3i")]
+position = Vector2(456, 271)
 
-[node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table1" unique_id=1500618434]
-position = Vector2(40, -8)
-texture = ExtResource("18_33w1t")
+[node name="Right Chair3" parent="Map/BreakRoom" unique_id=727533599 instance=ExtResource("22_68t56")]
+position = Vector2(542, 353)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table1" unique_id=1095865043]
+[node name="Left Chair3" parent="Map/BreakRoom" unique_id=175302006 instance=ExtResource("23_ydi3i")]
+position = Vector2(456, 353)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table1/StaticBody2D" unique_id=1244532736]
-shape = SubResource("RectangleShape2D_ijygm")
+[node name="Right Chair4" parent="Map/BreakRoom" unique_id=295808840 instance=ExtResource("22_68t56")]
+position = Vector2(392, 355)
 
-[node name="Break Room table2" type="Sprite2D" parent="Map/BreakRoom" unique_id=126687484]
-position = Vector2(521, 360)
-texture = ExtResource("16_yoaiw")
-
-[node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table2" unique_id=1330712450]
-position = Vector2(39, -8)
-texture = ExtResource("18_33w1t")
-
-[node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table2" unique_id=1940055530]
-position = Vector2(-39, -10)
-texture = ExtResource("17_w4psh")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table2" unique_id=698287206]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table2/StaticBody2D" unique_id=1325957725]
-shape = SubResource("RectangleShape2D_hjf4h")
-
-[node name="Break Room table3" type="Sprite2D" parent="Map/BreakRoom" unique_id=1704802675]
-position = Vector2(515, 268)
-texture = ExtResource("16_yoaiw")
-
-[node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table3" unique_id=507763856]
-position = Vector2(-42, -10)
-texture = ExtResource("17_w4psh")
-
-[node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table3" unique_id=62733729]
-position = Vector2(45, -8)
-texture = ExtResource("18_33w1t")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table3" unique_id=825472602]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table3/StaticBody2D" unique_id=613478131]
-shape = SubResource("RectangleShape2D_5270r")
-
-[node name="Break Room table4" type="Sprite2D" parent="Map/BreakRoom" unique_id=421566745]
-position = Vector2(345, 261)
-texture = ExtResource("16_yoaiw")
-
-[node name="Left Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table4" unique_id=379455694]
-position = Vector2(-41, -9)
-texture = ExtResource("17_w4psh")
-
-[node name="Right Chair" type="Sprite2D" parent="Map/BreakRoom/Break Room table4" unique_id=1549759515]
-position = Vector2(42, -8)
-texture = ExtResource("18_33w1t")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Map/BreakRoom/Break Room table4" unique_id=1902609803]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/BreakRoom/Break Room table4/StaticBody2D" unique_id=169436272]
-shape = SubResource("RectangleShape2D_8nn7b")
+[node name="Left Chair4" parent="Map/BreakRoom" unique_id=1539464773 instance=ExtResource("23_ydi3i")]
+position = Vector2(306, 355)
 
 [node name="Main Office Area" type="Node2D" parent="Map" unique_id=1502121410]
+y_sort_enabled = true
 
-[node name="Cubicle Cluster" type="StaticBody2D" parent="Map/Main Office Area" unique_id=230870515]
+[node name="Cubicle Cluster" parent="Map/Main Office Area" unique_id=990662673 instance=ExtResource("15_6q284")]
 
-[node name="Cubicle Cluster" type="Sprite2D" parent="Map/Main Office Area/Cubicle Cluster" unique_id=1572912720]
-position = Vector2(704, 213)
-texture = ExtResource("19_68t56")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Main Office Area/Cubicle Cluster" unique_id=1099631269]
-position = Vector2(704, 213)
-polygon = PackedVector2Array(-74, -92.5, -74, -55.5, -72, -55.5, -72, -46.5, -74, -46.5, -74, -4.5, -72, -4.5, -72, 5.5, -74, 5.5, -74, 47.5, -72, 47.5, -72, 56.5, -74, 56.5, -74, 92.5, 74, 92.5, 74, 56.5, 66, 56.5, 66, 47.5, 74, 47.5, 74, 5.5, 53, 5.5, 53, -4.5, 74, -4.5, 74, -46.5, 66, -46.5, 66, -55.5, 74, -55.5, 74, -92.5)
-
-[node name="CEO Cubicle" type="StaticBody2D" parent="Map/Main Office Area" unique_id=993469098]
-
-[node name="CEO Cubicle" type="Sprite2D" parent="Map/Main Office Area/CEO Cubicle" unique_id=953562690]
-position = Vector2(1019.75, 238)
-scale = Vector2(1.0261322, 1)
-texture = ExtResource("20_ydi3i")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Main Office Area/CEO Cubicle" unique_id=1147128851]
-position = Vector2(1019.75, 238)
-scale = Vector2(1.0261322, 1)
-polygon = PackedVector2Array(33.5, -69.5, -19.5, -69.5, -19.5, -62.5, -78.6, -60.5, -81.5, -60.5, -81.5, 34.5, -143.5, 34.5, -143.5, 69.5, 143.5, 69.5, 143.5, 34.5, -35.5, 34.5, -35.5, -24.5, -19.300003, -24.5, -17.5, -12.200001, -17.5, -9.5, 31.300003, -9.5, 33.300003, -24.5, 38.699997, -24.5, 40.699997, -7.5, 63.300003, -7.5, 66.5, -10.700001, 66.5, -25.099998, 70.8, -26.5, 73.600006, -26.5, 71.5, -59.6, 71.5, -62.5, 33.5, -62.5)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/Main Office Area/CEO Cubicle" unique_id=1859545626]
-position = Vector2(1019.75, 238)
-scale = Vector2(1.0261322, 1)
-polygon = PackedVector2Array(-18.5, -11.099998, -18.5, -8.799999, -20.5, -7.700001, -20.5, 3.699997, -31.800003, 5.5, -34.5, 5.5, -34.5, 34.300003, -31.300003, 37.5, -23.099998, 37.5, -21.099998, 31.5, -19.900002, 31.5, -17.900002, 37.5, -9.699997, 37.5, -6.5, 34.300003, -6.5, -8.099998)
-
-[node name="BoardRoom" type="Node2D" parent="Map" unique_id=1384085087]
-
-[node name="Upper wall" type="StaticBody2D" parent="Map/BoardRoom" unique_id=1245404059]
-
-[node name="Board Room Wall" type="Sprite2D" parent="Map/BoardRoom/Upper wall" unique_id=1204340529]
-position = Vector2(254, 514)
-texture = ExtResource("21_7qnlp")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/BoardRoom/Upper wall" unique_id=1090217612]
-position = Vector2(254, 514)
-polygon = PackedVector2Array(-255, 19, -123, 17, -122, -21, -253.5, -18)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/BoardRoom/Upper wall" unique_id=321686653]
-position = Vector2(254, 514)
-polygon = PackedVector2Array(253.5, -18, -52.5, -18, -50, 18, 250, 19)
-
-[node name="Printer Table" type="Sprite2D" parent="Map/BoardRoom" unique_id=1866172121]
-position = Vector2(252, 530)
-texture = ExtResource("22_gah80")
-
-[node name="Coffee Table and Tree" type="Sprite2D" parent="Map/BoardRoom" unique_id=40478336]
-position = Vector2(61, 531)
-texture = ExtResource("23_rl73t")
-
-[node name="Right Side Wall" type="StaticBody2D" parent="Map/BoardRoom" unique_id=609413050]
-
-[node name="Boardroom Wall Divider" type="Sprite2D" parent="Map/BoardRoom/Right Side Wall" unique_id=1583052567]
-position = Vector2(507, 725)
-texture = ExtResource("25_6odtb")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/BoardRoom/Right Side Wall" unique_id=1304815880]
-position = Vector2(507, 725)
-polygon = PackedVector2Array(-3.5, -230.5, -3.5, 230.5, 3.5, 230.5, 3.5, -230.5)
-
-[node name="Board Room Table" type="StaticBody2D" parent="Map/BoardRoom" unique_id=1965642324]
-
-[node name="Board Table" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=1930431643]
-position = Vector2(378, 691)
-texture = ExtResource("24_mk753")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=1547882260]
-position = Vector2(378, 691)
-polygon = PackedVector2Array(-38.5, 108, -24.5, 108, -24.5, 107, 22.5, 107, 22.5, 108, 38.5, 108, 38.5, -108, -38.5, -108)
-
-[node name="Left Chair4" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=858693686]
-position = Vector2(321, 698)
-texture = ExtResource("17_w4psh")
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=620330281]
-position = Vector2(321, 698)
-polygon = PackedVector2Array(10, 20.5, 10, -9.5, 0, -9.5, 0, -20.5, -10, -20.5, -10, 20.5)
-
-[node name="Left Chair3" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=1013939361]
-position = Vector2(318, 758)
-texture = ExtResource("17_w4psh")
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=333529656]
-position = Vector2(318, 758)
-polygon = PackedVector2Array(10, 20.5, 10, -9.5, 0, -9.5, 0, -20.5, -10, -20.5, -10, 20.5)
-
-[node name="Left Chair2" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=306223684]
-position = Vector2(319, 642)
-texture = ExtResource("17_w4psh")
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=1308669120]
-position = Vector2(319, 642)
-polygon = PackedVector2Array(10, 20.5, 10, -9.5, 0, -9.5, 0, -20.5, -10, -20.5, -10, 20.5)
-
-[node name="Left Chair" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=1698512394]
-position = Vector2(321, 596)
-texture = ExtResource("17_w4psh")
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=1836764448]
-position = Vector2(321, 596)
-polygon = PackedVector2Array(10, 20.5, 10, -9.5, 0, -9.5, 0, -20.5, -10, -20.5, -10, 20.5)
-
-[node name="Right Chair4" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=99621426]
-position = Vector2(438, 757)
-texture = ExtResource("18_33w1t")
-
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=1114318446]
-position = Vector2(438, 757)
-polygon = PackedVector2Array(10.5, -20.5, -0.5, -20.5, -0.5, -9.5, -10.5, -9.5, -10.5, 20.5, 10.5, 20.5)
-
-[node name="Right Chair3" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=258389018]
-position = Vector2(436, 702)
-texture = ExtResource("18_33w1t")
-
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=14965721]
-position = Vector2(436, 702)
-polygon = PackedVector2Array(10.5, -20.5, -0.5, -20.5, -0.5, -9.5, -10.5, -9.5, -10.5, 20.5, 10.5, 20.5)
-
-[node name="Right Chair2" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=1222361140]
-position = Vector2(437, 651)
-texture = ExtResource("18_33w1t")
-
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=82551939]
-position = Vector2(437, 651)
-polygon = PackedVector2Array(10.5, -20.5, -0.5, -20.5, -0.5, -9.5, -10.5, -9.5, -10.5, 20.5, 10.5, 20.5)
-
-[node name="Right Chair" type="Sprite2D" parent="Map/BoardRoom/Board Room Table" unique_id=883025772]
-position = Vector2(438, 602)
-texture = ExtResource("18_33w1t")
-
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Map/BoardRoom/Board Room Table" unique_id=1829184306]
-position = Vector2(438, 602)
-polygon = PackedVector2Array(10.5, -20.5, -0.5, -20.5, -0.5, -9.5, -10.5, -9.5, -10.5, 20.5, 10.5, 20.5)
+[node name="CEO Cubicle" parent="Map/Main Office Area" unique_id=1880990275 instance=ExtResource("16_pr4d6")]
+position = Vector2(1024, 209)
 
 [node name="ServerRoom" type="Node2D" parent="Map" unique_id=1754038388]
+y_sort_enabled = true
 
-[node name="Right Wall" type="StaticBody2D" parent="Map/ServerRoom" unique_id=945818269]
+[node name="Right Wall" parent="Map/ServerRoom" unique_id=1103901928 instance=ExtResource("24_7qnlp")]
 
-[node name="Right Server Room Wall" type="Sprite2D" parent="Map/ServerRoom/Right Wall" unique_id=522682029]
-position = Vector2(944, 612.75)
-scale = Vector2(1, 1.4693655)
-texture = ExtResource("26_qbscn")
+[node name="Upper IT Desk" parent="Map/ServerRoom" unique_id=1989647576 instance=ExtResource("26_rl73t")]
+position = Vector2(602, 607)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/ServerRoom/Right Wall" unique_id=544703434]
-position = Vector2(944, 612.75)
-scale = Vector2(1, 1.4693655)
-polygon = PackedVector2Array(-3.5, -228.5, -3.5, 228.5, 3.5, 228.5, 3.5, -228.5)
+[node name="Lower IT Desk" parent="Map/ServerRoom" unique_id=1604667695 instance=ExtResource("27_mk753")]
+position = Vector2(612, 726)
 
-[node name="Upper Wall" type="StaticBody2D" parent="Map/ServerRoom" unique_id=1864714635]
-
-[node name="Server Room Wall" type="Sprite2D" parent="Map/ServerRoom/Upper Wall" unique_id=63600278]
-position = Vector2(726, 512)
-texture = ExtResource("27_7h6bd")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/ServerRoom/Upper Wall" unique_id=875924528]
-position = Vector2(726, 512)
-polygon = PackedVector2Array(-216, 18, -81, 18, -81, -18, -216, -18)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/ServerRoom/Upper Wall" unique_id=1684955163]
-position = Vector2(726, 512)
-polygon = PackedVector2Array(216, -18, -15, -18, -15, 18, 216, 18)
-
-[node name="Upper IT Desk" type="StaticBody2D" parent="Map/ServerRoom" unique_id=2017834913]
-
-[node name="Upper IT Desk" type="Sprite2D" parent="Map/ServerRoom/Upper IT Desk" unique_id=1012919009]
-position = Vector2(609, 557)
-texture = ExtResource("28_46qiu")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/ServerRoom/Upper IT Desk" unique_id=361754758]
-position = Vector2(609, 557)
-polygon = PackedVector2Array(35.5, -64.5, 24.5, -64.5, 24.5, -57.3, 14.900002, -57.5, 13, -49.5, -35.5, -49.5, -35.5, -10.5, -32.5, -10.5, -29, 6, -8, 6, -4.5, -7.299999, -7.700001, -10.5, -3.5, -10.5, -3.5, 28.5, -35.5, 28.5, -35.5, 64.5, 35.4, 64.5, 35.5, 62.699997)
-
-[node name="Lower IT Desk" type="StaticBody2D" parent="Map/ServerRoom" unique_id=923528470]
-
-[node name="Lower IT Desk" type="Sprite2D" parent="Map/ServerRoom/Lower IT Desk" unique_id=1323191039]
-position = Vector2(608, 656)
-texture = ExtResource("29_viurs")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/ServerRoom/Lower IT Desk" unique_id=1270594829]
-position = Vector2(608, 656)
-polygon = PackedVector2Array(35.5, -64.5, 24.5, -64.5, 24.5, -56.3, 23.3, -57.5, 14.700001, -57.5, 11.5, -54.3, 11.5, -49.5, -34.6, -47.5, -35.5, -47.5, -35.5, -12.400002, -32.5, -11.200001, -29, 6, -9, 7, -4.5, -7.299999, -7.700001, -10.5, -3.5, -10.5, -3.5, 28.5, -35.5, 28.5, -35.5, 64.5, 35.4, 64.5, 35.5, 62.699997)
+[node name="Upper Wall" parent="Map/ServerRoom" unique_id=865125536 instance=ExtResource("25_gah80")]
+position = Vector2(650, 515)
 
 [node name="Left Printer Table" type="Sprite2D" parent="Map/ServerRoom" unique_id=1649153878]
 position = Vector2(767, 531)
@@ -394,179 +283,103 @@ texture = ExtResource("30_ifrvc")
 position = Vector2(859, 533)
 texture = ExtResource("30_ifrvc")
 
-[node name="Inner Server Room Walls" type="StaticBody2D" parent="Map/ServerRoom" unique_id=681300646]
+[node name="Inner Server Room Walls" parent="Map/ServerRoom" unique_id=883658233 instance=ExtResource("29_6odtb")]
 
-[node name="Inner Server Wall" type="Sprite2D" parent="Map/ServerRoom/Inner Server Room Walls" unique_id=637124715]
-position = Vector2(822, 788)
-texture = ExtResource("31_na3bg")
+[node name="Server" parent="Map/ServerRoom" unique_id=1757892716 instance=ExtResource("30_qbscn")]
+position = Vector2(723, 927)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/ServerRoom/Inner Server Room Walls" unique_id=2080245874]
-position = Vector2(822, 788)
-polygon = PackedVector2Array(-121, 140.5, -110, 140.5, -110, -129.7, -78.9, -131.5, -76, -131.5, -76, -140.5, -121, -140.5)
+[node name="Server2" parent="Map/ServerRoom" unique_id=1266277489 instance=ExtResource("30_qbscn")]
+position = Vector2(823, 927)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/ServerRoom/Inner Server Room Walls" unique_id=315016721]
-position = Vector2(822, 788)
-polygon = PackedVector2Array(121, -140.5, -35, -140.5, -35, -131.5, -34, -131.5, -34, -130.5, -33, -130.5, -33, -129.5, 121, -129.5)
+[node name="Server3" parent="Map/ServerRoom" unique_id=1207543130 instance=ExtResource("30_qbscn")]
+position = Vector2(925, 927)
 
-[node name="Servers" type="StaticBody2D" parent="Map/ServerRoom" unique_id=2097935077]
+[node name="Server4" parent="Map/ServerRoom" unique_id=684600775 instance=ExtResource("30_qbscn")]
+position = Vector2(723, 838)
 
-[node name="Server" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=100977450]
-position = Vector2(727, 910)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
+[node name="Server5" parent="Map/ServerRoom" unique_id=1004785286 instance=ExtResource("30_qbscn")]
+position = Vector2(823, 838)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=1540301600]
-position = Vector2(727, 910)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="Server6" parent="Map/ServerRoom" unique_id=465954097 instance=ExtResource("30_qbscn")]
+position = Vector2(925, 838)
 
-[node name="Server2" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=928351672]
-position = Vector2(827, 910)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
+[node name="Server7" parent="Map/ServerRoom" unique_id=1376541038 instance=ExtResource("30_qbscn")]
+position = Vector2(723, 749)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=1492664711]
-position = Vector2(827, 910)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="Server8" parent="Map/ServerRoom" unique_id=1385936679 instance=ExtResource("30_qbscn")]
+position = Vector2(823, 749)
 
-[node name="Server3" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=510292321]
-position = Vector2(925, 910)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
+[node name="Server9" parent="Map/ServerRoom" unique_id=1100615786 instance=ExtResource("30_qbscn")]
+position = Vector2(925, 749)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=1369519533]
-position = Vector2(925, 910)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="BoardRoom" type="Node2D" parent="Map" unique_id=1384085087]
+y_sort_enabled = true
 
-[node name="Server4" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=1815366035]
-position = Vector2(727, 796.81244)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
+[node name="Upper wall" parent="Map/BoardRoom" unique_id=533576473 instance=ExtResource("17_yoaiw")]
+position = Vector2(164, 515)
 
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=138775749]
-position = Vector2(727, 796.81244)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="Printer Table" type="Sprite2D" parent="Map/BoardRoom" unique_id=1866172121]
+position = Vector2(252, 530)
+texture = ExtResource("22_gah80")
 
-[node name="Server5" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=783003322]
-position = Vector2(827, 796.81244)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
+[node name="Coffee Table and Tree" type="Sprite2D" parent="Map/BoardRoom" unique_id=40478336]
+position = Vector2(61, 531)
+texture = ExtResource("23_rl73t")
 
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=954743443]
-position = Vector2(827, 796.81244)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="Right Side Wall" parent="Map/BoardRoom" unique_id=1457444003 instance=ExtResource("20_w4psh")]
 
-[node name="Server6" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=2097320014]
-position = Vector2(925, 796.81244)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
+[node name="Board Room Table" parent="Map/BoardRoom" unique_id=1090588129 instance=ExtResource("21_33w1t")]
+position = Vector2(377, 599)
 
-[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=1641796573]
-position = Vector2(925, 796.81244)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="Right Chair" parent="Map/BoardRoom" unique_id=1261824759 instance=ExtResource("22_68t56")]
+position = Vector2(443, 617)
 
-[node name="Server7" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=112891577]
-position = Vector2(727, 707.81244)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
+[node name="Left Chair" parent="Map/BoardRoom" unique_id=1793710584 instance=ExtResource("23_ydi3i")]
+position = Vector2(323, 613)
 
-[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=1436008345]
-position = Vector2(727, 707.81244)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="Right Chair2" parent="Map/BoardRoom" unique_id=1283422005 instance=ExtResource("22_68t56")]
+position = Vector2(444, 698)
 
-[node name="Server8" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=2125878379]
-position = Vector2(827, 707.81244)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
+[node name="Left Chair2" parent="Map/BoardRoom" unique_id=588109006 instance=ExtResource("23_ydi3i")]
+position = Vector2(320, 699)
 
-[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=275362150]
-position = Vector2(827, 707.81244)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="Right Chair3" parent="Map/BoardRoom" unique_id=1557082672 instance=ExtResource("22_68t56")]
+position = Vector2(444, 783)
 
-[node name="Server9" type="Sprite2D" parent="Map/ServerRoom/Servers" unique_id=1663407890]
-position = Vector2(925, 707.81244)
-scale = Vector2(0.017689705, 0.017689703)
-texture = ExtResource("26_seri3")
-
-[node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Map/ServerRoom/Servers" unique_id=1066355518]
-position = Vector2(925, 707.81244)
-scale = Vector2(0.017689705, 0.017689703)
-polygon = PackedVector2Array(-882, -964, -882, -962.3, -884, -961.2, -884, 962, 884, 962, 884, -962)
+[node name="Left Chair3" parent="Map/BoardRoom" unique_id=290069302 instance=ExtResource("23_ydi3i")]
+position = Vector2(320, 784)
 
 [node name="Main Hallway" type="Node2D" parent="Map" unique_id=396824245]
+y_sort_enabled = true
 
-[node name="Upper Hallway Wall" type="StaticBody2D" parent="Map/Main Hallway" unique_id=1082642323]
+[node name="Upper Hallway Wall" parent="Map/Main Hallway" unique_id=1560255017 instance=ExtResource("31_7h6bd")]
+position = Vector2(508, 446)
 
-[node name="Upper Hallway Wall" type="Sprite2D" parent="Map/Main Hallway/Upper Hallway Wall" unique_id=2005199803]
-position = Vector2(507, 427)
-texture = ExtResource("33_rqnvb")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Main Hallway/Upper Hallway Wall" unique_id=2049838576]
-position = Vector2(507, 427)
-polygon = PackedVector2Array(-292.5, 16, -285.5, 16, -285.5, -16, -292.5, -16)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/Main Hallway/Upper Hallway Wall" unique_id=1285624775]
-position = Vector2(507, 427)
-polygon = PackedVector2Array(-90.5, -16, -228.5, -16, -228.5, 16, -90.5, 16)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map/Main Hallway/Upper Hallway Wall" unique_id=240143815]
-position = Vector2(507, 427)
-polygon = PackedVector2Array(292.5, -16, -45.5, -16, -45.5, 16, 292.5, 16)
-
-[node name="Lower Hallway Wall" type="StaticBody2D" parent="Map/Main Hallway" unique_id=1837204221]
-
-[node name="Lower hallway wall" type="Sprite2D" parent="Map/Main Hallway/Lower Hallway Wall" unique_id=247284495]
-position = Vector2(474, 495)
-texture = ExtResource("34_snxsr")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Main Hallway/Lower Hallway Wall" unique_id=605805142]
-position = Vector2(474, 495)
-polygon = PackedVector2Array(-473.5, 3.5, -337.5, 3.5, -337.5, -3.5, -473.5, -3.5)
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Map/Main Hallway/Lower Hallway Wall" unique_id=1230306953]
-position = Vector2(474, 495)
-polygon = PackedVector2Array(172.5, -3.5, -272.5, -3.5, -272.5, 3.5, 172.5, 3.5)
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Map/Main Hallway/Lower Hallway Wall" unique_id=218395914]
-position = Vector2(474, 495)
-polygon = PackedVector2Array(473.5, -3.5, 238.5, -3.5, 238.5, 3.5, 473.5, 3.5)
+[node name="Lower Hallway Wall" parent="Map/Main Hallway" unique_id=1031373136 instance=ExtResource("32_46qiu")]
+position = Vector2(233, 501)
 
 [node name="Black Bar" type="Sprite2D" parent="Map" unique_id=1200372671]
 position = Vector2(1057, 631)
 texture = ExtResource("35_y3oto")
 
-[node name="Bottom Wall" type="StaticBody2D" parent="Map" unique_id=2045671447]
+[node name="Bottom Wall" parent="Map" unique_id=141071860 instance=ExtResource("34_viurs")]
+position = Vector2(436, 955)
 
-[node name="Bottom Wall" type="Sprite2D" parent="Map/Bottom Wall" unique_id=894646853]
-position = Vector2(583, 941)
-texture = ExtResource("36_8ep84")
+[node name="Upper Hitbox" type="StaticBody2D" parent="Map" unique_id=1415572206]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Map/Bottom Wall" unique_id=1567516341]
-position = Vector2(583, 941)
-polygon = PackedVector2Array(-583.5, -14, -583.5, 14, 583.5, 14, 583.5, -14)
-
-[node name="LeftBorder Wall" type="StaticBody2D" parent="Map" unique_id=1415572206]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/LeftBorder Wall" unique_id=1639255120]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Upper Hitbox" unique_id=1639255120]
 position = Vector2(845, -508)
 shape = SubResource("RectangleShape2D_seri3")
 
-[node name="Upper Wall" type="StaticBody2D" parent="Map" unique_id=371196974]
+[node name="Left Hitbox" type="StaticBody2D" parent="Map" unique_id=371196974]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Upper Wall" unique_id=39761132]
-position = Vector2(-758.0625, 478.8125)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Left Hitbox" unique_id=39761132]
+position = Vector2(-758, 478)
 shape = SubResource("RectangleShape2D_4spjl")
 
-[node name="RightBorder Wall2" type="StaticBody2D" parent="Map" unique_id=1114826021]
+[node name="Right Hitbox" type="StaticBody2D" parent="Map" unique_id=1114826021]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/RightBorder Wall2" unique_id=1110974757]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Right Hitbox" unique_id=1110974757]
 position = Vector2(1927, 479)
 shape = SubResource("RectangleShape2D_4spjl")
 
@@ -579,184 +392,5 @@ texture = ExtResource("2_wk7dr")
 [node name="IncidentTimer" type="Timer" parent="." unique_id=181824542]
 wait_time = 8.0
 autostart = true
-
-[node name="Player" parent="." unique_id=1881935737 instance=ExtResource("2_nwkqs")]
-position = Vector2(-99, 56)
-scale = Vector2(0.61124456, 0.61124456)
-
-[node name="Employees" type="Node2D" parent="." unique_id=1871804216]
-position = Vector2(5, 24)
-
-[node name="Employee1" parent="Employees" unique_id=1133885026 instance=ExtResource("2_pgah7")]
-position = Vector2(250, 420)
-scale = Vector2(0.639369, 0.639369)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Bob"
-employee_type = "Intern_A"
-
-[node name="Employee2" parent="Employees" unique_id=280188704 instance=ExtResource("2_pgah7")]
-position = Vector2(820, 280)
-scale = Vector2(0.6130586, 0.6130586)
-collision_layer = 1
-collision_mask = 1
-employee_name = "George"
-employee_type = "CEO"
-
-[node name="Employee3" parent="Employees" unique_id=2140453044 instance=ExtResource("2_pgah7")]
-position = Vector2(430, 280)
-scale = Vector2(0.6141567, 0.6141567)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Steven"
-employee_type = "CEO"
-
-[node name="Employee4" parent="Employees" unique_id=1133885030 instance=ExtResource("2_pgah7")]
-position = Vector2(450, 390)
-scale = Vector2(0.614, 0.614)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Alex"
-employee_type = "IT_NPC"
-
-[node name="Employee5" parent="Employees" unique_id=1133885031 instance=ExtResource("2_pgah7")]
-position = Vector2(620, 390)
-scale = Vector2(0.614, 0.614)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Marcus"
-employee_type = "Worker_D"
-
-[node name="Employee6" parent="Employees" unique_id=1133885032 instance=ExtResource("2_pgah7")]
-position = Vector2(560, 205)
-scale = Vector2(0.614, 0.614)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Jake"
-employee_type = "Intern_A"
-
-[node name="Employee7" parent="Employees" unique_id=1133885033 instance=ExtResource("2_pgah7")]
-position = Vector2(250, 260)
-scale = Vector2(0.614, 0.614)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Mia"
-employee_type = "Intern_B"
-
-[node name="Employee8" parent="Employees" unique_id=1133885034 instance=ExtResource("2_pgah7")]
-position = Vector2(250, 340)
-scale = Vector2(0.614, 0.614)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Sandra"
-employee_type = "Receptionist"
-
-[node name="Employee9" parent="Employees" unique_id=1133885035 instance=ExtResource("2_pgah7")]
-position = Vector2(360, 205)
-scale = Vector2(0.614, 0.614)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Lisa"
-employee_type = "Worker_C"
-
-[node name="Employee10" parent="Employees" unique_id=1133885036 instance=ExtResource("2_pgah7")]
-position = Vector2(460, 205)
-scale = Vector2(0.614, 0.614)
-collision_layer = 1
-collision_mask = 1
-employee_name = "Priya"
-employee_type = "Worker_C"
-
-[node name="Employee11" parent="Employees" unique_id=1133885037 instance=ExtResource("2_pgah7")]
-position = Vector2(720, 280)
-scale = Vector2(0.614, 0.614)
-collision_layer = 1
-collision_mask = 1
-employee_name = "James"
-employee_type = "Worker_B"
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
-script = ExtResource("5_eglr7")
-
-[node name="IssuePopup" parent="CanvasLayer" unique_id=343395867 instance=ExtResource("2_uvqaq")]
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TimerLabel" type="Label" parent="CanvasLayer"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -60.0
-offset_right = 60.0
-offset_bottom = 32.0
-text = "3:00"
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 18
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-
-[node name="DangerRow" type="HBoxContainer" parent="CanvasLayer"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = -36.0
-offset_right = -8.0
-offset_bottom = -8.0
-
-[node name="DangerLabel" type="Label" parent="CanvasLayer/DangerRow"]
-custom_minimum_size = Vector2(80, 0)
-text = "☠️ 0%"
-theme_override_font_sizes/font_size = 14
-theme_override_colors/font_color = Color(0.2, 0.9, 0.3, 1)
-
-[node name="DangerBar" type="ProgressBar" parent="CanvasLayer/DangerRow"]
-layout_mode = 2
-size_flags_horizontal = 3
-custom_minimum_size = Vector2(0, 20)
-max_value = 100.0
-show_percentage = false
-
-[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2082554985]
-offset_left = 998.0
-offset_top = 15.0
-offset_right = 1125.0
-offset_bottom = 64.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Security Score: 0
-"
-
-[node name="Phone" type="TextureRect" parent="CanvasLayer" unique_id=1934767713]
-layout_mode = 1
-anchors_preset = 4
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -242.0
-offset_top = -308.0
-offset_right = 0.0
-offset_bottom = 0.0
-texture = ExtResource("35_q2p2h")
-expand_mode = 1
-
-[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Phone" unique_id=495335545]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 58.0
-offset_top = 52.0
-offset_right = -18.0
-offset_bottom = -36.0
-horizontal_scroll_mode = 0
-
-[node name="NotificationList" type="VBoxContainer" parent="CanvasLayer/Phone/ScrollContainer" unique_id=1932424071]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="LockdownEvent" parent="CanvasLayer" instance=ExtResource("lockdown_ext")]
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]
