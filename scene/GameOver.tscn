@@ -122,5 +122,23 @@ theme_override_colors/font_color = Color(0.941, 0.784, 0.149, 1)
 theme_override_font_sizes/font_size = 22
 text = "MAIN MENU"
 
+[node name="Reflection Report" type="Button" parent="." unique_id=1535174780]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = 178.0
+offset_right = 145.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.941, 0.784, 0.149, 1)
+theme_override_font_sizes/font_size = 22
+text = "REFLECTION REPORT"
+
 [connection signal="pressed" from="PlayAgainButton" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Reflection Report" to="." method="_on_reflection_report_pressed"]

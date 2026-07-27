@@ -9,6 +9,7 @@ class_name CyberIssue
 @export var threat_level:int = 1
 @export var urgency:float
 @export var escalation:CyberEscalation
+@export var score: int = 100
 
 #Here, these are the Answers.
 @export var correct_index:int

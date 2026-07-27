@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://w6tw6i1rnqw3"]
+
+[ext_resource type="Resource" uid="uid://dey1xvskcc765" path="res://resources/Escalation Resources/Escalation_Ransomware.tres" id="1_3hcmb"]
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_mkfrp"]
+
+[resource]
+script = ExtResource("1_mkfrp")
+issue_name = "Ransomware Payload"
+description = "An employee executed a malicious macro, encrypting local files and attempting to spread through the network."
+employee_message = "All my file icons just turned into red lock symbols, and my desktop background suddenly became a skull that demands bitcoin. What should I do?"
+threat_level = 5
+urgency = 1.0
+escalation = ExtResource("1_3hcmb")
+score = 500
+answers = Array[String](["Issue Password Reset Ticket", "Send them Home", "Destroy Computer"])
+explanation = "The machine must be quarantined immediately before the encryption worm will move laterally across the network."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

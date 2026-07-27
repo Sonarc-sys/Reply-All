@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://cjgego4aj6rno"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_drr6e"]
+
+[resource]
+script = ExtResource("1_drr6e")
+issue_name = "Unrecognized Visitor"
+description = "Someone followed an employee through a secure corporate door without showing their credentials, and not swiping their company security badge."
+employee_message = "I just held the door open for someone that was carrying alot of coffee, but I didn't see any badge. It's fine, okay?"
+threat_level = 2
+urgency = 0.7
+score = 150
+answers = Array[String](["Issue Password Reset Ticket", "Send them Home", "Destroy Computer"])
+explanation = "Access control is compromised if corporate employees will allow unverified individuals into secure company areas out of politness."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"
