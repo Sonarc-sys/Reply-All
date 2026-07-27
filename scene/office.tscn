@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bgxoq4qv3dwxs" path="res://asset/pixel background office.png" id="2_wk7dr"]
 [ext_resource type="PackedScene" uid="uid://bgldeqc1xwyaj" path="res://scene/ToastBanner.tscn" id="5_4spjl"]
 [ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
+[ext_resource type="Texture2D" uid="uid://dgoyski6kmxha" path="res://asset/pixel_art_smartphone_blank.png" id="6_m1geu"]
 [ext_resource type="PackedScene" uid="uid://dcywsqq8hc6g3" path="res://scene/Map-Assets/Entry-Hallway/secretary_cubicle_1.tscn" id="7_seri3"]
 [ext_resource type="PackedScene" uid="uid://ch8jfytgdwl4y" path="res://scene/Map-Assets/Entry-Hallway/secretary_cubicle_2.tscn" id="8_4spjl"]
 [ext_resource type="Texture2D" uid="uid://dpr4s3akpdp20" path="res://asset/Map/Map__0003_Background.png" id="8_seri3"]
@@ -35,7 +36,6 @@
 [ext_resource type="PackedScene" uid="uid://87x0mdyq3hnm" path="res://scene/Map-Assets/Main-Hallway/upper_hallway_wall.tscn" id="31_7h6bd"]
 [ext_resource type="PackedScene" uid="uid://dxxbh0pkbjgi4" path="res://scene/Map-Assets/Main-Hallway/lower_hallway_wall.tscn" id="32_46qiu"]
 [ext_resource type="PackedScene" uid="uid://oe1veavo5w57" path="res://scene/Map-Assets/bottom_wall.tscn" id="34_viurs"]
-[ext_resource type="Texture2D" uid="uid://b0pdktxh5l6gp" path="res://asset/phone pixel.png" id="35_q2p2h"]
 [ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
@@ -69,22 +69,23 @@ text = "Security Score: 0
 
 [node name="ToastBanner" parent="CanvasLayer" unique_id=1473712903 instance=ExtResource("5_4spjl")]
 
-[node name="Phone" type="TextureRect" parent="CanvasLayer" unique_id=1934767713]
-offset_left = 892.0
-offset_top = 302.60345
-offset_right = 1194.0
-offset_bottom = 682.7069
-texture = ExtResource("35_q2p2h")
+[node name="Phone" type="TextureRect" parent="CanvasLayer" unique_id=577603701]
+offset_left = 809.0
+offset_top = 292.0
+offset_right = 1282.0
+offset_bottom = 658.0
+texture = ExtResource("6_m1geu")
+expand_mode = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Phone" unique_id=495335545]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.071
 anchor_bottom = -0.071
-offset_left = 78.0
-offset_top = 69.91646
-offset_right = 235.0
-offset_bottom = 324.38388
+offset_left = 149.0
+offset_top = 66.986
+offset_right = 325.0
+offset_bottom = 365.986
 horizontal_scroll_mode = 0
 
 [node name="NotificationList" type="VBoxContainer" parent="CanvasLayer/Phone/ScrollContainer" unique_id=1932424071]
