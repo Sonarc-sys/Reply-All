@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://brrnt8x1a5ly0"]
 
 [ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
-[ext_resource type="Resource" path="res://resources/Escalation Resources/WeakCredentials.tres" id="1_wc"]
+[ext_resource type="Resource" uid="uid://bbkto44c7al4c" path="res://resources/Escalation Resources/WeakCredentials.tres" id="1_wc"]
 
 [resource]
 script = ExtResource("1_iss")

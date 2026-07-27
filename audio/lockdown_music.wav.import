@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://drfx26qqn1bt3"
-path="res://.godot/imported/lockdown_music.wav-8e944b396bac51773361d4e3becbcae2.sample"
+path="res://.godot/imported/lockdown_music.wav-a5bbe840376582496daf35ad8665a810.sample"
 
 [deps]
 
-source_file="res://game audio/lockdown_music.wav"
-dest_files=["res://.godot/imported/lockdown_music.wav-8e944b396bac51773361d4e3becbcae2.sample"]
+source_file="res://audio/lockdown_music.wav"
+dest_files=["res://.godot/imported/lockdown_music.wav-a5bbe840376582496daf35ad8665a810.sample"]
 
 [params]
 

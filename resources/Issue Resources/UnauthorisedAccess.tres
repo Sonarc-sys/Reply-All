@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://cj6u3t5ays7dc"]
 
-[ext_resource type="Resource" path="res://resources/Escalation Resources/InsiderThreat.tres" id="1_ins"]
+[ext_resource type="Resource" uid="uid://ch8tjprhc3kji" path="res://resources/Escalation Resources/InsiderThreat.tres" id="1_ins"]
 [ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
 
 [resource]

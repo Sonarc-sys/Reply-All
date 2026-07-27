@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://chovw2tgemanu"
-path="res://.godot/imported/sfx_escalate.wav-37ca2717c43c2c4239066a66fd2f5ee9.sample"
+path="res://.godot/imported/sfx_escalate.wav-15c57a4a8a47165d80ad3396d9c686e4.sample"
 
 [deps]
 
-source_file="res://game audio/sfx_escalate.wav"
-dest_files=["res://.godot/imported/sfx_escalate.wav-37ca2717c43c2c4239066a66fd2f5ee9.sample"]
+source_file="res://audio/sfx_escalate.wav"
+dest_files=["res://.godot/imported/sfx_escalate.wav-15c57a4a8a47165d80ad3396d9c686e4.sample"]
 
 [params]
 
