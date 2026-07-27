@@ -5,21 +5,23 @@ var current_employee = null
 
 
 func _ready():
-	GameManager.time_left = GameManager.shift_duration
-	if not GameManager.day_ended.is_connected(_on_day_ended):
-		GameManager.day_ended.connect(_on_day_ended)
+	# Support both $Map/Employees and $Employees node paths
+	var emp_node = get_node_or_null("Map/Employees")
+	if emp_node == null:
+		emp_node = get_node_or_null("Employees")
+	if emp_node != null:
+		for employee in emp_node.get_children():
+			GameManager.register_employee(employee)
+			if !employee.issue_clicked.is_connected(show_issue):
+				employee.issue_clicked.connect(show_issue)
 	if not GameManager.lockdown_triggered.is_connected(_on_lockdown_triggered):
 		GameManager.lockdown_triggered.connect(_on_lockdown_triggered)
-	for employee in $Employees.get_children():
-		if !employee.issue_clicked.is_connected(show_issue):
-			employee.issue_clicked.connect(show_issue)
 
 func _on_incident_timer_timeout():
 	GameManager.spawn_issue()
 
 func show_issue(employee):
 	if GameManager.lockdown_active:
-		# During lockdown, E clears stations  -  no popup
 		employee.lockdown_clear()
 		return
 	if not employee.has_issue:
@@ -38,13 +40,3 @@ func _on_lockdown_cleared():
 
 func _on_lockdown_failed():
 	GameManager.end_day()
-
-func _on_day_ended(_data):
-	# Fade to black before cutscene
-	var fade = ColorRect.new()
-	fade.color = Color(0, 0, 0, 0)
-	fade.set_anchors_preset(Control.PRESET_FULL_RECT)
-	get_tree().current_scene.add_child(fade)
-	var tw = fade.create_tween()
-	tw.tween_property(fade, "color:a", 1.0, 1.2)
-	tw.tween_callback(func(): get_tree().change_scene_to_file("res://scene/GameOverTransition.tscn"))

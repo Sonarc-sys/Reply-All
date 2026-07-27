@@ -68,7 +68,7 @@ func _update_patience_display() -> void:
 
 func _format_time(total_seconds: float) -> String:
 	var secs: int = int(ceil(max(0, total_seconds)))
-	var minutes: int = secs / 60
+	var minutes: int = secs / 60  # integer division is fine here
 	var remaining_secs: int = secs % 60
 	
 	# Formats as "01:05" or "00:42"
