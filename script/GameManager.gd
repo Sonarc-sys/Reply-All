@@ -17,7 +17,17 @@ var unsucessful_job_hist: Array = []
 var issues = [
 	preload("res://resources/Issue Resources/PhishingEmail.tres"),
 	preload("res://resources/Issue Resources/SuspiciousUSB.tres"),
-	preload("res://resources/Issue Resources/ForgotPassword.tres")
+	preload("res://resources/Issue Resources/ForgotPassword.tres"),
+	preload("res://resources/Issue Resources/CEOSpoofing.tres"),
+	preload("res://resources/Issue Resources/Cleartext.tres"),
+	preload("res://resources/Issue Resources/Cryptojacking.tres"),
+	preload("res://resources/Issue Resources/EmailWorm.tres"),
+	preload("res://resources/Issue Resources/FoundUSB.tres"),
+	preload("res://resources/Issue Resources/PhishingEmail.tres"),
+	preload("res://resources/Issue Resources/RansomwarePropagation.tres"),
+	preload("res://resources/Issue Resources/ShadowIT.tres"),
+	preload("res://resources/Issue Resources/Spear Phishing.tres"),
+	preload("res://resources/Issue Resources/Tailgating.tres")
 ]
 var high_threat_issues = []
 var normal_issues = []
