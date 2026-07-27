@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://dxxbh0pkbjgi4" path="res://scene/Map-Assets/Main-Hallway/lower_hallway_wall.tscn" id="32_46qiu"]
 [ext_resource type="PackedScene" uid="uid://oe1veavo5w57" path="res://scene/Map-Assets/bottom_wall.tscn" id="34_viurs"]
 [ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
+[ext_resource type="PackedScene" path="res://scene/LockdownEvent.tscn" id="lockdown_ext"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
 size = Vector2(1687.5, 1318.5)
@@ -430,5 +431,7 @@ texture = ExtResource("2_wk7dr")
 [node name="IncidentTimer" type="Timer" parent="." unique_id=181824542]
 wait_time = 8.0
 autostart = true
+
+[node name="LockdownEvent" parent="CanvasLayer" instance=ExtResource("lockdown_ext")]
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]
