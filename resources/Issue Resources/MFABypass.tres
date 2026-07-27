@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://11fsl360b22d"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "MFA Push Bombing Attack"
 description = "An employee is being spammed with MFA approval requests on their phone. Someone has their password and is trying to tire them into approving."
-employee_message = "I keep getting authentication requests\non my phone but I'm not logging in.\nShould I just approve one to make them stop?"
+employee_message = "I keep getting authentication requests
+on my phone but I'm not logging in.
+Should I just approve one to make them stop?"
 threat_level = 5
 urgency = 0.95
 correct_index = 1

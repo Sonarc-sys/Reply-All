@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://dc7kslm3cly6v"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Business Email Compromise"
 description = "Finance received an email appearing to be from the CEO asking for an urgent $50,000 wire transfer to a new vendor."
-employee_message = "I got an email from the CEO's address\nasking me to wire $50,000 to a new supplier urgently.\nHe says not to discuss it with anyone. Should I do it?"
+employee_message = "I got an email from the CEO's address
+asking me to wire $50,000 to a new supplier urgently.
+He says not to discuss it with anyone. Should I do it?"
 threat_level = 4
 urgency = 0.7
 correct_index = 2

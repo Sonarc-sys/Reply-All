@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://cix3m3d203i4y"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Zero-Day Vulnerability Disclosed"
 description = "A zero-day exploit for your web server software was publicly disclosed this morning. No patch exists yet."
-employee_message = "I saw on Twitter there's a zero-day in our\nweb server software. Someone said the patch\nisn't out yet. What do we do?"
+employee_message = "I saw on Twitter there's a zero-day in our
+web server software. Someone said the patch
+isn't out yet. What do we do?"
 threat_level = 4
 urgency = 0.6
-correct_index = 0
 answers = Array[String](["Apply compensating controls  -  WAF rules, disable affected features, increase monitoring, and notify stakeholders", "Wait for the official patch before doing anything", "Ignore it  -  if there is no patch there is nothing to do"])
 explanation = "When no patch exists, compensating controls are critical. Harden what you can, increase monitoring, and be ready to respond fast when the patch drops."

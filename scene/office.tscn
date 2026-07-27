@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://sfyiscjawqa7" path="res://scene/employee.tscn" id="2_pgah7"]
 [ext_resource type="PackedScene" uid="uid://dfr3iv4iher32" path="res://scene/IssuePopup.tscn" id="2_uvqaq"]
 [ext_resource type="Texture2D" uid="uid://bgxoq4qv3dwxs" path="res://asset/pixel background office.png" id="2_wk7dr"]
-[ext_resource type="PackedScene" uid="uid://bgldeqc1xwyaj" path="res://scene/ToastBanner.tscn" id="5_4spjl"]
+[ext_resource type="PackedScene" path="res://scene/ToastBanner.tscn" id="5_4spjl"]
 [ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
 [ext_resource type="Texture2D" uid="uid://dgoyski6kmxha" path="res://asset/pixel_art_smartphone_blank.png" id="6_m1geu"]
 [ext_resource type="PackedScene" uid="uid://dcywsqq8hc6g3" path="res://scene/Map-Assets/Entry-Hallway/secretary_cubicle_1.tscn" id="7_seri3"]
@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://dxxbh0pkbjgi4" path="res://scene/Map-Assets/Main-Hallway/lower_hallway_wall.tscn" id="32_46qiu"]
 [ext_resource type="PackedScene" uid="uid://oe1veavo5w57" path="res://scene/Map-Assets/bottom_wall.tscn" id="34_viurs"]
 [ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
+[ext_resource type="PackedScene" path="res://scene/LockdownEvent.tscn" id="lockdown_ext"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
 size = Vector2(1687.5, 1318.5)
@@ -66,6 +67,44 @@ offset_bottom = 64.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Security Score: 0
 "
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 4.0
+offset_right = 50.0
+offset_bottom = 28.0
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "3:00"
+
+[node name="DangerRow" type="HBoxContainer" parent="CanvasLayer"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -36.0
+offset_right = -8.0
+offset_bottom = -8.0
+
+[node name="DangerLabel" type="Label" parent="CanvasLayer/DangerRow"]
+custom_minimum_size = Vector2(90, 0)
+text = "Threat: 0%"
+theme_override_font_sizes/font_size = 13
+theme_override_colors/font_color = Color(0.2, 0.9, 0.3, 1)
+
+[node name="DangerBar" type="ProgressBar" parent="CanvasLayer/DangerRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+custom_minimum_size = Vector2(0, 18)
+max_value = 100.0
+show_percentage = false
 
 [node name="ToastBanner" parent="CanvasLayer" unique_id=1473712903 instance=ExtResource("5_4spjl")]
 
@@ -392,5 +431,7 @@ texture = ExtResource("2_wk7dr")
 [node name="IncidentTimer" type="Timer" parent="." unique_id=181824542]
 wait_time = 8.0
 autostart = true
+
+[node name="LockdownEvent" parent="CanvasLayer" instance=ExtResource("lockdown_ext")]
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]

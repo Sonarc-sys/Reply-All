@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="CyberEscalation" format=3]
+[gd_resource type="Resource" script_class="CyberEscalation" format=3 uid="uid://ch8tjprhc3kji"]
 
-[ext_resource type="Script" path="res://resources/Escalation.gd" id="1_esc"]
+[ext_resource type="Script" uid="uid://2omncumtu2b7" path="res://resources/Escalation.gd" id="1_esc"]
 
 [resource]
 script = ExtResource("1_esc")

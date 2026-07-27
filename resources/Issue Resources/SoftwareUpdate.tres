@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://b2j2a274f8713"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Outdated Software in Production"
 description = "A critical security patch has been available for 6 weeks but an employee keeps dismissing the update prompt."
-employee_message = "I keep clicking 'remind me later' on that\nWindows update because it restarts my computer.\nCan I just skip it permanently?"
+employee_message = "I keep clicking 'remind me later' on that
+Windows update because it restarts my computer.
+Can I just skip it permanently?"
 threat_level = 3
 urgency = 0.3
 correct_index = 2

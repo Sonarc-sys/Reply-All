@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://p8355ersgqh7"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Insider Data Theft Suspected"
 description = "DLP alerts show an employee downloaded 40,000 customer records to a USB drive right before handing in their resignation."
-employee_message = "My resignation is in but I'm just\ncleaning up my files before I go.\nI copied some work stuff to my personal drive."
+employee_message = "My resignation is in but I'm just
+cleaning up my files before I go.
+I copied some work stuff to my personal drive."
 threat_level = 4
 urgency = 0.65
 correct_index = 1

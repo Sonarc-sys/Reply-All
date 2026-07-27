@@ -11,16 +11,44 @@ var score_label: Label
 var active_notifications: Dictionary = {}
 
 func _ready() -> void:
-	
 	score_label = get_node_or_null("ScoreLabel")
 
-	# Connect signals
 	GameManager.score_changed.connect(update_score)
 	GameManager.incidents_changed.connect(update_triage)
+	if GameManager.has_signal("danger_changed"):
+		GameManager.danger_changed.connect(_update_danger)
 
-	# Run initial updates
 	update_score(GameManager.score)
 	update_triage()
+	_update_danger(0.0)
+
+func _process(_delta):
+	_update_timer()
+
+func _update_timer():
+	var lbl = get_node_or_null("TimerLabel")
+	if lbl == null: return
+	var t = max(0.0, GameManager.time_left)
+	var mins = int(t) / 60
+	var secs = int(t) % 60
+	lbl.text = "%d:%02d" % [mins, secs]
+	lbl.modulate = Color(0.9, 0.2, 0.2) if t < 15.0 else Color.WHITE
+
+func _update_danger(value: float):
+	var bar = get_node_or_null("DangerRow/DangerBar")
+	var lbl = get_node_or_null("DangerRow/DangerLabel")
+	if bar:
+		bar.value = value
+		var col = Color(0.2, 0.9, 0.3)
+		if value > 60: col = Color(1.0, 0.55, 0.0)
+		if value > 80: col = Color(0.9, 0.2, 0.2)
+		bar.modulate = col
+	if lbl:
+		lbl.text = "Threat: %.0f%%" % value
+		var col2 = Color(0.2, 0.9, 0.3)
+		if value > 60: col2 = Color(1.0, 0.55, 0.0)
+		if value > 80: col2 = Color(0.9, 0.2, 0.2)
+		lbl.add_theme_color_override("font_color", col2)
 
 func update_score(score: int) -> void:
 	if score_label:

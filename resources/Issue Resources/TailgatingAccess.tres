@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://cglyaii0egghw"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Tailgating Into Server Room"
 description = "An unfamiliar person followed an employee into the server room by walking in right behind them."
-employee_message = "Someone I didn't recognise followed me into\nthe server room when I badged in.\nThey said they were from maintenance."
+employee_message = "Someone I didn't recognise followed me into
+the server room when I badged in.
+They said they were from maintenance."
 threat_level = 2
 urgency = 0.25
 correct_index = 1
