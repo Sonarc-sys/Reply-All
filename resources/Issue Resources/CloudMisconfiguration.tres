@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://ciciw4vibm2"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Public Cloud Storage Bucket"
 description = "A developer accidentally set an S3 bucket containing customer records to public read access."
-employee_message = "I made our project storage bucket public\nso the client could download files easily.\nThe customer data is in there too, is that okay?"
+employee_message = "I made our project storage bucket public
+so the client could download files easily.
+The customer data is in there too, is that okay?"
 threat_level = 3
 urgency = 0.45
 correct_index = 2

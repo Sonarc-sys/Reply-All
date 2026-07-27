@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://xmuu65sj61ih"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Suspicious Email Attachment"
 description = "An employee received an invoice PDF from an unknown sender and wants to open it."
-employee_message = "I got an invoice from someone I don't recognise.\nIt's a PDF. We do get invoices sometimes.\nShould I open it?"
+employee_message = "I got an invoice from someone I don't recognise.
+It's a PDF. We do get invoices sometimes.
+Should I open it?"
 threat_level = 3
 urgency = 0.35
 correct_index = 1

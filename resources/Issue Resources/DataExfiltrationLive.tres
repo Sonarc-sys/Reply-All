@@ -1,12 +1,15 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://bet0p2kuph0v6"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Live Data Exfiltration Detected"
 description = "Network monitoring shows gigabytes of data being sent to an overseas IP address from your database server right now."
-employee_message = "The network monitor is going crazy  - \nit says the database server is uploading\nhundreds of gigabytes somewhere. I don't know where."
+employee_message = "The network monitor is going crazy  - 
+it says the database server is uploading
+hundreds of gigabytes somewhere. I don't know where."
 threat_level = 5
 urgency = 1.0
-correct_index = 0
 answers = Array[String](["Block the outbound connection immediately, isolate the database server, and activate the incident response plan", "Investigate the destination IP first before taking any action", "Reboot the database server to interrupt the transfer"])
 explanation = "Every second of active exfiltration means more customer data stolen. Block the connection first, then investigate. Rebooting destroys evidence and may not stop the attack."

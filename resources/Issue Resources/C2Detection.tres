@@ -1,10 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://di8mwjn0x38k"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Command and Control Beacon Detected"
 description = "Your SIEM has flagged regular outbound connections from an internal machine to a known C2 server  -  a sign of active malware."
-employee_message = "Security monitoring flagged my computer\nas connecting to some weird external address\nevery 5 minutes. I didn't do anything."
+employee_message = "Security monitoring flagged my computer
+as connecting to some weird external address
+every 5 minutes. I didn't do anything."
 threat_level = 5
 urgency = 1.0
 correct_index = 2

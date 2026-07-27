@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://v74iou04lrcb"]
 
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
 [ext_resource type="Resource" path="res://resources/Escalation Resources/MalwareSpread.tres" id="1_esc"]
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
 
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Ransomware Actively Encrypting"
 description = "Files across the network are being encrypted in real time. The ransomware has already spread to three departments."
-employee_message = "My computer just showed a red screen\nsaying all my files are being encrypted\nand I need to pay to get them back. Help???"
+employee_message = "My computer just showed a red screen
+saying all my files are being encrypted
+and I need to pay to get them back. Help???"
 threat_level = 5
 urgency = 1.0
 escalation = ExtResource("1_esc")

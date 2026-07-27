@@ -1,11 +1,14 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://culed82w1dpi7"]
+
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Unlocked Workstation"
 description = "An employee left their computer unlocked and walked away from their desk for 20 minutes."
-employee_message = "I just stepped out to grab lunch.\nI'll only be gone like 20 minutes  - \ncan you just leave my computer on?"
-threat_level = 1
+employee_message = "I just stepped out to grab lunch.
+I'll only be gone like 20 minutes  - 
+can you just leave my computer on?"
 urgency = 0.15
 correct_index = 1
 answers = Array[String](["Leave it  -  the office is secure", "Lock the screen immediately and remind them of the clean desk policy", "Shut down their computer"])

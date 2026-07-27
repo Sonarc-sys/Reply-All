@@ -1,13 +1,16 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://brrnt8x1a5ly0"]
 
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
 [ext_resource type="Resource" path="res://resources/Escalation Resources/WeakCredentials.tres" id="1_wc"]
-[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
 
 [resource]
 script = ExtResource("1_iss")
 issue_name = "Public Wi-Fi Risk"
 description = "An employee is working from a coffee shop using public Wi-Fi without a VPN. What do you do?"
-employee_message = "I'm at the café finishing the quarterly report.\nThe Wi-Fi here is super fast!\n\nI forgot my VPN password  -  is it okay if I just work without it?"
+employee_message = "I'm at the café finishing the quarterly report.
+The Wi-Fi here is super fast!
+
+I forgot my VPN password  -  is it okay if I just work without it?"
 threat_level = 2
 urgency = 0.2
 escalation = ExtResource("1_wc")
