@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://printer001"]
+
+[ext_resource type="Resource" uid="uid://insider001" path="res://resources/Escalation Resources/InsiderThreat.tres" id="1_ins"]
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Sensitive Documents Left on Printer"
+description = "Confidential salary documents were found abandoned on the shared printer for two hours. What do you do?"
+employee_message = "Hey, I printed some HR salary files this morning\nbut got pulled into a meeting.\n\nCan you just leave them there? I'll grab them later."
+threat_level = 3
+urgency = 0.3
+escalation = ExtResource("1_ins")
+correct_index = 2
+answers = Array[String](["Leave them  -  they're in a secure office", "Email the employee to collect them", "Secure the documents immediately and file a policy breach report"])
+explanation = "Printed sensitive documents left unattended are a physical security risk. Collect and secure them immediately, then report the breach per policy."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

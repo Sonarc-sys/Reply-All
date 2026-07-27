@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[ext_resource type="Resource" path="res://resources/Escalation Resources/MalwareSpread.tres" id="1_esc"]
+
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Active Network Intrusion"
+description = "Security monitoring has detected an attacker actively moving through the internal network right now. Every second counts."
+employee_message = "I just got a weird alert on my screen  - \nit says 'Unauthorised remote session active.'\nShould I just ignore it?"
+threat_level = 5
+urgency = 0.8
+escalation = ExtResource("1_esc")
+correct_index = 0
+answers = Array[String](["Isolate the affected machine immediately and alert the security team", "Restart the computer and see if the alert goes away", "Email IT and wait for a response"])
+explanation = "An active intrusion requires immediate isolation. Every minute of delay gives the attacker deeper access to the network."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

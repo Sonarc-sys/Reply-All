@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Supply Chain Compromise"
+description = "A software vendor you use has announced their build system was backdoored. Your systems installed the malicious update last night."
+employee_message = "I just saw a news alert  -  the software\nwe installed the update for last night\nhas been backdoored by hackers. Are we affected?"
+threat_level = 5
+urgency = 0.9
+correct_index = 0
+answers = Array[String](["Immediately isolate all systems running the affected software, begin incident response, and contact the vendor", "Uninstall the software and carry on", "Wait for official guidance from the vendor before doing anything"])
+explanation = "Supply chain attacks like SolarWinds give attackers deep persistent access. Assume compromise  -  isolate, investigate, and activate your incident response plan immediately."

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://dataleak001"]
+
+[ext_resource type="Resource" uid="uid://databreach001" path="res://resources/Escalation Resources/DataBreach.tres" id="1_db"]
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Data Leak Risk"
+description = "An employee is emailing client files to their personal Gmail. What do you do?"
+employee_message = "I'm working from home this weekend so I emailed
+some client spreadsheets to my personal email.
+
+Is that okay?"
+threat_level = 4
+urgency = 0.45
+escalation = ExtResource("1_db")
+correct_index = 2
+answers = Array[String](["Tell them it's fine", "Ask them to delete the email", "Block the transfer, report it, and revoke access"])
+explanation = "Sending client data to personal accounts violates data protection policy and may breach regulations. This must be reported."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

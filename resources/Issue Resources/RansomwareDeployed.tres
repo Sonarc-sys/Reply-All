@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[ext_resource type="Resource" path="res://resources/Escalation Resources/MalwareSpread.tres" id="1_esc"]
+
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Ransomware Actively Encrypting"
+description = "Files across the network are being encrypted in real time. The ransomware has already spread to three departments."
+employee_message = "My computer just showed a red screen\nsaying all my files are being encrypted\nand I need to pay to get them back. Help???"
+threat_level = 5
+urgency = 1.0
+escalation = ExtResource("1_esc")
+correct_index = 1
+answers = Array[String](["Pay the ransom immediately to restore files", "Cut ALL network connections NOW  -  unplug ethernet, disable WiFi, alert the incident response team", "Run antivirus and hope for the best"])
+explanation = "Every second connected means more files encrypted and more systems infected. Kill the network connection immediately. Do not pay  -  it rarely works and funds criminals."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

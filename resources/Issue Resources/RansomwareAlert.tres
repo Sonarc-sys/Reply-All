@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://ransom001"]
+
+[ext_resource type="Resource" uid="uid://malware001" path="res://resources/Escalation Resources/MalwareSpread.tres" id="1_mal"]
+[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Ransomware Alert"
+description = "The antivirus has flagged a suspicious executable. What do you do?"
+employee_message = "My computer is running really slowly and I keep getting
+pop-ups asking me to call a number.
+
+I clicked a link in an email earlier today..."
+threat_level = 4
+urgency = 0.6
+escalation = ExtResource("1_mal")
+correct_index = 2
+answers = Array[String](["Ignore it and keep working", "Restart the computer", "Isolate the machine from the network immediately"])
+explanation = "Ransomware spreads fast. Isolating the machine stops it reaching other systems on the network."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

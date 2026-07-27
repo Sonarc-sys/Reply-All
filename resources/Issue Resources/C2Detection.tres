@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Command and Control Beacon Detected"
+description = "Your SIEM has flagged regular outbound connections from an internal machine to a known C2 server  -  a sign of active malware."
+employee_message = "Security monitoring flagged my computer\nas connecting to some weird external address\nevery 5 minutes. I didn't do anything."
+threat_level = 5
+urgency = 1.0
+correct_index = 2
+answers = Array[String](["Check the website the computer is connecting to", "Restart the computer to clear the connection", "Immediately isolate the machine from the network, preserve memory and disk for forensics, and begin full incident response"])
+explanation = "A C2 beacon means an attacker has persistent remote control of that machine right now. Isolate it immediately  -  do not restart, as that destroys forensic evidence in memory."

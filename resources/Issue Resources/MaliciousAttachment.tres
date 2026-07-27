@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Suspicious Email Attachment"
+description = "An employee received an invoice PDF from an unknown sender and wants to open it."
+employee_message = "I got an invoice from someone I don't recognise.\nIt's a PDF. We do get invoices sometimes.\nShould I open it?"
+threat_level = 3
+urgency = 0.35
+correct_index = 1
+answers = Array[String](["Open it  -  PDFs are usually safe", "Do not open it. Submit to IT for sandboxed analysis first", "Forward it to the whole finance team to check"])
+explanation = "PDFs can contain malicious macros or embedded exploits. Always route unexpected attachments through a sandbox before opening."
