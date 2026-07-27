@@ -38,9 +38,11 @@ func update_triage() -> void:
 				item.setup(employee)
 				active_notifications[employee] = item
 		#Spawn toaster notification
-				var message = "[ALERT] " + employee.employee_name + ": " + employee.current_issue.employee_message
 				if toast_banner and toast_banner.has_method("show_toast"):
-					toast_banner.show_toast(message)
+					toast_banner.show_toast(
+					employee.employee_name, 
+					employee.current_issue.employee_message
+					)
 				
 
 	# Removing notifications for fixed/failed issues

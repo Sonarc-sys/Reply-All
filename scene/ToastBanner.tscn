@@ -2,6 +2,21 @@
 
 [ext_resource type="Script" uid="uid://b1ys7y8oh2k7p" path="res://script/ToastBanner.gd" id="1_4lesw"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lesw"]
+content_margin_left = 16.0
+content_margin_top = 10.0
+content_margin_right = 16.0
+content_margin_bottom = 10.0
+bg_color = Color(0.11764706, 0.11764706, 0.14117648, 0.8235294)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="ToastBanner" type="PanelContainer" unique_id=1473712903]
 anchors_preset = 5
 anchor_left = 0.5
@@ -12,10 +27,15 @@ offset_bottom = 23.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4lesw")
 script = ExtResource("1_4lesw")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1086813086]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer" unique_id=1667361308]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=1933231284]
+custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
