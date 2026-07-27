@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bgldeqc1xwyaj"]
+
+[ext_resource type="Script" uid="uid://b1ys7y8oh2k7p" path="res://script/ToastBanner.gd" id="1_4lesw"]
+
+[node name="ToastBanner" type="PanelContainer" unique_id=1473712903]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -22.0
+offset_right = -21.0
+offset_bottom = 23.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+script = ExtResource("1_4lesw")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1086813086]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1667361308]
+layout_mode = 2
