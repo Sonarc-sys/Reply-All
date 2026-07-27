@@ -30,9 +30,21 @@ func show_issue(employee):
 	$CanvasLayer/IssuePopup.open(employee)
 
 func _on_lockdown_triggered():
-	var lockdown = $CanvasLayer/LockdownEvent
-	lockdown.lockdown_cleared.connect(_on_lockdown_cleared, CONNECT_ONE_SHOT)
-	lockdown.lockdown_failed.connect(_on_lockdown_failed, CONNECT_ONE_SHOT)
+	# Find LockdownEvent robustly - try multiple paths
+	var lockdown = get_node_or_null("CanvasLayer/LockdownEvent")
+	if lockdown == null:
+		lockdown = get_node_or_null("LockdownEvent")
+	if lockdown == null:
+		# Search entire scene tree
+		lockdown = find_child("LockdownEvent", true, false)
+	if lockdown == null:
+		push_error("LockdownEvent node not found - skipping lockdown")
+		GameManager.lockdown_active = false
+		return
+	if not lockdown.lockdown_cleared.is_connected(_on_lockdown_cleared):
+		lockdown.lockdown_cleared.connect(_on_lockdown_cleared, CONNECT_ONE_SHOT)
+	if not lockdown.lockdown_failed.is_connected(_on_lockdown_failed):
+		lockdown.lockdown_failed.connect(_on_lockdown_failed, CONNECT_ONE_SHOT)
 	lockdown.start(GameManager.employees)
 
 func _on_lockdown_cleared():
