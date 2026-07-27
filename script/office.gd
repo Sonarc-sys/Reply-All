@@ -16,6 +16,9 @@ func _ready():
 				employee.issue_clicked.connect(show_issue)
 	if not GameManager.lockdown_triggered.is_connected(_on_lockdown_triggered):
 		GameManager.lockdown_triggered.connect(_on_lockdown_triggered)
+	if not GameManager.day_ended.is_connected(_on_day_ended):
+		GameManager.day_ended.connect(_on_day_ended)
+	GameManager.time_left = GameManager.shift_duration
 
 func _on_incident_timer_timeout():
 	GameManager.spawn_issue()
@@ -52,3 +55,14 @@ func _on_lockdown_cleared():
 
 func _on_lockdown_failed():
 	GameManager.end_day()
+
+func _on_day_ended(_data):
+	AudioManager.stop_music()
+	# Fade to black then go to cutscene
+	var fade = ColorRect.new()
+	fade.color = Color(0, 0, 0, 0)
+	fade.set_anchors_preset(Control.PRESET_FULL_RECT)
+	get_tree().current_scene.add_child(fade)
+	var tw = fade.create_tween()
+	tw.tween_property(fade, "color:a", 1.0, 1.0)
+	tw.tween_callback(func(): get_tree().change_scene_to_file("res://scene/GameOverTransition.tscn"))

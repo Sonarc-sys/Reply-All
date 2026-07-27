@@ -25,6 +25,7 @@ var employees: Array       = []
 # ── Reflection report: tracks wrong answers ───────────────────────────────────
 # Each entry: { "issue_name": str, "correct_answer": str, "explanation": str }
 var wrong_answers: Array = []
+var unsucessful_job_hist: Array = []
 
 # ── Streak tracking ───────────────────────────────────────────────────────────
 var current_streak: int = 0

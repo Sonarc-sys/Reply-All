@@ -140,6 +140,19 @@ func _wrong(_idx: int):
 	GameManager.record_wrong_answer(the_issue.issue_name,
 		the_issue.answers[the_issue.correct_index],
 		the_issue.explanation)
+	# Also write to team's scoreboard format
+	if "unsucessful_job_hist" in GameManager:
+		var already = false
+		for j in GameManager.unsucessful_job_hist:
+			if j.get("name","") == the_issue.issue_name:
+				already = true; break
+		if not already:
+			GameManager.unsucessful_job_hist.append({
+				"name": the_issue.issue_name,
+				"description": the_issue.description,
+				"answer": the_issue.answers[the_issue.correct_index],
+				"explanation": the_issue.explanation
+			})
 
 	if has_node("/root/AudioManager"):
 		var sfx = load("res://audio/sfx_wrong.wav")
