@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://printer001"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
 
-[ext_resource type="Resource" uid="uid://insider001" path="res://resources/Escalation Resources/InsiderThreat.tres" id="1_ins"]
-[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_iss"]
+[ext_resource type="Resource" path="res://resources/Escalation Resources/InsiderThreat.tres" id="1_ins"]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
 
 [resource]
 script = ExtResource("1_iss")

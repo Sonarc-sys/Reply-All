@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://c35pqpvfa5e8l"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
 
-[ext_resource type="Resource" uid="uid://du7u00xe0sc0k" path="res://resources/Escalation Resources/Escalation_WormBreakout.tres" id="1_mwxv4"]
-[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_rxhjm"]
+[ext_resource type="Resource" path="res://resources/Escalation Resources/Escalation_WormBreakout.tres" id="1_mwxv4"]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_rxhjm"]
 
 [resource]
 script = ExtResource("1_rxhjm")
