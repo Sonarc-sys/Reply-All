@@ -118,7 +118,7 @@ func spawn_issue():
 		return
 	var roll = randf()
 	var pool: Array
-	if roll < 0.22 and not critical_issues.is_empty():
+	if roll < 0.35 and not critical_issues.is_empty():
 		pool = critical_issues
 	elif roll < 0.40 and not high_threat_issues.is_empty():
 		pool = high_threat_issues
