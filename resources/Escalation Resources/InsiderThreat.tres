@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberEscalation" format=3]
+
+[ext_resource type="Script" path="res://resources/Escalation.gd" id="1_esc"]
+
+[resource]
+script = ExtResource("1_esc")
+escalation_name = "Insider Threat Active"
+description = "Unauthorised internal access detected."
+severity = 4
+escalation_rate = 1.5
+consequence_text = "Sensitive files are being copied to external storage."
+metadata/_custom_type_script = "uid://2omncumtu2b7"

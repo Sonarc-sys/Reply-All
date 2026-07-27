@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Insider Data Theft Suspected"
+description = "DLP alerts show an employee downloaded 40,000 customer records to a USB drive right before handing in their resignation."
+employee_message = "My resignation is in but I'm just\ncleaning up my files before I go.\nI copied some work stuff to my personal drive."
+threat_level = 4
+urgency = 0.65
+correct_index = 1
+answers = Array[String](["Let them go  -  they're leaving anyway", "Immediately revoke access, preserve the USB as evidence, and escalate to legal and HR", "Ask them nicely to delete the files"])
+explanation = "A departing employee exfiltrating 40,000 customer records is a serious data breach. Lock access immediately and preserve evidence for legal action."

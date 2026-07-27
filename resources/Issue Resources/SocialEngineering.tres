@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+
+[ext_resource type="Resource" path="res://resources/Escalation Resources/AccountHijack.tres" id="1_acc"]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Social Engineering Call"
+description = "Someone calls the helpdesk claiming to be the CEO and demands an immediate password reset. What do you do?"
+employee_message = "There's someone on the phone saying they're the CEO.
+They sound really urgent and say they're locked out.
+
+Should I just reset their password?"
+threat_level = 3
+urgency = 0.35
+escalation = ExtResource("1_acc")
+correct_index = 1
+answers = Array[String](["Reset the password immediately", "Ask for their employee ID and call back on the official number", "Give them the IT admin password to save time"])
+explanation = "Always verify identity through a secondary channel. Social engineering relies on urgency and authority  -  never bypass verification."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

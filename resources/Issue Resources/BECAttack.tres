@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Business Email Compromise"
+description = "Finance received an email appearing to be from the CEO asking for an urgent $50,000 wire transfer to a new vendor."
+employee_message = "I got an email from the CEO's address\nasking me to wire $50,000 to a new supplier urgently.\nHe says not to discuss it with anyone. Should I do it?"
+threat_level = 4
+urgency = 0.7
+correct_index = 2
+answers = Array[String](["Wire it  -  the CEO's email address is legitimate", "Wire half now and confirm the rest later", "Do not wire anything. Call the CEO directly on a known number to verify. Report to IT security immediately."])
+explanation = "Business Email Compromise is one of the costliest cybercrimes. Attackers spoof or compromise executive emails. Always verify large transfers via phone using a known number  -  never email."

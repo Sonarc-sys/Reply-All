@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Tailgating Into Server Room"
+description = "An unfamiliar person followed an employee into the server room by walking in right behind them."
+employee_message = "Someone I didn't recognise followed me into\nthe server room when I badged in.\nThey said they were from maintenance."
+threat_level = 2
+urgency = 0.25
+correct_index = 1
+answers = Array[String](["Assume they are legitimate  -  maintenance visits happen", "Challenge them immediately, ask for ID, and escort them out if unverified", "Call a team meeting to discuss it next week"])
+explanation = "Tailgating is a classic physical intrusion technique. Always challenge unverified individuals in restricted areas  -  politeness is not more important than security."

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+
+[ext_resource type="Resource" path="res://resources/Escalation Resources/InsiderThreat.tres" id="1_ins"]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Unauthorised Access"
+description = "System logs show an employee accessed the HR salary database outside work hours. What do you do?"
+employee_message = "The log monitoring system flagged my account.
+I was just curious about the salary data.
+
+I won't do it again, can you just ignore it?"
+threat_level = 4
+urgency = 0.4
+escalation = ExtResource("1_ins")
+correct_index = 1
+answers = Array[String](["Ignore it since they promised not to repeat it", "Escalate to HR and revoke database access", "Shut down their computer remotely"])
+explanation = "Unauthorised access to sensitive data must be escalated regardless of intent. This is a potential insider threat."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

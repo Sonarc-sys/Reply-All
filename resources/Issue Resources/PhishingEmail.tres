@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="CyberIssue" format=3 uid="uid://hff0juo7efyi"]
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
 
-[ext_resource type="Resource" uid="uid://c80dnnsi24y5u" path="res://resources/Escalation Resources/AccountHijack.tres" id="1_8hw35"]
-[ext_resource type="Script" uid="uid://bsi7vk31tp6eg" path="res://resources/Issue.gd" id="1_cjb6s"]
+[ext_resource type="Resource" path="res://resources/Escalation Resources/AccountHijack.tres" id="1_8hw35"]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_cjb6s"]
 
 [resource]
 script = ExtResource("1_cjb6s")

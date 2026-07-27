@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+
+[ext_resource type="Resource" path="res://resources/Escalation Resources/WeakCredentials.tres" id="1_wc"]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+
+[resource]
+script = ExtResource("1_iss")
+issue_name = "Public Wi-Fi Risk"
+description = "An employee is working from a coffee shop using public Wi-Fi without a VPN. What do you do?"
+employee_message = "I'm at the café finishing the quarterly report.\nThe Wi-Fi here is super fast!\n\nI forgot my VPN password  -  is it okay if I just work without it?"
+threat_level = 2
+urgency = 0.2
+escalation = ExtResource("1_wc")
+correct_index = 1
+answers = Array[String](["It's fine for one day", "Instruct them to connect via VPN or go home", "Tell them to use their phone hotspot and share credentials"])
+explanation = "Public Wi-Fi exposes unencrypted traffic to anyone on the same network. VPN is mandatory for remote work with company data."
+metadata/_custom_type_script = "uid://bsi7vk31tp6eg"

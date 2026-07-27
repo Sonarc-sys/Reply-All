@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[resource]
+script = ExtResource("1_iss")
+issue_name = "MFA Push Bombing Attack"
+description = "An employee is being spammed with MFA approval requests on their phone. Someone has their password and is trying to tire them into approving."
+employee_message = "I keep getting authentication requests\non my phone but I'm not logging in.\nShould I just approve one to make them stop?"
+threat_level = 5
+urgency = 0.95
+correct_index = 1
+answers = Array[String](["Approve one request to stop the spam", "Deny all requests, immediately change the password, and report the incident to IT  -  account is compromised", "Ignore the notifications and they will stop"])
+explanation = "MFA fatigue attacks work by overwhelming users until they approve by accident. Approving even one grants full access. Change the password and report immediately."

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CyberIssue" format=3]
+[ext_resource type="Script" path="res://resources/Issue.gd" id="1_iss"]
+[resource]
+script = ExtResource("1_iss")
+issue_name = "RDP Port Exposed to Internet"
+description = "A scan reveals that Remote Desktop Protocol port 3389 is open directly to the internet on a server."
+employee_message = "I enabled remote desktop on the server last week\nso I could work from home easier.\nWas that okay?"
+threat_level = 3
+urgency = 0.4
+correct_index = 0
+answers = Array[String](["Close port 3389 immediately and require VPN for all remote access", "It is fine as long as they have a strong password", "Add a firewall rule to log access but leave the port open"])
+explanation = "Exposed RDP is a top target for brute-force and ransomware attacks. Close it immediately and enforce VPN-only remote access."
