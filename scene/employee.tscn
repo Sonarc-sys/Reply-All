@@ -54,6 +54,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_y30ri"]
 radius = 18.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sks6p"]
+bg_color = Color(0.019607844, 0.24705882, 0.84705883, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnxie"]
+bg_color = Color(0.9411765, 0.78431374, 0.14901961, 1)
+
 [node name="Employee" type="CharacterBody2D" unique_id=1292802840 groups=["employees"]]
 y_sort_enabled = true
 collision_layer = 2
@@ -96,8 +102,9 @@ offset_left = -35.0
 offset_top = -130.0
 offset_right = 37.0
 offset_bottom = -120.0
-max_value = 30.0
-value = 30.0
+theme_override_styles/background = SubResource("StyleBoxFlat_sks6p")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lnxie")
+value = 100.0
 show_percentage = false
 
 [node name="Exclamation" type="Label" parent="UI" unique_id=577583120]
