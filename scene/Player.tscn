@@ -51,14 +51,15 @@ animations = [{
 "speed": 8.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
-size = Vector2(37, 28.25)
+[sub_resource type="CircleShape2D" id="CircleShape2D_dr5eu"]
+radius = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
 radius = 100.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1676413528]
 y_sort_enabled = true
+motion_mode = 1
 script = ExtResource("1_si3wx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=35757525]
@@ -70,7 +71,7 @@ offset = Vector2(0, -32)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1430369263]
 y_sort_enabled = true
 position = Vector2(0, -14.875)
-shape = SubResource("RectangleShape2D_seri3")
+shape = SubResource("CircleShape2D_dr5eu")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=530706158]
 limit_left = 0
@@ -84,6 +85,7 @@ position = Vector2(228, 231)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1368849613]
+visible = false
 position = Vector2(-228, -286)
 shape = SubResource("CircleShape2D_interact")
 
