@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://reflect001"]
 
-[ext_resource type="Script" path="res://script/ReflectionReport.gd" id="1_ref"]
-[ext_resource type="Texture2D" path="res://asset/gameover_bg.png" id="2_bg"]
+[ext_resource type="Script" uid="uid://wievtscb1i0u" path="res://script/ReflectionReport.gd" id="1_ref"]
+[ext_resource type="Texture2D" uid="uid://doygktkwodbpa" path="res://asset/IntroCutScene.png" id="2_bg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_body"]
 bg_color = Color(0.10, 0.10, 0.12, 1.0)

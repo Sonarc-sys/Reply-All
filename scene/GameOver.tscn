@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://21ngdpil0neo"]
 
 [ext_resource type="Script" uid="uid://d42pdhonbsoi" path="res://script/GameOver.gd" id="1_go"]
-[ext_resource type="Texture2D" uid="uid://doygktkwodbpa" path="res://asset/gameover_bg.png" id="2_bg"]
+[ext_resource type="Texture2D" uid="uid://dlbki7ywiu2ay" path="res://asset/gameover_bg.png" id="2_bg"]
 
 [node name="GameOver" type="Control" unique_id=913601582]
 layout_mode = 3
@@ -95,10 +95,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -158.0
-offset_top = 36.0
-offset_right = 162.0
-offset_bottom = 94.0
+offset_left = -144.0
+offset_top = 37.0
+offset_right = 145.0
+offset_bottom = 90.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.941, 0.784, 0.149, 1)
@@ -112,10 +112,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -158.0
-offset_top = 104.0
-offset_right = 162.0
-offset_bottom = 162.0
+offset_left = -144.0
+offset_top = 107.0
+offset_right = 145.0
+offset_bottom = 161.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.941, 0.784, 0.149, 1)
@@ -129,10 +129,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -154.0
-offset_top = 178.0
+offset_left = -145.0
+offset_top = 177.0
 offset_right = 145.0
-offset_bottom = 228.0
+offset_bottom = 230.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.941, 0.784, 0.149, 1)
