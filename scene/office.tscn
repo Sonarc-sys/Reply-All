@@ -79,26 +79,31 @@ texture = ExtResource("8_seri3")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
 script = ExtResource("5_eglr7")
 
-[node name="TopHUD" type="HBoxContainer" parent="CanvasLayer" unique_id=967748544]
+[node name="HUDMargin" type="MarginContainer" parent="CanvasLayer" unique_id=1172703290]
 anchors_preset = 10
 anchor_right = 1.0
-offset_top = 10.0
-offset_bottom = 10.0
+offset_bottom = 14.0
 grow_horizontal = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 6
+
+[node name="TopHUD" type="HBoxContainer" parent="CanvasLayer/HUDMargin" unique_id=967748544]
+layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TimerCard" type="PanelContainer" parent="CanvasLayer/TopHUD" unique_id=1016381780]
+[node name="TimerCard" type="PanelContainer" parent="CanvasLayer/HUDMargin/TopHUD" unique_id=1016381780]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_m1geu")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TopHUD/TimerCard" unique_id=1946312049]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HUDMargin/TopHUD/TimerCard" unique_id=1946312049]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 6
 
-[node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer/TopHUD/TimerCard/MarginContainer" unique_id=283981266]
+[node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer/HUDMargin/TopHUD/TimerCard/MarginContainer" unique_id=283981266]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 bbcode_enabled = true
@@ -106,22 +111,22 @@ fit_content = true
 scroll_active = false
 autowrap_mode = 0
 
-[node name="Control" type="Control" parent="CanvasLayer/TopHUD" unique_id=1063809485]
+[node name="Control" type="Control" parent="CanvasLayer/HUDMargin/TopHUD" unique_id=1063809485]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ScoreCard" type="PanelContainer" parent="CanvasLayer/TopHUD" unique_id=1010171438]
+[node name="ScoreCard" type="PanelContainer" parent="CanvasLayer/HUDMargin/TopHUD" unique_id=1010171438]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vfpnv")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TopHUD/ScoreCard" unique_id=1605735238]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HUDMargin/TopHUD/ScoreCard" unique_id=1605735238]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 6
 
-[node name="ScoreLabel" type="RichTextLabel" parent="CanvasLayer/TopHUD/ScoreCard/MarginContainer" unique_id=644050624]
+[node name="ScoreLabel" type="RichTextLabel" parent="CanvasLayer/HUDMargin/TopHUD/ScoreCard/MarginContainer" unique_id=644050624]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 bbcode_enabled = true

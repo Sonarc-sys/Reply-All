@@ -26,7 +26,7 @@ func _process(_delta):
 	_update_timer()
 
 func _update_timer():
-	var lbl: RichTextLabel = get_node_or_null("TopHUD/TimerCard/MarginContainer/TimerLabel")
+	var lbl: RichTextLabel = get_node_or_null("HUDMargin/TopHUD/TimerCard/MarginContainer/TimerLabel")
 	if lbl == null: return
 	var t = max(0.0, GameManager.time_left)
 	var mins = int(t) / 60
@@ -58,7 +58,7 @@ func _update_danger(value: float):
 
 func update_score(score: int) -> void:
 	if score_label == null:
-		score_label = get_node_or_null("TopHUD/ScoreCard/MarginContainer/ScoreLabel")
+		score_label = get_node_or_null("HUDMargin/TopHUD/ScoreCard/MarginContainer/ScoreLabel")
 			
 	if score_label is RichTextLabel:
 		score_label.text = "[center]🛡️ [color=#38BDF8][b]SCORE:[/b][/color] [color=#F3F4F6]%d[/color][/center]" % score
