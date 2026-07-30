@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://sfyiscjawqa7" path="res://scene/employee.tscn" id="2_pgah7"]
 [ext_resource type="PackedScene" uid="uid://dfr3iv4iher32" path="res://scene/IssuePopup.tscn" id="2_uvqaq"]
 [ext_resource type="Texture2D" uid="uid://bgxoq4qv3dwxs" path="res://asset/pixel background office.png" id="2_wk7dr"]
-[ext_resource type="PackedScene" path="res://scene/ToastBanner.tscn" id="5_4spjl"]
+[ext_resource type="PackedScene" uid="uid://bgldeqc1xwyaj" path="res://scene/ToastBanner.tscn" id="5_4spjl"]
 [ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
 [ext_resource type="Texture2D" uid="uid://dgoyski6kmxha" path="res://asset/pixel_art_smartphone_blank.png" id="6_m1geu"]
 [ext_resource type="PackedScene" uid="uid://dcywsqq8hc6g3" path="res://scene/Map-Assets/Entry-Hallway/secretary_cubicle_1.tscn" id="7_seri3"]
@@ -37,7 +37,31 @@
 [ext_resource type="PackedScene" uid="uid://dxxbh0pkbjgi4" path="res://scene/Map-Assets/Main-Hallway/lower_hallway_wall.tscn" id="32_46qiu"]
 [ext_resource type="PackedScene" uid="uid://oe1veavo5w57" path="res://scene/Map-Assets/bottom_wall.tscn" id="34_viurs"]
 [ext_resource type="Texture2D" uid="uid://dtnf5ub6is5kn" path="res://asset/Map/Map__0000s_0003_Censor.png" id="35_y3oto"]
-[ext_resource type="PackedScene" path="res://scene/LockdownEvent.tscn" id="lockdown_ext"]
+[ext_resource type="PackedScene" uid="uid://lockdown001" path="res://scene/LockdownEvent.tscn" id="lockdown_ext"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m1geu"]
+bg_color = Color(0.09411765, 0.09411765, 0.1254902, 0.8235294)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29411766, 0.33333334, 0.3882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vfpnv"]
+bg_color = Color(0.09411765, 0.09411765, 0.1254902, 0.8235294)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.29411766, 0.33333334, 0.3882353, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_seri3"]
 size = Vector2(1687.5, 1318.5)
@@ -55,35 +79,61 @@ texture = ExtResource("8_seri3")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=205822229]
 script = ExtResource("5_eglr7")
 
+[node name="TopHUD" type="HBoxContainer" parent="CanvasLayer" unique_id=967748544]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+
+[node name="TimerCard" type="PanelContainer" parent="CanvasLayer/TopHUD" unique_id=1016381780]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m1geu")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TopHUD/TimerCard" unique_id=1946312049]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="TimerLabel" type="RichTextLabel" parent="CanvasLayer/TopHUD/TimerCard/MarginContainer" unique_id=283981266]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Control" type="Control" parent="CanvasLayer/TopHUD" unique_id=1063809485]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScoreCard" type="PanelContainer" parent="CanvasLayer/TopHUD" unique_id=1010171438]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vfpnv")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TopHUD/ScoreCard" unique_id=1605735238]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="ScoreLabel" type="RichTextLabel" parent="CanvasLayer/TopHUD/ScoreCard/MarginContainer" unique_id=644050624]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
 [node name="IssuePopup" parent="CanvasLayer" unique_id=343395867 instance=ExtResource("2_uvqaq")]
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScoreLabel" type="Label" parent="CanvasLayer" unique_id=2082554985]
-offset_left = 998.0
-offset_top = 15.0
-offset_right = 1125.0
-offset_bottom = 64.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Security Score: 0
-"
-
-[node name="TimerLabel" type="Label" parent="CanvasLayer"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -50.0
-offset_top = 4.0
-offset_right = 50.0
-offset_bottom = 28.0
-horizontal_alignment = 1
-theme_override_font_sizes/font_size = 16
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "3:00"
-
-[node name="DangerRow" type="HBoxContainer" parent="CanvasLayer"]
-layout_mode = 1
+[node name="DangerRow" type="HBoxContainer" parent="CanvasLayer" unique_id=1364626286]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -92,18 +142,22 @@ offset_left = 8.0
 offset_top = -36.0
 offset_right = -8.0
 offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
 
-[node name="DangerLabel" type="Label" parent="CanvasLayer/DangerRow"]
+[node name="DangerLabel" type="RichTextLabel" parent="CanvasLayer/DangerRow" unique_id=725949670]
 custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+bbcode_enabled = true
 text = "Threat: 0%"
-theme_override_font_sizes/font_size = 13
-theme_override_colors/font_color = Color(0.2, 0.9, 0.3, 1)
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
 
-[node name="DangerBar" type="ProgressBar" parent="CanvasLayer/DangerRow"]
+[node name="DangerBar" type="ProgressBar" parent="CanvasLayer/DangerRow" unique_id=1118877461]
+custom_minimum_size = Vector2(0, 18)
 layout_mode = 2
 size_flags_horizontal = 3
-custom_minimum_size = Vector2(0, 18)
-max_value = 100.0
 show_percentage = false
 
 [node name="ToastBanner" parent="CanvasLayer" unique_id=1473712903 instance=ExtResource("5_4spjl")]
@@ -130,6 +184,8 @@ horizontal_scroll_mode = 0
 [node name="NotificationList" type="VBoxContainer" parent="CanvasLayer/Phone/ScrollContainer" unique_id=1932424071]
 layout_mode = 2
 theme_override_constants/separation = 1
+
+[node name="LockdownEvent" parent="CanvasLayer" unique_id=215499116 instance=ExtResource("lockdown_ext")]
 
 [node name="Map" type="Node2D" parent="." unique_id=390555796]
 y_sort_enabled = true
@@ -431,7 +487,5 @@ texture = ExtResource("2_wk7dr")
 [node name="IncidentTimer" type="Timer" parent="." unique_id=181824542]
 wait_time = 8.0
 autostart = true
-
-[node name="LockdownEvent" parent="CanvasLayer" instance=ExtResource("lockdown_ext")]
 
 [connection signal="timeout" from="IncidentTimer" to="." method="_on_incident_timer_timeout"]
