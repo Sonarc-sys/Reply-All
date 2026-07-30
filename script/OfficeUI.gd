@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @export var notification_scene: PackedScene = preload("res://scene/NotificationItem.tscn")
 
-var score_label: Label
+var score_label: RichTextLabel
 @onready var notification_list: VBoxContainer = $Phone/ScrollContainer/NotificationList
 
 @onready var toast_banner: PanelContainer = $ToastBanner
@@ -26,33 +26,42 @@ func _process(_delta):
 	_update_timer()
 
 func _update_timer():
-	var lbl = get_node_or_null("TimerLabel")
+	var lbl: RichTextLabel = get_node_or_null("HUDMargin/TopHUD/TimerCard/MarginContainer/TimerLabel")
 	if lbl == null: return
 	var t = max(0.0, GameManager.time_left)
 	var mins = int(t) / 60
 	var secs = int(t) % 60
-	lbl.text = "%d:%02d" % [mins, secs]
-	lbl.modulate = Color(0.9, 0.2, 0.2) if t < 15.0 else Color.WHITE
+	var time_str = "%d:%02d" % [mins, secs]
+	# Emergency panic color shift
+	if t < 15.0:
+		lbl.text = "[center]⏱ [color=#F43F5E][b]%s[/b][/color][/center]" % time_str
+	else:
+		lbl.text = "[center]⏱ [color=#F3F4F6]%s[/color][/center]" % time_str
 
 func _update_danger(value: float):
 	var bar = get_node_or_null("DangerRow/DangerBar")
-	var lbl = get_node_or_null("DangerRow/DangerLabel")
+	var lbl: RichTextLabel = get_node_or_null("DangerRow/DangerLabel")
+	# Color thresholds (In Hext)
+	var hex_color = "#34D399" # Soft Green (Low threat)
+	if value > 60.0: 
+		hex_color = "#FBBF24" # Warning Orange/Yellow
+	if value > 80.0: 
+		hex_color = "#F43F5E" # Emergency Red
+	# Update Progress Bar Tint
 	if bar:
 		bar.value = value
-		var col = Color(0.2, 0.9, 0.3)
-		if value > 60: col = Color(1.0, 0.55, 0.0)
-		if value > 80: col = Color(0.9, 0.2, 0.2)
-		bar.modulate = col
+		bar.modulate = Color(hex_color)
+	# Update Text
 	if lbl:
-		lbl.text = "Threat: %.0f%%" % value
-		var col2 = Color(0.2, 0.9, 0.3)
-		if value > 60: col2 = Color(1.0, 0.55, 0.0)
-		if value > 80: col2 = Color(0.9, 0.2, 0.2)
-		lbl.add_theme_color_override("font_color", col2)
+		#lbl.text = "⚠️ [color=%s][b]THREAT:[/b] %.0f%%[/color]" % [hex_color, value]
+		lbl.text = "[outline_size=5][outline_color=#000000]⚠️ [color=%s][b]THREAT:[/b] %.0f%%[/color][/outline_color][/outline_size]" % [hex_color, value]
 
 func update_score(score: int) -> void:
-	if score_label:
-		score_label.text = "Security Score: " + str(score)
+	if score_label == null:
+		score_label = get_node_or_null("HUDMargin/TopHUD/ScoreCard/MarginContainer/ScoreLabel")
+			
+	if score_label is RichTextLabel:
+		score_label.text = "[center]🛡️ [color=#38BDF8][b]SCORE:[/b][/color] [color=#F3F4F6]%d[/color][/center]" % score
 
 func update_triage() -> void:
 	
