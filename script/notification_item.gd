@@ -3,24 +3,29 @@ class_name NotificationItem
 
 enum DisplayMode { TIMER, PERCENTAGE }
 
-# Change this to DisplayMode.PERCENTAGE if you prefer percentages!
 @export var display_mode: DisplayMode = DisplayMode.TIMER
 
-@onready var name_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/NameLabel
-@onready var time_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/TimeLabel
-@onready var description_label: Label = $MarginContainer/VBoxContainer/PanelContainer/Control/DescriptionLabel
+@onready var name_label: RichTextLabel = $MarginContainer/VBoxContainer/HeaderHBoxContainer/NameLabel
+@onready var time_label: RichTextLabel = $MarginContainer/VBoxContainer/HeaderHBoxContainer/TimerLabel
+@onready var description_label: RichTextLabel = $MarginContainer/VBoxContainer/DecriptionLabel
 
 var tracked_employee: Node = null
-var marquee_speed: float = 30.0
 
 func setup(employee) -> void:
 	tracked_employee = employee
-	name_label.text = employee.employee_name
-	description_label.text = employee.current_issue.description
+	
+	# Header name with bold styling and subtle app badge
+	if name_label:
+		name_label.text = "[b][color=#F3F4F6]%s[/color][/b]" % employee.employee_name
+		
+	# Description text with subtle muted grey/blue color
+	if description_label:
+		var msg = employee.current_issue.employee_message if employee.current_issue.get("employee_message") else employee.current_issue.description
+		description_label.text = "[color=#94A3B8]%s[/color]" % msg
+		
 	_update_patience_display()
 
-func _process(delta: float) -> void:
-	# 1. Guard check: Make sure employee exists AND still has a valid current issue
+func _process(_delta: float) -> void:
 	if tracked_employee == null or !is_instance_valid(tracked_employee):
 		return
 	if tracked_employee.current_issue == null:
@@ -28,25 +33,11 @@ func _process(delta: float) -> void:
 
 	_update_patience_display()
 
-	# --- MARQUEE LOGIC ---
-	var parent_container = description_label.get_parent() as Control
-	if parent_container:
-		var window_width = parent_container.size.x
-		var text_width = description_label.get_minimum_size().x
-
-		if text_width > window_width:
-			description_label.position.x -= marquee_speed * delta
-			if description_label.position.x < -text_width:
-				description_label.position.x = window_width
-		else:
-			description_label.position.x = 0
-
-
 func _update_patience_display() -> void:
-	# 2. Extra safety check inside the update function
 	if tracked_employee == null or tracked_employee.current_issue == null:
 		return
 
+	# Calculating timer directly based on patience
 	var urgency: float = tracked_employee.current_issue.urgency
 	var drain_per_second: float = urgency * 10.0
 	
@@ -54,22 +45,26 @@ func _update_patience_display() -> void:
 	if drain_per_second > 0:
 		remaining_seconds = tracked_employee.patience / drain_per_second
 
+	if time_label == null:
+		return
+
 	match display_mode:
 		DisplayMode.TIMER:
-			time_label.text = _format_time(remaining_seconds)
+			var formatted = _format_time(remaining_seconds)
 			if remaining_seconds <= 10.0:
-				time_label.modulate = Color.RED
+				time_label.text = "[right][color=#F43F5E]⏱ %s[/color][/right]" % formatted
 			else:
-				time_label.modulate = Color.WHITE
+				time_label.text = "[right][color=#64748B]⏱ %s[/color][/right]" % formatted
 
 		DisplayMode.PERCENTAGE:
 			var percent: int = int(round(tracked_employee.patience))
-			time_label.text = str(percent) + "%"
+			if percent <= 25:
+				time_label.text = "[right][color=#F43F5E]%d%%[/color][/right]" % percent
+			else:
+				time_label.text = "[right][color=#64748B]%d%%[/color][/right]" % percent
 
 func _format_time(total_seconds: float) -> String:
 	var secs: int = int(ceil(max(0, total_seconds)))
-	var minutes: int = secs / 60  # integer division is fine here
+	var minutes: int = secs / 60
 	var remaining_secs: int = secs % 60
-	
-	# Formats as "01:05" or "00:42"
 	return "%02d:%02d" % [minutes, remaining_secs]

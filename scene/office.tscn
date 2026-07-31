@@ -179,16 +179,18 @@ expand_mode = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.071
-anchor_bottom = -0.071
-offset_left = 149.0
-offset_top = 66.986
-offset_right = 325.0
-offset_bottom = 365.986
+anchor_right = 8.0
+anchor_bottom = 24.0
+offset_left = 152.0
+offset_top = 70.0
+offset_right = -3462.0
+offset_bottom = -8442.0
 horizontal_scroll_mode = 0
 
 [node name="NotificationList" type="VBoxContainer" parent="CanvasLayer/Phone/ScrollContainer" unique_id=1932424071]
 layout_mode = 2
-theme_override_constants/separation = 1
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
 
 [node name="LockdownEvent" parent="CanvasLayer" unique_id=215499116 instance=ExtResource("lockdown_ext")]
 
