@@ -11,7 +11,7 @@ employee_message = "My computer just showed a red screen
 saying all my files are being encrypted
 and I need to pay to get them back. Help???"
 threat_level = 5
-urgency = 1.0
+urgency = 0.35
 escalation = ExtResource("1_esc")
 correct_index = 1
 answers = Array[String](["Pay the ransom immediately to restore files", "Cut ALL network connections NOW  -  unplug ethernet, disable WiFi, alert the incident response team", "Run antivirus and hope for the best"])

@@ -12,7 +12,7 @@ some client spreadsheets to my personal email.
 
 Is that okay?"
 threat_level = 4
-urgency = 0.45
+urgency = 0.35
 escalation = ExtResource("1_db")
 correct_index = 2
 answers = Array[String](["Tell them it's fine", "Ask them to delete the email", "Block the transfer, report it, and revoke access"])

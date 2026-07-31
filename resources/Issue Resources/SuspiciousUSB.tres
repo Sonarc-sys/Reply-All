@@ -11,7 +11,7 @@ It says \"Payroll Information\".
 
 Should I open it to see who it belongs to?"
 threat_level = 5
-urgency = 1.0
+urgency = 0.35
 correct_index = 2
 answers = Array[String](["Plug it in to check the files", "Give it to another employee to test", "Report it to IT/security"])
 explanation = "USB's can have autostart programs that can install malware as soon as you plug it in."

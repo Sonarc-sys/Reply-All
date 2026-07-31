@@ -10,7 +10,7 @@ employee_message = "I keep getting authentication requests
 on my phone but I'm not logging in.
 Should I just approve one to make them stop?"
 threat_level = 5
-urgency = 0.95
+urgency = 0.35
 correct_index = 1
 answers = Array[String](["Approve one request to stop the spam", "Deny all requests, immediately change the password, and report the incident to IT  -  account is compromised", "Ignore the notifications and they will stop"])
 explanation = "MFA fatigue attacks work by overwhelming users until they approve by accident. Approving even one grants full access. Change the password and report immediately."

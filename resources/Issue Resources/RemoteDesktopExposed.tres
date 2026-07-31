@@ -10,6 +10,6 @@ employee_message = "I enabled remote desktop on the server last week
 so I could work from home easier.
 Was that okay?"
 threat_level = 3
-urgency = 0.4
+urgency = 0.35
 answers = Array[String](["Close port 3389 immediately and require VPN for all remote access", "It is fine as long as they have a strong password", "Add a firewall rule to log access but leave the port open"])
 explanation = "Exposed RDP is a top target for brute-force and ransomware attacks. Close it immediately and enforce VPN-only remote access."

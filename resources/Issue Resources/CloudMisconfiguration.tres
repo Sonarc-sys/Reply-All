@@ -10,7 +10,7 @@ employee_message = "I made our project storage bucket public
 so the client could download files easily.
 The customer data is in there too, is that okay?"
 threat_level = 3
-urgency = 0.45
+urgency = 0.35
 correct_index = 2
 answers = Array[String](["Fine  -  the client needs access anyway", "Send the client a direct link and hope no one else finds it", "Set the bucket to private immediately, audit who accessed it, and notify compliance"])
 explanation = "Public cloud buckets with customer data are a GDPR/privacy breach waiting to happen. Restrict access immediately and treat it as a potential data exposure incident."

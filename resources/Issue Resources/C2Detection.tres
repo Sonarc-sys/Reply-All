@@ -10,7 +10,7 @@ employee_message = "Security monitoring flagged my computer
 as connecting to some weird external address
 every 5 minutes. I didn't do anything."
 threat_level = 5
-urgency = 1.0
+urgency = 0.35
 correct_index = 2
 answers = Array[String](["Check the website the computer is connecting to", "Restart the computer to clear the connection", "Immediately isolate the machine from the network, preserve memory and disk for forensics, and begin full incident response"])
 explanation = "A C2 beacon means an attacker has persistent remote control of that machine right now. Isolate it immediately  -  do not restart, as that destroys forensic evidence in memory."

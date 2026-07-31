@@ -12,7 +12,7 @@ pop-ups asking me to call a number.
 
 I clicked a link in an email earlier today..."
 threat_level = 4
-urgency = 0.6
+urgency = 0.35
 escalation = ExtResource("1_mal")
 correct_index = 2
 answers = Array[String](["Ignore it and keep working", "Restart the computer", "Isolate the machine from the network immediately"])

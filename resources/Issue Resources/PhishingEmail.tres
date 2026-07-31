@@ -12,7 +12,7 @@ to sign into a new document system.
 
 The link looks a little weird though."
 threat_level = 3
-urgency = 0.8
+urgency = 0.35
 escalation = ExtResource("1_8hw35")
 correct_index = 1
 answers = Array[String](["Click link", "Verify sender", "reply with password"])

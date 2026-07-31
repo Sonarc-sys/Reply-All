@@ -10,6 +10,6 @@ employee_message = "I saw on Twitter there's a zero-day in our
 web server software. Someone said the patch
 isn't out yet. What do we do?"
 threat_level = 4
-urgency = 0.6
+urgency = 0.35
 answers = Array[String](["Apply compensating controls  -  WAF rules, disable affected features, increase monitoring, and notify stakeholders", "Wait for the official patch before doing anything", "Ignore it  -  if there is no patch there is nothing to do"])
 explanation = "When no patch exists, compensating controls are critical. Harden what you can, increase monitoring, and be ready to respond fast when the patch drops."
