@@ -157,7 +157,7 @@ func issue_failed():
 	current_streak = 0
 	incidents_changed.emit()
 
-func record_wrong_answer(issue_name: String, correct_answer: String, explanation: String):
+func record_wrong_answer(issue_name: String, correct_answer: String, explanation: String, description: String = ""):
 	# Only record each unique issue once
 	for entry in wrong_answers:
 		if entry["issue_name"] == issue_name:
@@ -166,6 +166,7 @@ func record_wrong_answer(issue_name: String, correct_answer: String, explanation
 		"issue_name":     issue_name,
 		"correct_answer": correct_answer,
 		"explanation":    explanation,
+		"description":    description,
 	})
 
 func add_score(amount: int):

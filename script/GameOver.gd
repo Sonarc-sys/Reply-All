@@ -31,6 +31,10 @@ func _ready():
 		streak_lbl.text = "Best Streak: %d" % GameManager.best_streak
 
 func _on_play_again_pressed():
+	# Restart music before going to intro
+	if has_node("/root/AudioManager"):
+		var music = load("res://audio/menu_music.wav")
+		if music: get_node("/root/AudioManager").play_music(music)
 	GameManager.score             = 0
 	GameManager.time_left         = GameManager.shift_duration
 	GameManager.day_over          = false
