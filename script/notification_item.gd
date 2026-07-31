@@ -16,12 +16,12 @@ func setup(employee) -> void:
 	
 	# Header name with bold styling and subtle app badge
 	if name_label:
-		name_label.text = "[b][color=#F3F4F6]%s[/color][/b]" % employee.employee_name
+		name_label.text = "[b][color=#38BDF8]%s[/color][/b]" % employee.employee_name
 		
 	# Description text with subtle muted grey/blue color
 	if description_label:
 		var msg = employee.current_issue.employee_message if employee.current_issue.get("employee_message") else employee.current_issue.description
-		description_label.text = "[color=#94A3B8]%s[/color]" % msg
+		description_label.text = "[color=#F3F4F6]%s[/color]" % msg
 		
 	_update_patience_display()
 

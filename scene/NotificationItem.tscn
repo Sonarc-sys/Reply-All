@@ -43,6 +43,7 @@ custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/normal_font_size = 11
+theme_override_font_sizes/bold_font_size = 11
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
