@@ -38,7 +38,7 @@ const SPRITE_BASE_X = {
 const ROLE_CONFIG = {
 	"IT_NPC":       { "patience": 85,  "drain": 1.2, "walk_chance": 0.10, "speed": 18 },
 	"Worker_D":     { "patience": 85,  "drain": 1.2, "walk_chance": 0.10, "speed": 18 },
-	"CEO":          { "patience": 50,  "drain": 2.8, "walk_chance": 0.05, "speed": 15 },
+	"CEO":          { "patience": 120,  "drain": 1.0, "walk_chance": 0.05, "speed": 15 },
 	"Intern_A":     { "patience": 130, "drain": 0.7, "walk_chance": 0.20, "speed": 22 },
 	"Intern_B":     { "patience": 130, "drain": 0.7, "walk_chance": 0.20, "speed": 22 },
 	"Receptionist": { "patience": 100, "drain": 1.0, "walk_chance": 0.05, "speed": 15 },
