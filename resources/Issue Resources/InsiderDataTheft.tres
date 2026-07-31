@@ -10,7 +10,7 @@ employee_message = "My resignation is in but I'm just
 cleaning up my files before I go.
 I copied some work stuff to my personal drive."
 threat_level = 4
-urgency = 0.65
+urgency = 0.35
 correct_index = 1
 answers = Array[String](["Let them go  -  they're leaving anyway", "Immediately revoke access, preserve the USB as evidence, and escalate to legal and HR", "Ask them nicely to delete the files"])
 explanation = "A departing employee exfiltrating 40,000 customer records is a serious data breach. Lock access immediately and preserve evidence for legal action."

@@ -12,7 +12,7 @@ I was just curious about the salary data.
 
 I won't do it again, can you just ignore it?"
 threat_level = 4
-urgency = 0.4
+urgency = 0.35
 escalation = ExtResource("1_ins")
 correct_index = 1
 answers = Array[String](["Ignore it since they promised not to repeat it", "Escalate to HR and revoke database access", "Shut down their computer remotely"])

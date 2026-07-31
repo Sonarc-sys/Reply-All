@@ -214,6 +214,22 @@ func escalate():
 	GameManager.issue_failed()
 	GameManager.add_danger(failed.threat_level * 8.0)
 	GameManager.add_score(-failed.threat_level * 100)
+	# Record as wrong answer for Reflection Report (timed out = not answered correctly)
+	var correct_ans = failed.answers[failed.correct_index]
+	GameManager.record_wrong_answer(failed.issue_name, correct_ans, failed.explanation, failed.description)
+	# Also write to scoreboard
+	if "unsucessful_job_hist" in GameManager:
+		var already = false
+		for j in GameManager.unsucessful_job_hist:
+			if j.get("name","") == failed.issue_name:
+				already = true; break
+		if not already:
+			GameManager.unsucessful_job_hist.append({
+				"name": failed.issue_name,
+				"description": failed.description if "description" in failed else "",
+				"answer": correct_ans,
+				"explanation": failed.explanation
+			})
 	has_issue = false
 	current_issue = null
 	$UI/PatienceBar.value = patience

@@ -10,7 +10,7 @@ employee_message = "I got an email from the CEO's address
 asking me to wire $50,000 to a new supplier urgently.
 He says not to discuss it with anyone. Should I do it?"
 threat_level = 4
-urgency = 0.7
+urgency = 0.35
 correct_index = 2
 answers = Array[String](["Wire it  -  the CEO's email address is legitimate", "Wire half now and confirm the rest later", "Do not wire anything. Call the CEO directly on a known number to verify. Report to IT security immediately."])
 explanation = "Business Email Compromise is one of the costliest cybercrimes. Attackers spoof or compromise executive emails. Always verify large transfers via phone using a known number  -  never email."

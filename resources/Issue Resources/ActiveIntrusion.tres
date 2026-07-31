@@ -11,7 +11,7 @@ employee_message = "I just got a weird alert on my screen  -
 it says 'Unauthorised remote session active.'
 Should I just ignore it?"
 threat_level = 5
-urgency = 0.8
+urgency = 0.35
 escalation = ExtResource("1_esc")
 answers = Array[String](["Isolate the affected machine immediately and alert the security team", "Restart the computer and see if the alert goes away", "Email IT and wait for a response"])
 explanation = "An active intrusion requires immediate isolation. Every minute of delay gives the attacker deeper access to the network."

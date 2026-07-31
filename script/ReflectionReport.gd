@@ -43,6 +43,15 @@ func _ready():
 		issue_lbl.add_theme_font_size_override("font_size", 15)
 		issue_lbl.add_theme_color_override("font_color", Color(0.95, 0.95, 1.0))
 
+		# Show the actual question/description if recorded
+		var desc_lbl: Label = null
+		if entry.get("description", "") != "":
+			desc_lbl = Label.new()
+			desc_lbl.text = entry["description"]
+			desc_lbl.add_theme_font_size_override("font_size", 12)
+			desc_lbl.add_theme_color_override("font_color", Color(0.75, 0.78, 0.88))
+			desc_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+
 		var div = ColorRect.new()
 		div.custom_minimum_size = Vector2(0, 1)
 		div.color = Color(0.18, 0.20, 0.28)
@@ -69,6 +78,7 @@ func _ready():
 		expl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 
 		vb.add_child(issue_lbl)
+		if desc_lbl: vb.add_child(desc_lbl)
 		vb.add_child(div)
 		vb.add_child(correct_row)
 		vb.add_child(expl)

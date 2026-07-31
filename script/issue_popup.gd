@@ -139,7 +139,8 @@ func _wrong(_idx: int):
 
 	GameManager.record_wrong_answer(the_issue.issue_name,
 		the_issue.answers[the_issue.correct_index],
-		the_issue.explanation)
+		the_issue.explanation,
+		the_issue.description)
 	# Also write to team's scoreboard format
 	if "unsucessful_job_hist" in GameManager:
 		var already = false
