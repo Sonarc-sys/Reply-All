@@ -42,8 +42,9 @@ expand_mode = 3
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/normal_font_size = 11
-theme_override_font_sizes/bold_font_size = 11
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 13
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
@@ -51,6 +52,7 @@ autowrap_mode = 0
 
 [node name="TimerLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HeaderHBoxContainer" unique_id=2132901456]
 layout_mode = 2
+mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 11
 bbcode_enabled = true
 fit_content = true
@@ -58,9 +60,11 @@ scroll_active = false
 autowrap_mode = 0
 
 [node name="DecriptionLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1349029605]
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 36)
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 9
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 11
+theme_override_font_sizes/bold_font_size = 11
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
