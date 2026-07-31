@@ -3,50 +3,80 @@ class_name NotificationItem
 
 enum DisplayMode { TIMER, PERCENTAGE }
 
-# Change this to DisplayMode.PERCENTAGE if you prefer percentages!
 @export var display_mode: DisplayMode = DisplayMode.TIMER
 
-@onready var name_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/NameLabel
-@onready var time_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/TimeLabel
-@onready var description_label: Label = $MarginContainer/VBoxContainer/PanelContainer/Control/DescriptionLabel
+@onready var notification_container: VBoxContainer = $MarginContainer/VBoxContainer
+
+@onready var name_label: RichTextLabel = $MarginContainer/VBoxContainer/HeaderHBoxContainer/NameLabel
+@onready var time_label: RichTextLabel = $MarginContainer/VBoxContainer/HeaderHBoxContainer/TimerLabel
+@onready var description_label: RichTextLabel = $MarginContainer/VBoxContainer/DecriptionLabel
+
+#var for bubble expansion
+var is_expanded: bool = false
+@export var collapsed_height: float = 35.0
+# Stored text states
+var full_text: String = ""
+var preview_text: String = ""
 
 var tracked_employee: Node = null
-var marquee_speed: float = 30.0
 
+#Speech bubble
 func setup(employee) -> void:
 	tracked_employee = employee
-	name_label.text = employee.employee_name
-	description_label.text = employee.current_issue.description
+	
+	# Header name with app badge
+	if name_label:
+		name_label.text = "[b][color=#38BDF8]%s[/color][/b]" % employee.employee_name
+		
+	# Description text Logic for Elipse
+	if description_label:
+		var raw_msg = "Issue requires attention!"
+		if employee.current_issue:
+			if employee.current_issue.get("employee_message") != null and employee.current_issue.employee_message != "":
+				raw_msg = employee.current_issue.employee_message
+			elif employee.current_issue.get("description") != null:
+				raw_msg = employee.current_issue.description
+		
+		# Replace newlines with single spaces
+		var msg = raw_msg.replace("\r\n", " ").replace("\n", " ").replace("\r", " ")
+		while "  " in msg:
+			msg = msg.replace("  ", " ")
+			
+		full_text = "[color=#F3F4F6]%s[/color]" % msg
+		
+		# Set's Character limit for elipse to appear
+		if msg.length() > 45:
+			var raw_cutoff = msg.left(45)
+			var last_space = raw_cutoff.rfind(" ")
+			
+			if last_space > 0:
+				raw_cutoff = raw_cutoff.left(last_space)
+				
+			var short_msg = raw_cutoff.strip_edges(false, true)
+			var styled_ellipsis = "[b][font_size=13][color=#F3F4F6]...[/color][/font_size][/b]"
+			preview_text = "[color=#F3F4F6]%s[/color]%s" % [short_msg, styled_ellipsis]
+		else:
+			preview_text = full_text
+
+		# Start collapsed with clean preview text
+		description_label.text = preview_text
+		
 	_update_patience_display()
 
-func _process(delta: float) -> void:
-	# 1. Guard check: Make sure employee exists AND still has a valid current issue
+func _process(_delta: float) -> void:
 	if tracked_employee == null or !is_instance_valid(tracked_employee):
 		return
 	if tracked_employee.current_issue == null:
 		return
 
 	_update_patience_display()
-
-	# --- MARQUEE LOGIC ---
-	var parent_container = description_label.get_parent() as Control
-	if parent_container:
-		var window_width = parent_container.size.x
-		var text_width = description_label.get_minimum_size().x
-
-		if text_width > window_width:
-			description_label.position.x -= marquee_speed * delta
-			if description_label.position.x < -text_width:
-				description_label.position.x = window_width
-		else:
-			description_label.position.x = 0
-
-
+	
+#Time calculations and Display
 func _update_patience_display() -> void:
-	# 2. Extra safety check inside the update function
 	if tracked_employee == null or tracked_employee.current_issue == null:
 		return
 
+	# Calculating timer directly based on patience
 	var urgency: float = tracked_employee.current_issue.urgency
 	var drain_per_second: float = urgency * 10.0
 	
@@ -54,22 +84,71 @@ func _update_patience_display() -> void:
 	if drain_per_second > 0:
 		remaining_seconds = tracked_employee.patience / drain_per_second
 
+	if time_label == null:
+		return
+	#Timer Display code
 	match display_mode:
 		DisplayMode.TIMER:
-			time_label.text = _format_time(remaining_seconds)
+			var formatted = _format_time(remaining_seconds)
 			if remaining_seconds <= 10.0:
-				time_label.modulate = Color.RED
+				time_label.text = "[right][color=#F43F5E]⏱ %s[/color][/right]" % formatted
 			else:
-				time_label.modulate = Color.WHITE
+				time_label.text = "[right][color=#64748B]⏱ %s[/color][/right]" % formatted
 
 		DisplayMode.PERCENTAGE:
 			var percent: int = int(round(tracked_employee.patience))
-			time_label.text = str(percent) + "%"
+			if percent <= 25:
+				time_label.text = "[right][color=#F43F5E]%d%%[/color][/right]" % percent
+			else:
+				time_label.text = "[right][color=#64748B]%d%%[/color][/right]" % percent
 
 func _format_time(total_seconds: float) -> String:
 	var secs: int = int(ceil(max(0, total_seconds)))
-	var minutes: int = secs / 60  # integer division is fine here
+	var minutes: int = secs / 60
 	var remaining_secs: int = secs % 60
-	
-	# Formats as "01:05" or "00:42"
 	return "%02d:%02d" % [minutes, remaining_secs]
+	
+	
+#Speech Bubble Expansion Code
+func _ready() -> void:
+	if description_label:
+		description_label.clip_contents = true
+		description_label.fit_content = false
+		description_label.custom_minimum_size.y = collapsed_height
+
+func _gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		toggle_expand()
+
+func toggle_expand() -> void:
+	is_expanded = !is_expanded
+	
+	if description_label:
+		if is_expanded:
+			# Expanded state: swap to full text and allow container expansion
+			description_label.text = full_text
+			description_label.fit_content = true
+			description_label.custom_minimum_size.y = 0
+		else:
+			# Collapsed state: swap to truncated text with "..." and clamp height
+			description_label.text = preview_text
+			description_label.fit_content = false
+			description_label.custom_minimum_size.y = collapsed_height
+			
+	# Refresh parent container layout
+	queue_sort()
+	if get_parent() is Control:
+		get_parent().queue_sort()
+		
+# Returns remaining patience/time in seconds for sorting
+func get_remaining_time() -> float:
+	if tracked_employee and is_instance_valid(tracked_employee):
+		if tracked_employee.current_issue:
+			var urgency: float = tracked_employee.current_issue.urgency
+			var drain_per_second: float = urgency * 10.0
+			if drain_per_second > 0:
+				return tracked_employee.patience / drain_per_second
+			return tracked_employee.patience
+	return 999999.0
+		
+	

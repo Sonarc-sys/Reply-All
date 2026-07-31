@@ -1,37 +1,70 @@
 [gd_scene format=3 uid="uid://dp0yescl3dyou"]
 
 [ext_resource type="Script" uid="uid://hbxqqtpxoeb8" path="res://script/notification_item.gd" id="1_b7bfx"]
+[ext_resource type="Texture2D" uid="uid://cd2xro0jdug18" path="res://asset/profile_Icon.png" id="2_x7pf3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s20ox"]
+bg_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
+border_width_left = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.25490198, 0.33333334, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
 
 [node name="NotificationItem" type="PanelContainer" unique_id=140080238]
-custom_minimum_size = Vector2(176, 20)
+custom_minimum_size = Vector2(0, 20)
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_s20ox")
 script = ExtResource("1_b7bfx")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=2022888275]
 layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1286978183]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1505574667]
+[node name="HeaderHBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1505574667]
 layout_mode = 2
 
-[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1600840315]
+[node name="AppIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/HeaderHBoxContainer" unique_id=1327283087]
+custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
+texture = ExtResource("2_x7pf3")
+expand_mode = 3
 
-[node name="TimeLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2056446084]
-layout_mode = 2
-size_flags_horizontal = 3
-horizontal_alignment = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer" unique_id=1926891970]
-clip_children = 1
+[node name="NameLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HeaderHBoxContainer" unique_id=1562899520]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 13
+theme_override_font_sizes/bold_font_size = 13
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/PanelContainer" unique_id=1207910314]
+[node name="TimerLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HeaderHBoxContainer" unique_id=2132901456]
 layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 11
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
 
-[node name="DescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer/PanelContainer/Control" unique_id=1558082471]
-layout_mode = 0
-offset_right = 120.0
-offset_bottom = 23.0
+[node name="DecriptionLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1349029605]
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 11
+theme_override_font_sizes/bold_font_size = 11
+bbcode_enabled = true
+fit_content = true
+scroll_active = false

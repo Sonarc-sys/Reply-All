@@ -9,7 +9,9 @@
 [ext_resource type="Script" uid="uid://coo5a4ydkglck" path="res://script/OfficeUI.gd" id="5_eglr7"]
 [ext_resource type="Texture2D" uid="uid://dgoyski6kmxha" path="res://asset/pixel_art_smartphone_blank.png" id="6_m1geu"]
 [ext_resource type="PackedScene" uid="uid://dcywsqq8hc6g3" path="res://scene/Map-Assets/Entry-Hallway/secretary_cubicle_1.tscn" id="7_seri3"]
+[ext_resource type="Script" uid="uid://cx5sirgwl4sar" path="res://script/notification_list.gd" id="7_vfpnv"]
 [ext_resource type="PackedScene" uid="uid://ch8jfytgdwl4y" path="res://scene/Map-Assets/Entry-Hallway/secretary_cubicle_2.tscn" id="8_4spjl"]
+[ext_resource type="PackedScene" uid="uid://dp0yescl3dyou" path="res://scene/NotificationItem.tscn" id="8_qv62g"]
 [ext_resource type="Texture2D" uid="uid://dpr4s3akpdp20" path="res://asset/Map/Map__0003_Background.png" id="8_seri3"]
 [ext_resource type="PackedScene" uid="uid://r4873igoon8j" path="res://scene/Map-Assets/Entry-Hallway/door_hallway_wall_2.tscn" id="9_m1geu"]
 [ext_resource type="Texture2D" uid="uid://bgilc6pftwef8" path="res://asset/Map/Map__0004s_0006_Vending-Machines-and-others.png" id="12_qv62g"]
@@ -179,16 +181,20 @@ expand_mode = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_top = -0.071
-anchor_bottom = -0.071
-offset_left = 149.0
-offset_top = 66.986
-offset_right = 325.0
-offset_bottom = 365.986
+anchor_right = 8.0
+anchor_bottom = 24.0
+offset_left = 152.0
+offset_top = 70.0
+offset_right = -3462.0
+offset_bottom = -8442.0
 horizontal_scroll_mode = 0
 
 [node name="NotificationList" type="VBoxContainer" parent="CanvasLayer/Phone/ScrollContainer" unique_id=1932424071]
 layout_mode = 2
-theme_override_constants/separation = 1
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+script = ExtResource("7_vfpnv")
+notification_item_scene = ExtResource("8_qv62g")
 
 [node name="LockdownEvent" parent="CanvasLayer" unique_id=215499116 instance=ExtResource("lockdown_ext")]
 
