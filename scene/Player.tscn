@@ -126,7 +126,7 @@ animations = [{
 radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_interact"]
-radius = 100.0
+radius = 44.15
 
 [node name="Player" type="CharacterBody2D" unique_id=1676413528]
 y_sort_enabled = true
@@ -157,8 +157,7 @@ position = Vector2(228, 231)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1368849613]
-visible = false
-position = Vector2(-228, -286)
+position = Vector2(-228, -250)
 shape = SubResource("CircleShape2D_interact")
 
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]

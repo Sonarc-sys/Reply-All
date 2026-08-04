@@ -90,7 +90,7 @@ func _update_animation():
 	if sprite == null or sprite.sprite_frames == null:
 		return
 
-	# Map roles to prefix ("Office Worker" -> "worker", "CEO" -> "ceo", etc.)
+	# Map roles to prefix (Office Worker -> worker, CEO -> ceo, etc.)
 	var role_key: String = ""
 	match employee_type:
 		"Office Worker":
@@ -132,14 +132,14 @@ func show_lockdown_alert():
 	excl.visible = true
 	excl.scale = Vector2(1.8, 1.8)
 	excl.add_theme_color_override("font_color", Color(0.95, 0.05, 0.05))
-	excl.add_theme_font_size_override("font_size", 80)
+	excl.add_theme_font_size_override("font_size", 40)
 
 func hide_lockdown_alert():
 	var excl = $UI/Exclamation
 	excl.visible = false
 	excl.scale = Vector2(1.0, 1.0)
 	excl.add_theme_color_override("font_color", Color(1.0, 0.15, 0.10))
-	excl.add_theme_font_size_override("font_size", 64)
+	excl.add_theme_font_size_override("font_size", 50)
 	if has_issue and not escalated:
 		excl.visible = true
 
