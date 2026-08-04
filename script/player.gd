@@ -4,52 +4,61 @@ extends CharacterBody2D
 var nearby_employee = null
 var _lockdown_cleared_set: Array = []
 
-func _ready():
-	_build_sprite_frames()
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-func _build_sprite_frames():
-	var tex = load("res://asset/characters.png")
-	if tex == null:
-		return
-	var frames = SpriteFrames.new()
-	if frames.has_animation("default"):
-		frames.remove_animation("default")
-	frames.add_animation("default")
-	frames.set_animation_loop("default", true)
-	frames.set_animation_speed("default", 1.0)
-	var idle_at = AtlasTexture.new()
-	idle_at.atlas = tex
-	idle_at.region = Rect2(0, 0, 64, 64)
-	frames.add_frame("default", idle_at)
-	frames.add_animation("walk")
-	frames.set_animation_loop("walk", true)
-	frames.set_animation_speed("walk", 10.0)
-	for f in range(4):
-		var at = AtlasTexture.new()
-		at.atlas = tex
-		at.region = Rect2(f * 64, 0, 64, 64)
-		frames.add_frame("walk", at)
-	var sprite = $AnimatedSprite2D
-	sprite.sprite_frames = frames
-	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	sprite.play("default")
+func _ready():
+	# Initial state setup
+	if sprite and sprite.sprite_frames and sprite.sprite_frames.has_animation("idle"):
+		sprite.play("idle")
 
 func _physics_process(_delta):
+	# 1. Input vector setup
 	var direction = Vector2(
 		Input.get_axis("move_left", "move_right"),
 		Input.get_axis("move_up", "move_down")
 	)
+	
 	if direction.length() > 0:
 		direction = direction.normalized()
+		
 	velocity = direction * speed
 	move_and_slide()
-	var sprite = $AnimatedSprite2D
-	if direction.length() > 0:
-		if direction.x < 0: sprite.flip_h = true
-		elif direction.x > 0: sprite.flip_h = false
-		if sprite.animation != "walk": sprite.play("walk")
+	
+	# 2. Dynamic 4-Directional Animation Logic
+	_update_animation(direction)
+
+func _update_animation(direction: Vector2) -> void:
+	if sprite == null or sprite.sprite_frames == null:
+		return
+
+	# Single static "idle" frame when stationary
+	if direction == Vector2.ZERO:
+		if sprite.sprite_frames.has_animation("idle"):
+			if sprite.animation != "idle":
+				sprite.play("idle")
+		return
+
+	# Determine dominant movement axis for directional walk
+	var target_anim: String = ""
+
+	if abs(direction.x) >= abs(direction.y):
+		if direction.x > 0:
+			target_anim = "walk_right"
+		else:
+			target_anim = "walk_left"
 	else:
-		if sprite.animation != "default": sprite.play("default")
+		if direction.y > 0:
+			target_anim = "walk_down"
+		else:
+			target_anim = "walk_up"
+
+	# Disable horizontal flip so explicit walk_left / walk_right sprites display as designed
+	sprite.flip_h = false
+
+	# Play target directional animation
+	if sprite.sprite_frames.has_animation(target_anim):
+		if sprite.animation != target_anim:
+			sprite.play(target_anim)
 
 func _process(_delta):
 	if Input.is_action_just_pressed("interact"):

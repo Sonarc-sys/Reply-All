@@ -291,8 +291,8 @@ employee_name = "James"
 employee_type = "Intern"
 
 [node name="Player" parent="Map" unique_id=1881935737 instance=ExtResource("2_nwkqs")]
-position = Vector2(43, 162)
-scale = Vector2(0.61124456, 0.61124456)
+position = Vector2(39, 170.00002)
+scale = Vector2(0.9, 0.9)
 
 [node name="Entry Hallway" type="Node2D" parent="Map" unique_id=1202782627]
 y_sort_enabled = true
