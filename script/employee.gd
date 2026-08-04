@@ -90,7 +90,7 @@ func _update_animation():
 	if sprite == null or sprite.sprite_frames == null:
 		return
 
-	# Map "Office Worker" -> "worker", others -> lowercase with underscores
+	# Map roles to prefix ("Office Worker" -> "worker", "CEO" -> "ceo", etc.)
 	var role_key: String = ""
 	match employee_type:
 		"Office Worker":
@@ -98,26 +98,34 @@ func _update_animation():
 		_:
 			role_key = employee_type.to_lower().replace(" ", "_")
 
-	var is_walking = direction_ofmovement.length() > 0.1
-	var anim_state = "walk" if is_walking else "default"
-	
-	# Constructs target name (e.g., "worker_default", "ceo_walk")
-	var target_anim = "%s_%s" % [role_key, anim_state]
+	# 1. Idle/Standing Still -> role_default
+	if direction_ofmovement.length() <= 0.1:
+		sprite.flip_h = false # Reset flip on idle
+		var default_anim = "%s_default" % role_key
+		if sprite.sprite_frames.has_animation(default_anim):
+			if sprite.animation != default_anim:
+				sprite.play(default_anim)
+		return
 
-	# Flip sprite horizontally according to horizontal movement direction
-	if is_walking:
-		if direction_ofmovement.x < 0:
-			sprite.flip_h = true
-		elif direction_ofmovement.x > 0:
-			sprite.flip_h = false
+	# 2. Moving State -> Determine direction
+	var target_anim: String = ""
 
-	# Play animation if available in SpriteFrames, with fallback
+	if abs(direction_ofmovement.x) >= abs(direction_ofmovement.y):
+		# Horizontal movement uses single "role_walk" animation
+		target_anim = "%s_walk" % role_key
+		sprite.flip_h = (direction_ofmovement.x < 0) # Flip horizontally if walking LEFT
+	else:
+		# Vertical movement uses explicit up/down animations
+		sprite.flip_h = false
+		if direction_ofmovement.y > 0:
+			target_anim = "%s_walk_down" % role_key
+		else:
+			target_anim = "%s_walk_up" % role_key
+
+	# Play target animation if found in SpriteFrames
 	if sprite.sprite_frames.has_animation(target_anim):
 		if sprite.animation != target_anim:
 			sprite.play(target_anim)
-	elif sprite.sprite_frames.has_animation(anim_state):
-		if sprite.animation != anim_state:
-			sprite.play(anim_state)
 
 func show_lockdown_alert():
 	var excl = $UI/Exclamation
