@@ -134,8 +134,14 @@ func _wrong(_idx: int):
 		GameManager.trigger_lockdown()
 	else:
 		GameManager.add_danger(the_issue.threat_level * 4.0)
+		# Clear the ticket immediately on wrong answer - player reviews it in Reflection Report
 		if current_employee != null:
 			current_employee.wrong_answer()
+			current_employee.has_issue     = false
+			current_employee.current_issue = null
+			current_employee.escalated     = false
+			current_employee.get_node("UI/Exclamation").visible = false
+			GameManager.incidents_changed.emit()
 
 	GameManager.record_wrong_answer(the_issue.issue_name,
 		the_issue.answers[the_issue.correct_index],
