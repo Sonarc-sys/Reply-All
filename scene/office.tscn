@@ -206,96 +206,93 @@ y_sort_enabled = true
 position = Vector2(5, 24)
 
 [node name="Employee1" parent="Map/Employees" unique_id=1133885026 instance=ExtResource("2_pgah7")]
-position = Vector2(340, 652)
-scale = Vector2(0.639369, 0.639369)
+position = Vector2(731, 345)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 employee_name = "Bob"
-employee_type = "Intern"
 
 [node name="Employee2" parent="Map/Employees" unique_id=280188704 instance=ExtResource("2_pgah7")]
 position = Vector2(198, 704)
-scale = Vector2(0.6130586, 0.6130586)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 employee_name = "George"
-employee_type = "Manager"
 
 [node name="Employee3" parent="Map/Employees" unique_id=2140453044 instance=ExtResource("2_pgah7")]
-position = Vector2(247, 293)
-scale = Vector2(0.6141567, 0.6141567)
+position = Vector2(161.00002, 203)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
-employee_name = "Steven"
-employee_type = "CEO"
+employee_name = "Lisa"
+employee_type = "Secretary"
 
 [node name="Employee4" parent="Map/Employees" unique_id=1133885030 instance=ExtResource("2_pgah7")]
-position = Vector2(530, 193.00003)
-scale = Vector2(0.614, 0.614)
+position = Vector2(492.00006, 202.00002)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 employee_name = "Alex"
-employee_type = "IT"
+employee_type = "Manager"
 
 [node name="Employee5" parent="Map/Employees" unique_id=1133885031 instance=ExtResource("2_pgah7")]
-position = Vector2(1121.9999, 239.00002)
-scale = Vector2(0.614, 0.614)
+position = Vector2(1117, 240.00002)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 employee_name = "Marcus"
-employee_type = "IT2"
+employee_type = "CEO"
 
 [node name="Employee6" parent="Map/Employees" unique_id=1133885032 instance=ExtResource("2_pgah7")]
-position = Vector2(432.00003, 314.00003)
-scale = Vector2(0.614, 0.614)
+position = Vector2(427, 369)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 employee_name = "Jake"
 employee_type = "Intern"
 
 [node name="Employee7" parent="Map/Employees" unique_id=1133885033 instance=ExtResource("2_pgah7")]
-position = Vector2(31.999939, 364)
-scale = Vector2(0.614, 0.614)
+position = Vector2(234, 368.00003)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 employee_name = "Mia"
-employee_type = "Intern2"
+employee_type = "Secretary"
 
 [node name="Employee8" parent="Map/Employees" unique_id=1133885034 instance=ExtResource("2_pgah7")]
 position = Vector2(828.99994, 244.00002)
-scale = Vector2(0.614, 0.614)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
-employee_name = "Sandra"
-employee_type = "Receptionist"
+employee_name = "Tom"
+employee_type = "Manager"
 
 [node name="Employee9" parent="Map/Employees" unique_id=1133885035 instance=ExtResource("2_pgah7")]
 position = Vector2(773.99994, 781)
-scale = Vector2(0.614, 0.614)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
-employee_name = "Lisa"
-employee_type = "Receptionist2"
+employee_name = "Tony"
+employee_type = "Intern"
 
 [node name="Employee10" parent="Map/Employees" unique_id=1133885036 instance=ExtResource("2_pgah7")]
 position = Vector2(88.00001, 690)
-scale = Vector2(0.614, 0.614)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
-employee_name = "Priya"
-employee_type = "Normal3"
+employee_name = "Allen"
 
 [node name="Employee11" parent="Map/Employees" unique_id=1133885037 instance=ExtResource("2_pgah7")]
 position = Vector2(638.99994, 821.00006)
-scale = Vector2(0.614, 0.614)
+scale = Vector2(0.9, 0.9)
 collision_layer = 1
 collision_mask = 1
 employee_name = "James"
-employee_type = "Normal4"
+employee_type = "Intern"
 
 [node name="Player" parent="Map" unique_id=1881935737 instance=ExtResource("2_nwkqs")]
-position = Vector2(43, 162)
-scale = Vector2(0.61124456, 0.61124456)
+position = Vector2(39, 170.00002)
+scale = Vector2(0.9, 0.9)
 
 [node name="Entry Hallway" type="Node2D" parent="Map" unique_id=1202782627]
 y_sort_enabled = true

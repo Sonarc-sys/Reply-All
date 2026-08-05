@@ -21,8 +21,12 @@ buses/default_bus_layout=""
 
 [autoload]
 
-GameManager="*uid://bqeox1mdo5lwg"
+GameManager="*res://script/GameManager.gd"
 AudioManager="*res://script/AudioManager.gd"
+
+[display]
+
+window/stretch/mode="canvas_items"
 
 [input]
 
