@@ -1,6 +1,6 @@
 # Reply All: Cybersecurity Awareness Gamification Platform
 
-**INFO49402 Capstone Project — Sheridan College**  
+**INFO49402 Capstone Project - Sheridan College**  
 Group 25 | Troy Patrick, Vladimir Gappasov, Ayinkaran Ravindran  
 Capstone Advisor: Syed Tanbeer
 
