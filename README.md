@@ -22,6 +22,7 @@ The core design philosophy is threat triage. Multiple incidents appear simultane
 - Critical breach lockdown event triggered by threat level 5 wrong answers
 - iPad-style tablet popup UI for incident response interactions
 - Phone notification system with dynamic sorting by time remaining
+- Expandable phone notifications on click that can shrink again on click
 - Adaptive audio system with separate tracks for standard gameplay and lockdown events
 - Intro and game over cutscenes with performance-based messaging
 - Post-shift Reflection Report showing all incorrect and timed-out answers with explanations
