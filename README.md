@@ -18,7 +18,7 @@ The core design philosophy is threat triage. Multiple incidents appear simultane
 
 - 36 unique cybersecurity incident scenarios across four threat levels
 - Dynamic danger bar and scoring system that responds to player decisions in real time
-- Patience and escalation system per NPC role type
+- Patience, movement chance and escalation system per NPC role type
 - Critical breach lockdown event triggered by threat level 5 wrong answers
 - iPad-style tablet popup UI for incident response interactions
 - Phone notification system with dynamic sorting by time remaining
