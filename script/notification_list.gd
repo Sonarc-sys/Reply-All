@@ -1,7 +1,7 @@
 extends VBoxContainer
 class_name NotificationList
 
-# Drag and drop your NotificationItem.tscn here in the Inspector
+
 @export var notification_item_scene: PackedScene 
 
 var sort_timer: float = 0.0
@@ -10,12 +10,12 @@ func _process(delta: float) -> void:
 	# Only sort if we have multiple items in the list
 	if get_child_count() > 1:
 		sort_timer += delta
-		# Re-sort every 1.0 second so UI cards don't jitter around constantly while ticking
+		# Re-sort every 1.0 second 
 		if sort_timer >= 1.0:
 			sort_timer = 0.0
 			sort_notifications_by_time()
 
-## Call this method whenever you spawn a new employee notification!
+# Used for expansion
 func add_notification(employee_node: Node) -> void:
 	if notification_item_scene == null:
 		push_error("NotificationItem scene is not assigned in the Inspector!")
@@ -28,7 +28,7 @@ func add_notification(employee_node: Node) -> void:
 	# Immediately sort upon adding a new item
 	sort_notifications_by_time()
 
-## Sorts child NotificationItem nodes ascending by remaining patience time
+# Sorting Logic
 func sort_notifications_by_time() -> void:
 	var items: Array[Node] = get_children()
 	

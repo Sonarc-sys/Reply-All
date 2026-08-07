@@ -11,7 +11,7 @@ func _ready():
 	score_label.text = "Final Score:  %d" % GameManager.score
 	stats_label.text = "Handled: %d     Failed: %d" % [handled, failed]
 
-	# Optional nodes that may or may not exist in the scene
+	# For future content
 	var flavour_lbl = get_node_or_null("FlavourLabel")
 	var streak_lbl  = get_node_or_null("StreakLabel")
 

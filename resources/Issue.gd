@@ -1,11 +1,11 @@
 extends Resource
 class_name CyberIssue
-
+# Visible to players issue name, Employee message for notification and question
 @export var issue_name:String
-@export_multiline var description:String
+@export_multiline var description:String #Mainly for dev to understand and used in reflection report for clarity
 @export_multiline var employee_message:String
 
-# Here, this code will be hidden from the player
+#  hidden from the player
 @export var threat_level:int = 1
 @export var urgency:float
 @export var escalation:CyberEscalation

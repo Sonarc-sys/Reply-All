@@ -5,7 +5,7 @@ signal issue_clicked(employee)
 @onready var name_label = $UI/NameLabel
 @export var employee_name = "Employee"
 
-# Updated enum to reflect your current roles
+# Roles
 @export_enum(
 	"CEO",
 	"Manager",
@@ -74,7 +74,7 @@ func _physics_process(delta):
 	velocity = direction_ofmovement * _cfg["speed"]
 	move_and_slide()
 
-	# Keep NPC within safe walkable map bounds
+	# NPC safe walkable map bounds
 	var clamped = Vector2(
 		clamp(global_position.x, 40.0, 950.0),
 		clamp(global_position.y, 175.0, 890.0)
@@ -111,18 +111,18 @@ func _update_animation():
 	var target_anim: String = ""
 
 	if abs(direction_ofmovement.x) >= abs(direction_ofmovement.y):
-		# Horizontal movement uses single "role_walk" animation
+		# Horizontal movement 
 		target_anim = "%s_walk" % role_key
 		sprite.flip_h = (direction_ofmovement.x < 0) # Flip horizontally if walking LEFT
 	else:
-		# Vertical movement uses explicit up/down animations
+		# Vertical movement 
 		sprite.flip_h = false
 		if direction_ofmovement.y > 0:
 			target_anim = "%s_walk_down" % role_key
 		else:
 			target_anim = "%s_walk_up" % role_key
 
-	# Play target animation if found in SpriteFrames
+	
 	if sprite.sprite_frames.has_animation(target_anim):
 		if sprite.animation != target_anim:
 			sprite.play(target_anim)

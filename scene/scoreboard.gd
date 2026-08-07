@@ -1,7 +1,7 @@
 
 extends Control
 
-# Removed strict typing (e.g., ": Label", "as Label") to prevent Godot from nullifying RichTextLabels
+
 var job_list
 var details_label
 var explanation_label

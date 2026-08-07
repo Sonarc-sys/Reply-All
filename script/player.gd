@@ -52,7 +52,7 @@ func _update_animation(direction: Vector2) -> void:
 		else:
 			target_anim = "walk_up"
 
-	# Disable horizontal flip so explicit walk_left / walk_right sprites display as designed
+	# Disable horizontal flip 
 	sprite.flip_h = false
 
 	# Play target directional animation
