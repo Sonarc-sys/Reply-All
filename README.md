@@ -3,7 +3,7 @@
 **INFO49402 Capstone Project - Sheridan College**  
 Group 25 | Troy Patrick, Vladimir Gappasov, Ayinkaran Ravindran  
 Capstone Advisor: Syed Tanbeer
-
+[Full Capstone Report (PDF)](CapstoneReport_Group_25.pdf)
 ---
 
 ## Overview
